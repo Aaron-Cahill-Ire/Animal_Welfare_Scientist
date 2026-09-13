@@ -25,7 +25,7 @@
   "models": [],
   "tools": [],
   "cost_usd": 0,
-  "runtime_seconds_example": 0.000376,
+  "runtime_seconds_example": 0.000405,
   "human_review_required": true,
   "limitations": [
     "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented.",
@@ -107,7 +107,7 @@
   },
   "output_example": {
     "schema_version": "1.0",
-    "run_id": "b8aa0b0c-e69b-4fc4-bac9-3f710088c386",
+    "run_id": "aa180f9f-9da7-45e8-b21a-25efd384d6d0",
     "agent_id": "A4",
     "agent_version": "6ab83d2d0f4d95d3d610a9c9a1a0beddd5be6368d2c7cb8e725465f29fc07885",
     "configuration_snapshot": {
@@ -167,7 +167,7 @@
         }
       }
     ],
-    "runtime_seconds": 0.000376,
+    "runtime_seconds": 0.000405,
     "cost_usd": 0.0,
     "backend": "deterministic-python",
     "human_review_required": true,
@@ -228,5 +228,5 @@
   "evidence_maturity": "Prototype",
   "maintenance": "Active",
   "security": "Unreviewed",
-  "last_evaluation": "2026-09-13T13:46:40.577264+00:00"
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
 }

@@ -25,7 +25,7 @@
   "models": [],
   "tools": [],
   "cost_usd": 0,
-  "runtime_seconds_example": 0.000314,
+  "runtime_seconds_example": 0.000321,
   "human_review_required": true,
   "limitations": [
     "Requires structured tool identity and quoted capability evidence; no live external discovery or availability check.",
@@ -83,7 +83,7 @@
   },
   "output_example": {
     "schema_version": "1.0",
-    "run_id": "8cf8aa24-f84d-48c1-91f1-00c866706469",
+    "run_id": "9719252b-303a-4b47-a971-fe8c38f20d6b",
     "agent_id": "A5",
     "agent_version": "29cfe1ac4f7d239edfd95cce228ccd6454d1a8e620f18bdc2b3031283c242c39",
     "configuration_snapshot": {
@@ -143,7 +143,7 @@
         }
       }
     ],
-    "runtime_seconds": 0.000314,
+    "runtime_seconds": 0.000321,
     "cost_usd": 0.0,
     "backend": "deterministic-python",
     "human_review_required": true,
@@ -215,5 +215,5 @@
   "evidence_maturity": "Prototype",
   "maintenance": "Active",
   "security": "Unreviewed",
-  "last_evaluation": "2026-09-13T13:46:40.577264+00:00"
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
 }

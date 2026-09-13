@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "run_id": "5ede123c-01b8-47ed-b76d-369ac5f96bef",
+  "run_id": "dc243e50-c602-4288-8ef2-896f0793679b",
   "agent_id": "C1",
   "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
   "configuration_snapshot": {
@@ -29,7 +29,7 @@
       "passage": "Synthetic pig enrichment study reports more activity."
     }
   ],
-  "runtime_seconds": 0.000204,
+  "runtime_seconds": 0.0002,
   "cost_usd": 0.0,
   "backend": "deterministic-python",
   "human_review_required": true,

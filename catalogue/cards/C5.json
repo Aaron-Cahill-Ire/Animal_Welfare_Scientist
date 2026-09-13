@@ -25,7 +25,7 @@
   "models": [],
   "tools": [],
   "cost_usd": 0,
-  "runtime_seconds_example": 0.000144,
+  "runtime_seconds_example": 0.000147,
   "human_review_required": true,
   "limitations": [
     "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
@@ -49,7 +49,7 @@
   },
   "output_example": {
     "schema_version": "1.0",
-    "run_id": "7903706b-ba9b-4afd-b603-c0b9469d6c1c",
+    "run_id": "6f6031ef-d00b-44e2-9ccc-9f273441143b",
     "agent_id": "C5",
     "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
     "configuration_snapshot": {
@@ -73,7 +73,7 @@
     },
     "input_sha256": "612373c422a5a85a638cb4c38a2d9e9e16768812037e8c77fe72fcfc378fa5f4",
     "sources": [],
-    "runtime_seconds": 0.000144,
+    "runtime_seconds": 0.000147,
     "cost_usd": 0.0,
     "backend": "deterministic-python",
     "human_review_required": true,
@@ -131,5 +131,5 @@
   "evidence_maturity": "Prototype",
   "maintenance": "Active",
   "security": "Unreviewed",
-  "last_evaluation": "2026-09-13T13:46:40.577264+00:00"
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
 }
