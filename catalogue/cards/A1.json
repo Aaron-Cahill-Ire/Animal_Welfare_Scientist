@@ -25,7 +25,7 @@
   "models": [],
   "tools": [],
   "cost_usd": 0,
-  "runtime_seconds_example": 0.000511,
+  "runtime_seconds_example": 0.000498,
   "human_review_required": true,
   "limitations": [
     "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
@@ -111,7 +111,7 @@
   },
   "output_example": {
     "schema_version": "1.0",
-    "run_id": "c1bd8fc0-1a69-4288-b8da-b99b605c310c",
+    "run_id": "09de98af-e2a9-4c9c-86b5-d70d63ae3c88",
     "agent_id": "A1",
     "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
     "configuration_snapshot": {
@@ -171,7 +171,7 @@
         }
       }
     ],
-    "runtime_seconds": 0.000511,
+    "runtime_seconds": 0.000498,
     "cost_usd": 0.0,
     "backend": "deterministic-python",
     "human_review_required": true,
@@ -295,5 +295,5 @@
   "evidence_maturity": "Prototype",
   "maintenance": "Active",
   "security": "Unreviewed",
-  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+  "last_evaluation": "2026-09-13T13:46:40.577264+00:00"
 }

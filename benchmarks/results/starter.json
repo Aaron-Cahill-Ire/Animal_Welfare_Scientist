@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "suite_version": "starter-0.1.0",
   "dataset_version": "synthetic-development-0.1.0",
-  "evaluated_at": "2026-09-13T13:44:10.300634+00:00",
+  "evaluated_at": "2026-09-13T13:46:40.577264+00:00",
   "grading": "Automated semantic assertions written by implementation developers; not independent.",
   "scientific_validation": "Not performed",
   "summaries": {
@@ -601,8 +601,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.00058,
-      "baseline_runtime_seconds": 0.000504,
+      "runtime_seconds": 0.000582,
+      "baseline_runtime_seconds": 0.000505,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
     },
@@ -637,7 +637,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "IndexError: list index out of range",
-      "runtime_seconds": 0.000255,
+      "runtime_seconds": 0.000258,
       "baseline_runtime_seconds": 2.7e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
@@ -656,7 +656,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 0.000222,
-      "baseline_runtime_seconds": 3.9e-05,
+      "baseline_runtime_seconds": 4e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
     },
@@ -673,7 +673,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.00038,
+      "runtime_seconds": 0.000382,
       "baseline_runtime_seconds": 7.8e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
@@ -691,8 +691,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000149,
-      "baseline_runtime_seconds": 3.1e-05,
+      "runtime_seconds": 0.000152,
+      "baseline_runtime_seconds": 3.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
     },
@@ -710,7 +710,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 0.000226,
-      "baseline_runtime_seconds": 5.2e-05,
+      "baseline_runtime_seconds": 5.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
     },
@@ -727,7 +727,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000287,
+      "runtime_seconds": 0.000286,
       "baseline_runtime_seconds": 7.1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
@@ -745,8 +745,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000356,
-      "baseline_runtime_seconds": 8.3e-05,
+      "runtime_seconds": 0.000361,
+      "baseline_runtime_seconds": 8.4e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
     },
@@ -763,7 +763,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000396,
+      "runtime_seconds": 0.000397,
       "baseline_runtime_seconds": 0.000102,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
@@ -781,8 +781,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000176,
-      "baseline_runtime_seconds": 3.8e-05,
+      "runtime_seconds": 0.000181,
+      "baseline_runtime_seconds": 5.4e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
     },
@@ -817,8 +817,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000392,
-      "baseline_runtime_seconds": 9.7e-05,
+      "runtime_seconds": 0.000395,
+      "baseline_runtime_seconds": 9.9e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
     },
@@ -835,7 +835,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.0004,
+      "runtime_seconds": 0.000399,
       "baseline_runtime_seconds": 0.000102,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
@@ -853,8 +853,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000369,
-      "baseline_runtime_seconds": 8.6e-05,
+      "runtime_seconds": 0.000364,
+      "baseline_runtime_seconds": 8.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
     },
@@ -869,8 +869,8 @@
       "warnings": [],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 8.3e-05,
-      "baseline_runtime_seconds": 1.6e-05,
+      "runtime_seconds": 8.8e-05,
+      "baseline_runtime_seconds": 1.7e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
     },
@@ -888,7 +888,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 0.000347,
-      "baseline_runtime_seconds": 8.3e-05,
+      "baseline_runtime_seconds": 8.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
     },
@@ -905,7 +905,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000338,
+      "runtime_seconds": 0.000353,
       "baseline_runtime_seconds": 8e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
@@ -923,8 +923,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000475,
-      "baseline_runtime_seconds": 8.7e-05,
+      "runtime_seconds": 0.000469,
+      "baseline_runtime_seconds": 8.8e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
     },
@@ -941,8 +941,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 8.2e-05,
-      "baseline_runtime_seconds": 1.6e-05,
+      "runtime_seconds": 7.8e-05,
+      "baseline_runtime_seconds": 1.7e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
     },
@@ -959,8 +959,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000239,
-      "baseline_runtime_seconds": 5.8e-05,
+      "runtime_seconds": 0.000238,
+      "baseline_runtime_seconds": 5.9e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
     },
@@ -977,8 +977,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000284,
-      "baseline_runtime_seconds": 6.4e-05,
+      "runtime_seconds": 0.000285,
+      "baseline_runtime_seconds": 6.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
     },
@@ -995,7 +995,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000281,
+      "runtime_seconds": 0.000283,
       "baseline_runtime_seconds": 6.9e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
@@ -1013,7 +1013,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000113,
+      "runtime_seconds": 0.000114,
       "baseline_runtime_seconds": 2.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
@@ -1031,7 +1031,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 5.9e-05,
+      "runtime_seconds": 6e-05,
       "baseline_runtime_seconds": 1.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
@@ -1049,8 +1049,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000142,
-      "baseline_runtime_seconds": 2.9e-05,
+      "runtime_seconds": 0.00014,
+      "baseline_runtime_seconds": 3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
     },
@@ -1067,8 +1067,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000194,
-      "baseline_runtime_seconds": 4.1e-05,
+      "runtime_seconds": 0.000198,
+      "baseline_runtime_seconds": 4.4e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
     },
@@ -1086,7 +1086,7 @@
       "baseline_passed": false,
       "baseline_error": null,
       "runtime_seconds": 0.000491,
-      "baseline_runtime_seconds": 0.000119,
+      "baseline_runtime_seconds": 0.000122,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
     },
@@ -1103,8 +1103,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'test_ready'",
-      "runtime_seconds": 0.000134,
-      "baseline_runtime_seconds": 1.3e-05,
+      "runtime_seconds": 0.000138,
+      "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
     },
@@ -1139,7 +1139,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000185,
+      "runtime_seconds": 0.000187,
       "baseline_runtime_seconds": 1.1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
@@ -1175,8 +1175,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000151,
-      "baseline_runtime_seconds": 8e-06,
+      "runtime_seconds": 0.000152,
+      "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
     },
@@ -1212,7 +1212,7 @@
       "baseline_passed": false,
       "baseline_error": "KeyError: 'mean_absolute_pixel_change'",
       "runtime_seconds": 0.000211,
-      "baseline_runtime_seconds": 1.1e-05,
+      "baseline_runtime_seconds": 1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
     },
@@ -1230,7 +1230,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 2e-05,
-      "baseline_runtime_seconds": 5e-06,
+      "baseline_runtime_seconds": 6e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
     },
@@ -1247,7 +1247,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'missing'",
-      "runtime_seconds": 0.0002,
+      "runtime_seconds": 0.000204,
       "baseline_runtime_seconds": 1.1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
@@ -1266,7 +1266,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 2e-05,
-      "baseline_runtime_seconds": 5e-06,
+      "baseline_runtime_seconds": 6e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
     },
@@ -1283,7 +1283,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'class'",
-      "runtime_seconds": 0.000135,
+      "runtime_seconds": 0.000132,
       "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
@@ -1301,7 +1301,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 1.9e-05,
+      "runtime_seconds": 2e-05,
       "baseline_runtime_seconds": 5e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
@@ -1319,7 +1319,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'compatibility'",
-      "runtime_seconds": 0.000177,
+      "runtime_seconds": 0.000179,
       "baseline_runtime_seconds": 1.4e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
@@ -1338,7 +1338,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 2e-05,
-      "baseline_runtime_seconds": 6e-06,
+      "baseline_runtime_seconds": 5e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
     },
@@ -1355,8 +1355,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000144,
-      "baseline_runtime_seconds": 9e-06,
+      "runtime_seconds": 0.000139,
+      "baseline_runtime_seconds": 8e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
     },
@@ -1373,7 +1373,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 1.9e-05,
+      "runtime_seconds": 2e-05,
       "baseline_runtime_seconds": 5e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
@@ -1391,7 +1391,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'test_ready'",
-      "runtime_seconds": 0.00013,
+      "runtime_seconds": 0.000134,
       "baseline_runtime_seconds": 1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
@@ -1407,7 +1407,7 @@
       "warnings": [],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 6.8e-05,
+      "runtime_seconds": 6.9e-05,
       "baseline_runtime_seconds": 6e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
@@ -1425,7 +1425,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'validation_status'",
-      "runtime_seconds": 0.000188,
+      "runtime_seconds": 0.000185,
       "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
@@ -1443,7 +1443,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'unresolved_decisions'",
-      "runtime_seconds": 9.8e-05,
+      "runtime_seconds": 9.9e-05,
       "baseline_runtime_seconds": 7e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
@@ -1461,7 +1461,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000152,
+      "runtime_seconds": 0.000153,
       "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
@@ -1497,7 +1497,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000134,
+      "runtime_seconds": 0.000135,
       "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
@@ -1531,7 +1531,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'causal_assessment'",
-      "runtime_seconds": 0.000192,
+      "runtime_seconds": 0.000197,
       "baseline_runtime_seconds": 1.1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
@@ -1549,7 +1549,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'invalid'",
-      "runtime_seconds": 0.000145,
+      "runtime_seconds": 0.000147,
       "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
@@ -1567,7 +1567,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'class'",
-      "runtime_seconds": 0.000125,
+      "runtime_seconds": 0.000121,
       "baseline_runtime_seconds": 8e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
@@ -1585,8 +1585,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000109,
-      "baseline_runtime_seconds": 6e-06,
+      "runtime_seconds": 8.5e-05,
+      "baseline_runtime_seconds": 7e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
     },
@@ -1603,8 +1603,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'rejected'",
-      "runtime_seconds": 0.000147,
-      "baseline_runtime_seconds": 1.2e-05,
+      "runtime_seconds": 0.000142,
+      "baseline_runtime_seconds": 1.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
     },
@@ -1621,7 +1621,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "KeyError: 'freshness'",
-      "runtime_seconds": 0.000168,
+      "runtime_seconds": 0.000167,
       "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
@@ -1639,7 +1639,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000137,
+      "runtime_seconds": 0.000138,
       "baseline_runtime_seconds": 8e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
@@ -1657,8 +1657,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000158,
-      "baseline_runtime_seconds": 8e-06,
+      "runtime_seconds": 0.000155,
+      "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
     },
@@ -1675,7 +1675,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000225,
+      "runtime_seconds": 0.000228,
       "baseline_runtime_seconds": 1.7e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
@@ -1693,7 +1693,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 8.1e-05,
+      "runtime_seconds": 8e-05,
       "baseline_runtime_seconds": 8e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
@@ -1711,7 +1711,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000117,
+      "runtime_seconds": 0.000116,
       "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
@@ -1747,7 +1747,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "IndexError: list index out of range",
-      "runtime_seconds": 0.00023,
+      "runtime_seconds": 0.000229,
       "baseline_runtime_seconds": 1.9e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
@@ -1766,7 +1766,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 8.7e-05,
-      "baseline_runtime_seconds": 7e-06,
+      "baseline_runtime_seconds": 8e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
     },
@@ -1783,7 +1783,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000148,
+      "runtime_seconds": 0.000143,
       "baseline_runtime_seconds": 1.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
@@ -1801,7 +1801,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": "IndexError: list index out of range",
-      "runtime_seconds": 0.000143,
+      "runtime_seconds": 0.000144,
       "baseline_runtime_seconds": 1.1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
@@ -1837,7 +1837,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 9.8e-05,
+      "runtime_seconds": 9.9e-05,
       "baseline_runtime_seconds": 8e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
@@ -1853,7 +1853,7 @@
       "warnings": [],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 6.5e-05,
+      "runtime_seconds": 6.6e-05,
       "baseline_runtime_seconds": 6e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
@@ -1871,8 +1871,8 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000108,
-      "baseline_runtime_seconds": 8e-06,
+      "runtime_seconds": 0.00011,
+      "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
     },
@@ -1889,8 +1889,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000141,
-      "baseline_runtime_seconds": 1.5e-05,
+      "runtime_seconds": 0.000142,
+      "baseline_runtime_seconds": 1.6e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
     },
@@ -1908,7 +1908,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 0.000104,
-      "baseline_runtime_seconds": 9e-06,
+      "baseline_runtime_seconds": 1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
     },
@@ -1925,7 +1925,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000111,
+      "runtime_seconds": 0.000114,
       "baseline_runtime_seconds": 1.1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
@@ -1943,7 +1943,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000136,
+      "runtime_seconds": 0.000138,
       "baseline_runtime_seconds": 1.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
@@ -1961,7 +1961,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000139,
+      "runtime_seconds": 0.000138,
       "baseline_runtime_seconds": 1.3e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
@@ -1979,8 +1979,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 9e-05,
-      "baseline_runtime_seconds": 8e-06,
+      "runtime_seconds": 9.1e-05,
+      "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
     },
@@ -1997,8 +1997,8 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.00013,
-      "baseline_runtime_seconds": 1.3e-05,
+      "runtime_seconds": 0.000131,
+      "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
     },
@@ -2015,7 +2015,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000141,
+      "runtime_seconds": 0.00014,
       "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
@@ -2033,7 +2033,7 @@
       ],
       "baseline_passed": false,
       "baseline_error": null,
-      "runtime_seconds": 0.000167,
+      "runtime_seconds": 0.000168,
       "baseline_runtime_seconds": 1.2e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
@@ -2051,7 +2051,7 @@
       ],
       "baseline_passed": true,
       "baseline_error": null,
-      "runtime_seconds": 0.000113,
+      "runtime_seconds": 0.00011,
       "baseline_runtime_seconds": 9e-06,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
@@ -2070,7 +2070,7 @@
       "baseline_passed": true,
       "baseline_error": null,
       "runtime_seconds": 0.000115,
-      "baseline_runtime_seconds": 9e-06,
+      "baseline_runtime_seconds": 1e-05,
       "cost_usd": 0.0,
       "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
     },
