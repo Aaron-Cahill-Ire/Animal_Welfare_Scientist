@@ -1,0 +1,29 @@
+{
+  "n": 4,
+  "passed": 4,
+  "baseline_passed": 2,
+  "baseline": "Brief-only rule decomposition with no source annotations.",
+  "configuration_snapshot": {
+    "agent_id": "A1",
+    "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+  },
+  "failures": [],
+  "abstentions": 1,
+  "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+  "maturity": "Prototype"
+}

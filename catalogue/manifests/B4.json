@@ -1,0 +1,122 @@
+{
+  "name": "Multimodal Welfare Analysis Agent",
+  "task": "Annotate bounded synthetic grayscale video frames",
+  "required": [
+    "video"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "video"
+    ],
+    "properties": {
+      "video": {
+        "type": "object",
+        "properties": {
+          "format": {
+            "type": "string"
+          },
+          "frames": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "timestamp_seconds": {
+                  "type": "number"
+                },
+                "pixels": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "annotations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "timestamp_seconds",
+            "mean_brightness",
+            "mean_absolute_pixel_change",
+            "observation",
+            "uncertainty"
+          ],
+          "properties": {
+            "timestamp_seconds": {
+              "type": "number"
+            },
+            "mean_brightness": {
+              "type": "number"
+            },
+            "mean_absolute_pixel_change": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "observation": {
+              "type": "string"
+            },
+            "uncertainty": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "backend": {
+        "type": "string"
+      },
+      "duration_seconds": {
+        "type": "number"
+      },
+      "welfare_diagnosis": {
+        "type": "null"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "2\u2013120 grayscale frames, <=64x64 pixels, <=60 seconds; no audio, compressed-video decoding or welfare diagnosis"
+  ],
+  "modalities": [
+    "synthetic-grayscale-video"
+  ],
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "id": "B4",
+  "configuration_snapshot": {
+    "agent_id": "B4",
+    "agent_version": "19975e455cc2b9c9e3e4c5544c90a259feff7feb2df74c9f7df38b5d52e220ef",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+  },
+  "run_method": "python -m commons run B4",
+  "permissions": [],
+  "human_review_required": true
+}

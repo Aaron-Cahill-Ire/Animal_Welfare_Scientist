@@ -1,0 +1,75 @@
+{
+  "name": "Experiment and Analysis Planner",
+  "task": "Plan a comparison and approximate sample requirements",
+  "required": [
+    "protocol",
+    "resources"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "protocol",
+      "resources"
+    ],
+    "properties": {
+      "protocol": {
+        "type": "object"
+      },
+      "resources": {
+        "type": "object"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "design": {
+        "type": "string"
+      },
+      "sampling": {
+        "type": "object"
+      },
+      "power_inputs": {
+        "type": "object"
+      },
+      "analysis_plan": {
+        "type": "object"
+      },
+      "unresolved_decisions": {
+        "type": "array"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "Power approximation is limited to two independent continuous-outcome groups; no clustering adjustment"
+  ],
+  "modalities": [
+    "structured-json"
+  ],
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "id": "B3",
+  "configuration_snapshot": {
+    "agent_id": "B3",
+    "agent_version": "3fe7c4922aca2dd702d58a06036e97a467ec7647dd64788ff95af7ffe657fd26",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+  },
+  "run_method": "python -m commons run B3",
+  "permissions": [],
+  "human_review_required": true
+}

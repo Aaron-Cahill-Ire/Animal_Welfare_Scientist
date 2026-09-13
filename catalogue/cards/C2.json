@@ -1,0 +1,166 @@
+{
+  "name": "Dataset and Measurement Auditor",
+  "purpose": "Calculate missingness, group frequencies, paired categorical agreement and cross-split overlap.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Calculate missingness, group frequencies, paired categorical agreement and cross-split overlap."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000228,
+  "human_review_required": true,
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "rows": [
+      {
+        "id": 1,
+        "species": "pig",
+        "r1": "active",
+        "r2": "active"
+      },
+      {
+        "id": 2,
+        "species": "pig",
+        "r1": "rest",
+        "r2": "active"
+      }
+    ],
+    "data_dictionary": {
+      "id": {},
+      "species": {},
+      "r1": {},
+      "r2": {}
+    },
+    "group_by": [
+      "species"
+    ],
+    "rater_columns": [
+      "r1",
+      "r2"
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "5452483c-961d-49a6-adb8-2a4306b30218",
+    "agent_id": "C2",
+    "agent_version": "4d12de1168e487bd86f5377b27b51cdcbabc655146f47ebb852f1d45fa44909b",
+    "configuration_snapshot": {
+      "agent_id": "C2",
+      "agent_version": "4d12de1168e487bd86f5377b27b51cdcbabc655146f47ebb852f1d45fa44909b",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+    },
+    "input_sha256": "f956f9890f7250b2130250de6234aa627d563eb003fb22fd28bd6f6cbad79cb3",
+    "sources": [],
+    "runtime_seconds": 0.000228,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "completed",
+    "data": {
+      "row_count": 2,
+      "missingness": {
+        "id": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "r1": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "r2": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "species": {
+          "count": 0,
+          "fraction": 0.0
+        }
+      },
+      "representation": {
+        "species": {
+          "observed_counts": {
+            "pig": 2
+          },
+          "missing_count": 0,
+          "population_representativeness": "unknown; target population distribution not supplied"
+        }
+      },
+      "annotation_reliability": [
+        {
+          "raters": [
+            "r1",
+            "r2"
+          ],
+          "paired_n": 2,
+          "agreement": 0.5,
+          "cohen_kappa": 0.0,
+          "reason": "Unweighted categorical Cohen kappa; paired observations only"
+        }
+      ],
+      "cross_split_units": [],
+      "undeclared_columns": [],
+      "sensor_validity": "unknown; requires calibration and criterion-validation evidence",
+      "generalisation": "Observed group frequencies alone cannot establish representativeness"
+    },
+    "warnings": [
+      "No inferential validity or population-representativeness claim is made."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+}

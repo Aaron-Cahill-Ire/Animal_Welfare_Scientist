@@ -1,0 +1,2096 @@
+{
+  "schema_version": "1.0",
+  "suite_version": "starter-0.1.0",
+  "dataset_version": "synthetic-development-0.1.0",
+  "evaluated_at": "2026-09-13T13:44:10.300634+00:00",
+  "grading": "Automated semantic assertions written by implementation developers; not independent.",
+  "scientific_validation": "Not performed",
+  "summaries": {
+    "A1": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 2,
+      "baseline": "Brief-only rule decomposition with no source annotations.",
+      "configuration_snapshot": {
+        "agent_id": "A1",
+        "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "A2": {
+      "n": 5,
+      "passed": 5,
+      "baseline_passed": 5,
+      "baseline": "Scan the first supplied source only.",
+      "configuration_snapshot": {
+        "agent_id": "A2",
+        "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "A3": {
+      "n": 6,
+      "passed": 6,
+      "baseline_passed": 5,
+      "baseline": "Compare only the first candidate.",
+      "configuration_snapshot": {
+        "agent_id": "A3",
+        "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "A4": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 3,
+      "baseline": "Rank by the first criterion only.",
+      "configuration_snapshot": {
+        "agent_id": "A4",
+        "agent_version": "6ab83d2d0f4d95d3d610a9c9a1a0beddd5be6368d2c7cb8e725465f29fc07885",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "A5": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 3,
+      "baseline": "Map only the first supplied source.",
+      "configuration_snapshot": {
+        "agent_id": "A5",
+        "agent_version": "29cfe1ac4f7d239edfd95cce228ccd6454d1a8e620f18bdc2b3031283c242c39",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+      },
+      "failures": [],
+      "abstentions": 2,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "A6": {
+      "n": 5,
+      "passed": 5,
+      "baseline_passed": 4,
+      "baseline": "First-source quotation-only audit without evidence annotations.",
+      "configuration_snapshot": {
+        "agent_id": "A6",
+        "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B1": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B1",
+        "agent_version": "6c368b4605ed36f177e79a63ee6d2fab311d992105aa9ffee249064af064d8a5",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+      },
+      "failures": [],
+      "abstentions": 2,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B2": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B2",
+        "agent_version": "7384d90d218c8e78d2060c2c2c1f55064be46c3b7f804c728b4ac1a8c207f7d4",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B3": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B3",
+        "agent_version": "3fe7c4922aca2dd702d58a06036e97a467ec7647dd64788ff95af7ffe657fd26",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B4": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B4",
+        "agent_version": "19975e455cc2b9c9e3e4c5544c90a259feff7feb2df74c9f7df38b5d52e220ef",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+      },
+      "failures": [],
+      "abstentions": 2,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B5": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B5",
+        "agent_version": "96a02832c07aa7a83d90d075741b3694b1fe530c354526356d15f3c4ccb5d78e",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B6": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B6",
+        "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+      },
+      "failures": [],
+      "abstentions": 2,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B7": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 1,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B7",
+        "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+      },
+      "failures": [],
+      "abstentions": 2,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "B8": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 2,
+      "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+      "configuration_snapshot": {
+        "agent_id": "B8",
+        "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+      },
+      "failures": [],
+      "abstentions": 1,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "C1": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 3,
+      "baseline": "Extract all non-excluded supplied passages without lexical screening.",
+      "configuration_snapshot": {
+        "agent_id": "C1",
+        "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+      },
+      "failures": [],
+      "abstentions": 0,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "C2": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 2,
+      "baseline": "Missingness and group frequency audit without categorical reliability calculations.",
+      "configuration_snapshot": {
+        "agent_id": "C2",
+        "agent_version": "4d12de1168e487bd86f5377b27b51cdcbabc655146f47ebb852f1d45fa44909b",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+      },
+      "failures": [],
+      "abstentions": 0,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "C3": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 3,
+      "baseline": "Copy reviewed protocol and flag missing fields without cross-plan consistency checks.",
+      "configuration_snapshot": {
+        "agent_id": "C3",
+        "agent_version": "600e6fe1e9e1c98c5cc89ee4c8854a98137dc9f22817690b2eb66081bd2de6ed",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
+      },
+      "failures": [],
+      "abstentions": 0,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "C4": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 3,
+      "baseline": "Core animal/human/environment/governance questions without procedure or scale triggers.",
+      "configuration_snapshot": {
+        "agent_id": "C4",
+        "agent_version": "25b9e4961114d1ef9b223e27ea9e7fb07445383febc02387da53b802d9ffbc4e",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
+      },
+      "failures": [],
+      "abstentions": 0,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "C5": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 4,
+      "baseline": "Artifact completeness and content manifest without run-provenance field checks.",
+      "configuration_snapshot": {
+        "agent_id": "C5",
+        "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+      },
+      "failures": [],
+      "abstentions": 0,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    },
+    "C6": {
+      "n": 4,
+      "passed": 4,
+      "baseline_passed": 3,
+      "baseline": "Classify coverage gaps without detecting disagreement among reported directions.",
+      "configuration_snapshot": {
+        "agent_id": "C6",
+        "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+        "backend": "deterministic-python",
+        "model": null,
+        "prompt": null,
+        "tools": [],
+        "dependencies": {
+          "python": "3.9.6"
+        },
+        "permissions": [],
+        "parameters": {
+          "input_bytes": 1000000,
+          "sources": 200,
+          "cost_usd": 0,
+          "runtime_seconds": 10
+        },
+        "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+      },
+      "failures": [],
+      "abstentions": 0,
+      "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+      "maturity": "Prototype"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "A1-typed",
+      "agent_id": "A1",
+      "category": "ordinary",
+      "input_sha256": "c0f9386b2feaf4d1a995a4cb31c53c013f3762e627f5817dc36516ac735ffb4d",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.00058,
+      "baseline_runtime_seconds": 0.000504,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+    },
+    {
+      "case_id": "A1-ambiguous",
+      "agent_id": "A1",
+      "category": "missing_ambiguous",
+      "input_sha256": "cb748c63e68cc5dea13682c034d2644b3b4a0d15de2d872da572283fe9e60036",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000102,
+      "baseline_runtime_seconds": 2.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+    },
+    {
+      "case_id": "A1-causal-overclaim",
+      "agent_id": "A1",
+      "category": "misleading_adversarial",
+      "input_sha256": "790eaa3477ba9948a8ef468f5481c570602243d38e580a7e1a80b0f451b20f58",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "IndexError: list index out of range",
+      "runtime_seconds": 0.000255,
+      "baseline_runtime_seconds": 2.7e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+    },
+    {
+      "case_id": "A1-measurement-action",
+      "agent_id": "A1",
+      "category": "task_specific_failure",
+      "input_sha256": "483ead9518c52c64404599f21d29e85ea100acb0b4094e437724566a79d7c8f9",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000222,
+      "baseline_runtime_seconds": 3.9e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+    },
+    {
+      "case_id": "A2-match",
+      "agent_id": "A2",
+      "category": "ordinary",
+      "input_sha256": "ec8defce823a92c023c5a332bd8675b1b0318e71695933b64b298be86d713d03",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No external search performed. Source annotations and availability classifications require verification."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.00038,
+      "baseline_runtime_seconds": 7.8e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+    },
+    {
+      "case_id": "A2-empty",
+      "agent_id": "A2",
+      "category": "missing_ambiguous",
+      "input_sha256": "c563002a3f00056ac9d18679c2cfb512f95a929adb68e30f0200b6321273ffd8",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No external search performed. Source annotations and availability classifications require verification."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000149,
+      "baseline_runtime_seconds": 3.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+    },
+    {
+      "case_id": "A2-no-target",
+      "agent_id": "A2",
+      "category": "abstention",
+      "input_sha256": "bb978d5ef4e285e2cecf8620730c9080d5df172b3695bfe54639c10e94a130e5",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "No external search performed. Source annotations and availability classifications require verification."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000226,
+      "baseline_runtime_seconds": 5.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+    },
+    {
+      "case_id": "A2-fabricated-quote",
+      "agent_id": "A2",
+      "category": "misleading_adversarial",
+      "input_sha256": "34328af6d82462da04b3daa747ba17b4eaa0ad50686ff339d027c77bed8598dd",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No external search performed. Source annotations and availability classifications require verification."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000287,
+      "baseline_runtime_seconds": 7.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+    },
+    {
+      "case_id": "A2-inaccessible",
+      "agent_id": "A2",
+      "category": "task_specific_failure",
+      "input_sha256": "76a811f85b08bb01c2507fdeac1c278a5cd96954f8ab4d39cbff388d548a6c15",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No external search performed. Source annotations and availability classifications require verification."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000356,
+      "baseline_runtime_seconds": 8.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+    },
+    {
+      "case_id": "A3-covered",
+      "agent_id": "A3",
+      "category": "ordinary",
+      "input_sha256": "572ed50829563d4401b2cfd291ea37f681837c403ade0282edd567bc43640788",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000396,
+      "baseline_runtime_seconds": 0.000102,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    {
+      "case_id": "A3-incomplete",
+      "agent_id": "A3",
+      "category": "missing_ambiguous",
+      "input_sha256": "27a8dc47e77a9e203077b2999ddc09b93dba794a9e0895b0a3be40b70e2e6319",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000176,
+      "baseline_runtime_seconds": 3.8e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    {
+      "case_id": "A3-no-capabilities",
+      "agent_id": "A3",
+      "category": "abstention",
+      "input_sha256": "78a1420898405661f58259dc3bdfb29b2ff2934303a27710e5fe90b3cf3d5766",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 6.2e-05,
+      "baseline_runtime_seconds": 1.4e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    {
+      "case_id": "A3-measurement-not-action",
+      "agent_id": "A3",
+      "category": "misleading_adversarial",
+      "input_sha256": "cfc298cf5f514f755c1200ab29647b046e2fbaf3f8249295119d15434e99a5ef",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000392,
+      "baseline_runtime_seconds": 9.7e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    {
+      "case_id": "A3-context-transfer",
+      "agent_id": "A3",
+      "category": "task_specific_failure",
+      "input_sha256": "b2b452ab6d935c45a4d16705f953408bd7c47fb0056928abf71f8cab15befff8",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.0004,
+      "baseline_runtime_seconds": 0.000102,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    {
+      "case_id": "A4-weighted",
+      "agent_id": "A4",
+      "category": "ordinary",
+      "input_sha256": "9e47e7331746be8542a2f0b5ac03baede39b326bcd8ffd33ff0bc042e061ac51",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "Scoring is a shallow comparison, not independent research or an adoption recommendation."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000369,
+      "baseline_runtime_seconds": 8.6e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+    },
+    {
+      "case_id": "A4-no-criteria",
+      "agent_id": "A4",
+      "category": "missing_ambiguous",
+      "input_sha256": "7654a7a5eefe30004d73614faac5ecf17edc54d9da99cbf0580b0f004a6fc3fd",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 8.3e-05,
+      "baseline_runtime_seconds": 1.6e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+    },
+    {
+      "case_id": "A4-invalid-score",
+      "agent_id": "A4",
+      "category": "misleading_adversarial",
+      "input_sha256": "7d421bc70201f81fabd794868abc9366864c41563a93eb17123a85bf5c91fe74",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "Scoring is a shallow comparison, not independent research or an adoption recommendation."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000347,
+      "baseline_runtime_seconds": 8.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+    },
+    {
+      "case_id": "A4-missing-cost",
+      "agent_id": "A4",
+      "category": "task_specific_failure",
+      "input_sha256": "0e4246661556f1d2771e9913b931fc330426dce60d0d1fa5eeeb4b2f435c10d0",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "Scoring is a shallow comparison, not independent research or an adoption recommendation."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000338,
+      "baseline_runtime_seconds": 8e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+    },
+    {
+      "case_id": "A5-dedup",
+      "agent_id": "A5",
+      "category": "ordinary",
+      "input_sha256": "09582bfec0612d345ad37424fbb3697c27f120948e72b027c0a95453408779dd",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Task suitability depends on explicit capability annotations; no external discovery or live access checks performed."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000475,
+      "baseline_runtime_seconds": 8.7e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+    },
+    {
+      "case_id": "A5-empty",
+      "agent_id": "A5",
+      "category": "missing_ambiguous",
+      "input_sha256": "293381f141734b232a76a5752b46cc1384b83335187e20f5b7202589907cf2c8",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Task suitability depends on explicit capability annotations; no external discovery or live access checks performed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 8.2e-05,
+      "baseline_runtime_seconds": 1.6e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+    },
+    {
+      "case_id": "A5-invented-capability",
+      "agent_id": "A5",
+      "category": "misleading_adversarial",
+      "input_sha256": "e5684c39faaf1c35e11ea45c175e4f0f0e6fdc4b780175b84149eeb5dc38cf0b",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Task suitability depends on explicit capability annotations; no external discovery or live access checks performed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000239,
+      "baseline_runtime_seconds": 5.8e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+    },
+    {
+      "case_id": "A5-version-unverified",
+      "agent_id": "A5",
+      "category": "task_specific_failure",
+      "input_sha256": "d06545327ba81563762de8bace1b68087535d5eb1c8c7d98ae32cb3fb7aeeb12",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Task suitability depends on explicit capability annotations; no external discovery or live access checks performed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000284,
+      "baseline_runtime_seconds": 6.4e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+    },
+    {
+      "case_id": "A6-quote",
+      "agent_id": "A6",
+      "category": "ordinary",
+      "input_sha256": "3be36c99bfd1307b37a6d06cabcf9bab950c4e4f05a125b34782e88746fa1e02",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000281,
+      "baseline_runtime_seconds": 6.9e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+    },
+    {
+      "case_id": "A6-missing",
+      "agent_id": "A6",
+      "category": "missing_ambiguous",
+      "input_sha256": "ffaac754fb9d6afba6266fb1ab34356b4e70b3ced5796d61e3f414ec891bf11d",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000113,
+      "baseline_runtime_seconds": 2.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+    },
+    {
+      "case_id": "A6-no-claims",
+      "agent_id": "A6",
+      "category": "abstention",
+      "input_sha256": "34a43848b43b4bb1c1015085b15edc7a885a9efe93a1a25174eccde6f5927839",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 5.9e-05,
+      "baseline_runtime_seconds": 1.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+    },
+    {
+      "case_id": "A6-overlap-not-entailment",
+      "agent_id": "A6",
+      "category": "misleading_adversarial",
+      "input_sha256": "1daf057a3c3f5018f8afb84024dcc6506c56d50f54afcd3fac8e4b7a914a2fd9",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000142,
+      "baseline_runtime_seconds": 2.9e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+    },
+    {
+      "case_id": "A6-contradiction-context",
+      "agent_id": "A6",
+      "category": "task_specific_failure",
+      "input_sha256": "1daf047ba9f02845756fd2b0ef10d491edb4f0754ad7fc259adb517797a0695d",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000194,
+      "baseline_runtime_seconds": 4.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+    },
+    {
+      "case_id": "A3-incompatible-combination",
+      "agent_id": "A3",
+      "category": "task_specific_failure",
+      "input_sha256": "02ffe3ae5a037816c73372136b88bc9058ae8a6b527786ba56b2254a37f00a4a",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000491,
+      "baseline_runtime_seconds": 0.000119,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    {
+      "case_id": "b1-ordinary",
+      "agent_id": "B1",
+      "category": "ordinary",
+      "input_sha256": "29889411abfa1b515007aec1e0101e0ab72c27b4f1131badd1a6bb691ec408ae",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Hypothesis draft; causal and welfare claims remain unvalidated."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'test_ready'",
+      "runtime_seconds": 0.000134,
+      "baseline_runtime_seconds": 1.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+    },
+    {
+      "case_id": "b1-missing",
+      "agent_id": "B1",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 2.1e-05,
+      "baseline_runtime_seconds": 6e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+    },
+    {
+      "case_id": "b2-ordinary",
+      "agent_id": "B2",
+      "category": "ordinary",
+      "input_sha256": "5fa3bed49a836d1993193a05577c34aecc1e3a0cc756666fc9167700e1ed6f84",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "A source reference and matching population do not independently validate an indicator."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000185,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+    },
+    {
+      "case_id": "b2-missing",
+      "agent_id": "B2",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 2e-05,
+      "baseline_runtime_seconds": 5e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+    },
+    {
+      "case_id": "b3-ordinary",
+      "agent_id": "B3",
+      "category": "ordinary",
+      "input_sha256": "e74de9b76b4a77be63f94e6096cf6bed027c072c3bd739752a4de122bae0262b",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Planning approximation only; do not start a study from this output."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000151,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+    },
+    {
+      "case_id": "b3-missing",
+      "agent_id": "B3",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 2e-05,
+      "baseline_runtime_seconds": 5e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+    },
+    {
+      "case_id": "b4-ordinary",
+      "agent_id": "B4",
+      "category": "ordinary",
+      "input_sha256": "0aac822f3de7a0bea7d4d210e77394aae4cc1b9acc17879000ad03c6afb98fcd",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Synthetic frame analysis only; no validated behaviour classifier or human-labelled welfare evaluation."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'mean_absolute_pixel_change'",
+      "runtime_seconds": 0.000211,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+    },
+    {
+      "case_id": "b4-missing",
+      "agent_id": "B4",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 2e-05,
+      "baseline_runtime_seconds": 5e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+    },
+    {
+      "case_id": "b5-ordinary",
+      "agent_id": "B5",
+      "category": "ordinary",
+      "input_sha256": "1b88bc0ec48e59808e2c4906503cdfb177e117ed9c0f8f3a9314fa4cc493975b",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Missingness mechanism is unknown; available-case statistics may be biased. Independent statistical review required for consequential use."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'missing'",
+      "runtime_seconds": 0.0002,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
+    },
+    {
+      "case_id": "b5-missing",
+      "agent_id": "B5",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 2e-05,
+      "baseline_runtime_seconds": 5e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
+    },
+    {
+      "case_id": "b6-ordinary",
+      "agent_id": "B6",
+      "category": "ordinary",
+      "input_sha256": "3e87f5547720c63a5d6b6392ce0bfed8276d2fe7bb42e6c3ee74c3d184fd2485",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'class'",
+      "runtime_seconds": 0.000135,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+    },
+    {
+      "case_id": "b6-missing",
+      "agent_id": "B6",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 1.9e-05,
+      "baseline_runtime_seconds": 5e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+    },
+    {
+      "case_id": "b7-ordinary",
+      "agent_id": "B7",
+      "category": "ordinary",
+      "input_sha256": "6db1c38099401c70c38d7d55935ab36803e9997a155fec002462e5e4e36f8794",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'compatibility'",
+      "runtime_seconds": 0.000177,
+      "baseline_runtime_seconds": 1.4e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+    },
+    {
+      "case_id": "b7-missing",
+      "agent_id": "B7",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 2e-05,
+      "baseline_runtime_seconds": 6e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+    },
+    {
+      "case_id": "b8-ordinary",
+      "agent_id": "B8",
+      "category": "ordinary",
+      "input_sha256": "55256859a20d46e325e38643a450343baf5f906a759288c5ceb1c1a4355f1fa9",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "Bench pass does not establish animal welfare benefit, field performance or safety."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000144,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+    },
+    {
+      "case_id": "b8-missing",
+      "agent_id": "B8",
+      "category": "missing",
+      "input_sha256": "5a569fd551797688c4a10254e74d2155c9b3780af4299fa047d7239200e4685f",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Input or result could not be validated; no research conclusion was produced."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 1.9e-05,
+      "baseline_runtime_seconds": 5e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+    },
+    {
+      "case_id": "b1-adversarial",
+      "agent_id": "B1",
+      "category": "adversarial",
+      "input_sha256": "4cdf00d5ef10cfa3bb86ea8d97eab83df928561f102d343ef02dcbf18c67dd9a",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Hypothesis draft; causal and welfare claims remain unvalidated."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'test_ready'",
+      "runtime_seconds": 0.00013,
+      "baseline_runtime_seconds": 1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+    },
+    {
+      "case_id": "b1-task-failure",
+      "agent_id": "B1",
+      "category": "task-failure",
+      "input_sha256": "a1658643822013abcab05301bc60d8cf3487c02e4962e2d902b7eef539f7be96",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 6.8e-05,
+      "baseline_runtime_seconds": 6e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+    },
+    {
+      "case_id": "b2-adversarial",
+      "agent_id": "B2",
+      "category": "adversarial",
+      "input_sha256": "cb6ff0c3fdeefe0f9ebf56256f34fa64ccf63bb98e09d1a9dc5a060c028c00d5",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "A source reference and matching population do not independently validate an indicator."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'validation_status'",
+      "runtime_seconds": 0.000188,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+    },
+    {
+      "case_id": "b2-task-failure",
+      "agent_id": "B2",
+      "category": "task-failure",
+      "input_sha256": "34e1fa2c8c2f7a472f433026d616457269f7bbb97160f8fc3bc02cff1401f0e9",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "A source reference and matching population do not independently validate an indicator."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'unresolved_decisions'",
+      "runtime_seconds": 9.8e-05,
+      "baseline_runtime_seconds": 7e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+    },
+    {
+      "case_id": "b3-adversarial",
+      "agent_id": "B3",
+      "category": "adversarial",
+      "input_sha256": "29c21d04ed1430b3d868f2b221a2d0cece562347d1cbf8cf7a01d51202f0ec85",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Planning approximation only; do not start a study from this output."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000152,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+    },
+    {
+      "case_id": "b3-task-failure",
+      "agent_id": "B3",
+      "category": "task-failure",
+      "input_sha256": "4355ab1107d02d08e0d417412e5a2c67bad008cbc86339dd8f064774e737b6ad",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Planning approximation only; do not start a study from this output."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'resource_feasible'",
+      "runtime_seconds": 0.000146,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+    },
+    {
+      "case_id": "b4-adversarial",
+      "agent_id": "B4",
+      "category": "adversarial",
+      "input_sha256": "8011c4984f6a543480dd0fd75f150e81745795550e6967b918f4d3f327f6738c",
+      "passed": true,
+      "error": null,
+      "status": "unsupported_input",
+      "warnings": [
+        "Only synthetic grayscale frame sequences are supported; audio and encoded video are unsupported."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000134,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+    },
+    {
+      "case_id": "b4-task-failure",
+      "agent_id": "B4",
+      "category": "task-failure",
+      "input_sha256": "817c0f839ab502b5514206af87930783311aa36ba4a8244c240c81d2bca3b570",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000144,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+    },
+    {
+      "case_id": "b5-adversarial",
+      "agent_id": "B5",
+      "category": "adversarial",
+      "input_sha256": "3314cdca5563ff664c5dd6a6ec670e574dc32fca52e324ffdc1e207207f2221d",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Missingness mechanism is unknown; available-case statistics may be biased. Independent statistical review required for consequential use."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'causal_assessment'",
+      "runtime_seconds": 0.000192,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
+    },
+    {
+      "case_id": "b5-task-failure",
+      "agent_id": "B5",
+      "category": "task-failure",
+      "input_sha256": "f4fa54e9c21b0972fd5de6ab4f5a7ec8edd683ee68b78022e2cb597af72082fe",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Missingness mechanism is unknown; available-case statistics may be biased. Independent statistical review required for consequential use."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'invalid'",
+      "runtime_seconds": 0.000145,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
+    },
+    {
+      "case_id": "b6-adversarial",
+      "agent_id": "B6",
+      "category": "adversarial",
+      "input_sha256": "f7bb6c3baf93e0af8104c241e2eea3db6f86f94a44cd74858d4d43455b9062ef",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'class'",
+      "runtime_seconds": 0.000125,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+    },
+    {
+      "case_id": "b6-task-failure",
+      "agent_id": "B6",
+      "category": "task-failure",
+      "input_sha256": "502b62b5cfaa967193d56ad376411f9034b48717ca1575d0ec76456d138460df",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000109,
+      "baseline_runtime_seconds": 6e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+    },
+    {
+      "case_id": "b7-adversarial",
+      "agent_id": "B7",
+      "category": "adversarial",
+      "input_sha256": "cb5aa7c3dd5a8558bfd18eaa4810b8437f5f3cbfec346dde7c9857908a2054b4",
+      "passed": true,
+      "error": null,
+      "status": "abstained",
+      "warnings": [
+        "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'rejected'",
+      "runtime_seconds": 0.000147,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+    },
+    {
+      "case_id": "b7-task-failure",
+      "agent_id": "B7",
+      "category": "task-failure",
+      "input_sha256": "aae7eaea856248c268893675637657b2327f5720b48c0db97696f14953213932",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "KeyError: 'freshness'",
+      "runtime_seconds": 0.000168,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+    },
+    {
+      "case_id": "b8-adversarial",
+      "agent_id": "B8",
+      "category": "adversarial",
+      "input_sha256": "86f7125277a619cee2828476575ddac938be28e8a2568e0a1cfca9bd3f834b54",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "Bench pass does not establish animal welfare benefit, field performance or safety."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000137,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+    },
+    {
+      "case_id": "b8-task-failure",
+      "agent_id": "B8",
+      "category": "task-failure",
+      "input_sha256": "b223e1d971a9a8f9fd31be62df42e9a4bb7ac1d85e768c915a5aff5be1e5ff24",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [
+        "Bench pass does not establish animal welfare benefit, field performance or safety."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000158,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+    },
+    {
+      "case_id": "c1-ordinary",
+      "agent_id": "C1",
+      "category": "ordinary",
+      "input_sha256": "923fc5cb829f40a8eec3679946f8b7463e432c2af04387c157a710948a2589f1",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000225,
+      "baseline_runtime_seconds": 1.7e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+    },
+    {
+      "case_id": "c1-missing",
+      "agent_id": "C1",
+      "category": "missing",
+      "input_sha256": "623769ebb36832a6090e881c51a198224672f09dba21dceb9300fb588b0a067f",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 8.1e-05,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+    },
+    {
+      "case_id": "c1-adversarial",
+      "agent_id": "C1",
+      "category": "adversarial",
+      "input_sha256": "9f431e0b61e7c8b2fec67d36e4bec973a776c0abe4219aacd8ec4aea7de965ae",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000117,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+    },
+    {
+      "case_id": "c1-task_failure",
+      "agent_id": "C1",
+      "category": "task_failure",
+      "input_sha256": "fb8e44bb1eb35db21858760bcf74ce873a19f4d26f0de4d06363692ed9340c9c",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000103,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+    },
+    {
+      "case_id": "c2-ordinary",
+      "agent_id": "C2",
+      "category": "ordinary",
+      "input_sha256": "f956f9890f7250b2130250de6234aa627d563eb003fb22fd28bd6f6cbad79cb3",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "No inferential validity or population-representativeness claim is made."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "IndexError: list index out of range",
+      "runtime_seconds": 0.00023,
+      "baseline_runtime_seconds": 1.9e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+    },
+    {
+      "case_id": "c2-missing",
+      "agent_id": "C2",
+      "category": "missing",
+      "input_sha256": "44df0cb576f8819ff0b2a26a276b1478f3717c275cb093bdec38d750fadf30c1",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No inferential validity or population-representativeness claim is made."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 8.7e-05,
+      "baseline_runtime_seconds": 7e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+    },
+    {
+      "case_id": "c2-adversarial",
+      "agent_id": "C2",
+      "category": "adversarial",
+      "input_sha256": "92f9104eba421b09aadba5f2a4e56d37600a85725dc56b443c4be4dad24b29d8",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "No inferential validity or population-representativeness claim is made."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000148,
+      "baseline_runtime_seconds": 1.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+    },
+    {
+      "case_id": "c2-task_failure",
+      "agent_id": "C2",
+      "category": "task_failure",
+      "input_sha256": "2c8d05230d5e267851d6543171ef2ea4514a841689dfab1aeca1c2a95db53aa8",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "No inferential validity or population-representativeness claim is made."
+      ],
+      "baseline_passed": false,
+      "baseline_error": "IndexError: list index out of range",
+      "runtime_seconds": 0.000143,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+    },
+    {
+      "case_id": "c3-ordinary",
+      "agent_id": "C3",
+      "category": "ordinary",
+      "input_sha256": "04530039d99003347af8f51b7da89e1c550a09d4dec28b9b5b03b1f4817796f2",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "This is a draft; no registration or external submission is performed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000146,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
+    },
+    {
+      "case_id": "c3-missing",
+      "agent_id": "C3",
+      "category": "missing",
+      "input_sha256": "c074705bdc2f86508ab6db92aed87a85ffd0f736dfdf582ba26acf673bc6a0de",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "This is a draft; no registration or external submission is performed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 9.8e-05,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
+    },
+    {
+      "case_id": "c3-adversarial",
+      "agent_id": "C3",
+      "category": "adversarial",
+      "input_sha256": "f649829a7ba63f724efaaceb89d5902bd7ba84ace4ff47a447423643ea7dffbc",
+      "passed": true,
+      "error": null,
+      "status": "awaiting_human",
+      "warnings": [],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 6.5e-05,
+      "baseline_runtime_seconds": 6e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
+    },
+    {
+      "case_id": "c3-task_failure",
+      "agent_id": "C3",
+      "category": "task_failure",
+      "input_sha256": "de2ceeaa512b79ab5e421b07ac012bb3fcfc0650d34c51cf78f8b641bd1cfffa",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "This is a draft; no registration or external submission is performed."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000108,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "02d3c1de71653de555e78c91012af10293d5a8a957db06648b1ffff4a3e4cc62"
+    },
+    {
+      "case_id": "c4-ordinary",
+      "agent_id": "C4",
+      "category": "ordinary",
+      "input_sha256": "26bcebbb6b7958dc52c9548e36efab4a50534a6f1ae181ee76949b3cbe8ae5e1",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Questions and mitigation options are contextual review support, not risk clearance or ethics approval."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000141,
+      "baseline_runtime_seconds": 1.5e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
+    },
+    {
+      "case_id": "c4-missing",
+      "agent_id": "C4",
+      "category": "missing",
+      "input_sha256": "dce3003a764a51acae735baaa02d74210f0484c87c82f6cc44b334ddb458fc16",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Questions and mitigation options are contextual review support, not risk clearance or ethics approval."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000104,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
+    },
+    {
+      "case_id": "c4-adversarial",
+      "agent_id": "C4",
+      "category": "adversarial",
+      "input_sha256": "08a92d120704d7220c9efccf4726ead0954c75dc6afb48d1e8c0b599bb5782f9",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Questions and mitigation options are contextual review support, not risk clearance or ethics approval."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000111,
+      "baseline_runtime_seconds": 1.1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
+    },
+    {
+      "case_id": "c4-task_failure",
+      "agent_id": "C4",
+      "category": "task_failure",
+      "input_sha256": "c39b46f495d9399844f1adf18936b0c3c6f4d3366730c09ec5a7421011d9a3ec",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Questions and mitigation options are contextual review support, not risk clearance or ethics approval."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000136,
+      "baseline_runtime_seconds": 1.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
+    },
+    {
+      "case_id": "c5-ordinary",
+      "agent_id": "C5",
+      "category": "ordinary",
+      "input_sha256": "612373c422a5a85a638cb4c38a2d9e9e16768812037e8c77fe72fcfc378fa5f4",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Manifest audits supplied content; referenced paths and code are not opened or executed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000139,
+      "baseline_runtime_seconds": 1.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+    },
+    {
+      "case_id": "c5-missing",
+      "agent_id": "C5",
+      "category": "missing",
+      "input_sha256": "336635ed1aaa898ba48421258ae1fda93594ed7f55ba8b2fecc0f4b6e90fb026",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Manifest audits supplied content; referenced paths and code are not opened or executed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 9e-05,
+      "baseline_runtime_seconds": 8e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+    },
+    {
+      "case_id": "c5-adversarial",
+      "agent_id": "C5",
+      "category": "adversarial",
+      "input_sha256": "1be8d3a625ac00d7d2af9678d815b1e99584a68c63599faab29f5c764ac6eee5",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Manifest audits supplied content; referenced paths and code are not opened or executed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.00013,
+      "baseline_runtime_seconds": 1.3e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+    },
+    {
+      "case_id": "c5-task_failure",
+      "agent_id": "C5",
+      "category": "task_failure",
+      "input_sha256": "24358e7f268b9977d1c812f9c2c158242189732c238195b101a382951e49f877",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Manifest audits supplied content; referenced paths and code are not opened or executed."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000141,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+    },
+    {
+      "case_id": "c6-ordinary",
+      "agent_id": "C6",
+      "category": "ordinary",
+      "input_sha256": "91886887e4053ac9b8babdcbc3d95eae50d703094a8376242b3654aae37e0d00",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+      ],
+      "baseline_passed": false,
+      "baseline_error": null,
+      "runtime_seconds": 0.000167,
+      "baseline_runtime_seconds": 1.2e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+    },
+    {
+      "case_id": "c6-missing",
+      "agent_id": "C6",
+      "category": "missing",
+      "input_sha256": "82d4d42665e560a5bdb8f557a13890299b38b58344793fbb4abbd19750ea0cfa",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000113,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+    },
+    {
+      "case_id": "c6-adversarial",
+      "agent_id": "C6",
+      "category": "adversarial",
+      "input_sha256": "94133e7a93a3093a4a931d5c195c2481f0ad289d2c9429feb03b80e75b8d6991",
+      "passed": true,
+      "error": null,
+      "status": "partial",
+      "warnings": [
+        "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.000115,
+      "baseline_runtime_seconds": 9e-06,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+    },
+    {
+      "case_id": "c6-task_failure",
+      "agent_id": "C6",
+      "category": "task_failure",
+      "input_sha256": "c6d31134cda8b32e7f37195ead0e3e230de34d4cda59eb8ba3d8468e1da6811e",
+      "passed": true,
+      "error": null,
+      "status": "completed",
+      "warnings": [
+        "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+      ],
+      "baseline_passed": true,
+      "baseline_error": null,
+      "runtime_seconds": 0.00014,
+      "baseline_runtime_seconds": 1e-05,
+      "cost_usd": 0.0,
+      "configuration_snapshot_id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+    }
+  ]
+}

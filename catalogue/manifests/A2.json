@@ -1,0 +1,193 @@
+{
+  "name": "Solution and Prior-Art Scout",
+  "task": "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+  "required": [
+    "search_targets",
+    "sources"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "search_targets",
+      "sources"
+    ],
+    "properties": {
+      "search_targets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "capability_id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "capability_id": {
+              "type": "string"
+            },
+            "component_id": {
+              "type": "string"
+            },
+            "component_type": {
+              "type": "string"
+            },
+            "context": {
+              "type": "object"
+            },
+            "constraints": {
+              "type": "object"
+            },
+            "requirements": {
+              "type": "array"
+            }
+          }
+        }
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "passage": {
+              "type": "string"
+            },
+            "accessible": {
+              "type": "boolean"
+            },
+            "context": {
+              "type": "object"
+            },
+            "capability_matches": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "capability_id",
+                  "evidence_quote"
+                ],
+                "properties": {
+                  "capability_id": {
+                    "type": "string"
+                  },
+                  "evidence_quote": {
+                    "type": "string"
+                  },
+                  "requirements_met": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "requirements_unmet": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "constraint_fit": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "solution": {
+              "type": "object"
+            },
+            "tool": {
+              "type": "object"
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "claim_id",
+                  "relation",
+                  "evidence_quote"
+                ],
+                "properties": {
+                  "claim_id": {
+                    "type": "string"
+                  },
+                  "relation": {
+                    "type": "string",
+                    "enum": [
+                      "supports",
+                      "contradicts",
+                      "neutral"
+                    ]
+                  },
+                  "evidence_quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "data_classification": {
+        "type": "string",
+        "enum": [
+          "public",
+          "synthetic"
+        ]
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "candidates",
+      "coverage"
+    ],
+    "properties": {
+      "candidates": {
+        "type": "array"
+      },
+      "coverage": {
+        "type": "array"
+      }
+    }
+  },
+  "limitations": [
+    "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+    "Synthetic examples are not field validation."
+  ],
+  "modalities": [
+    "text",
+    "structured_data"
+  ],
+  "baseline": "Scan the first supplied source only.",
+  "id": "A2",
+  "configuration_snapshot": {
+    "agent_id": "A2",
+    "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+  },
+  "run_method": "python -m commons run A2",
+  "permissions": [],
+  "human_review_required": true
+}

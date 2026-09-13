@@ -1,0 +1,25 @@
+{
+  "question": "Does enrichment change pig activity?",
+  "inclusion_terms": [
+    "pig",
+    "enrichment"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "passage": "Synthetic pig enrichment study reports more activity."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d1",
+      "passage": "Synthetic pig enrichment study reports more activity.",
+      "human_decision": "include",
+      "finding": "More activity reported; welfare implications uncertain.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "data_classification": "synthetic"
+}

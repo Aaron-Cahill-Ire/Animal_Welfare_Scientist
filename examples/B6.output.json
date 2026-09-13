@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "run_id": "2ac97c2c-0b7b-470b-999c-969fe80db9f8",
+  "agent_id": "B6",
+  "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+  "configuration_snapshot": {
+    "agent_id": "B6",
+    "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+  },
+  "input_sha256": "3e87f5547720c63a5d6b6392ce0bfed8276d2fe7bb42e6c3ee74c3d184fd2485",
+  "sources": [],
+  "runtime_seconds": 0.000152,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "partial",
+  "data": {
+    "concept_specification": {
+      "components": [
+        {
+          "requirement_id": "r1",
+          "class": "temperature sensor",
+          "purpose": "measurement",
+          "quantity": "temperature"
+        }
+      ],
+      "interfaces": [
+        {
+          "requirement_id": "r1",
+          "signal": "digital or analog signal",
+          "connector": null,
+          "voltage": null
+        }
+      ],
+      "environment": {
+        "location": "synthetic bench"
+      },
+      "production_ready": false
+    },
+    "bench_test_plan": [
+      {
+        "requirement_id": "r1",
+        "test": "Bench calibration against a reference and repeated measurements",
+        "acceptance": "error <= 0.5 C against reference",
+        "animal_use": false
+      }
+    ],
+    "unresolved_decisions": [],
+    "review_needs": [
+      "Engineering review",
+      "Animal ethics review before any animal use"
+    ]
+  },
+  "warnings": [
+    "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

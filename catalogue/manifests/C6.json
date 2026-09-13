@@ -1,0 +1,131 @@
+{
+  "name": "Research Question and Knowledge-Gap Agent",
+  "task": "Classify scoped unresolved questions from supplied synthesis and documented search coverage.",
+  "required": [
+    "synthesis",
+    "scope"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "synthesis",
+      "scope"
+    ],
+    "properties": {
+      "synthesis": {
+        "type": "object",
+        "properties": {
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question": {
+                  "type": "string"
+                },
+                "finding": {
+                  "type": "string"
+                },
+                "direction": {
+                  "type": "string"
+                },
+                "source_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "search_coverage": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "complete_within_scope": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      },
+      "scope": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "scope",
+      "research_questions",
+      "out_of_scope_findings",
+      "search_coverage",
+      "global_absence_claim"
+    ],
+    "properties": {
+      "scope": {
+        "type": "object"
+      },
+      "research_questions": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "out_of_scope_findings": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "search_coverage": {
+        "type": "object"
+      },
+      "global_absence_claim": {
+        "type": "boolean"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "modalities": [
+    "text",
+    "structured_data"
+  ],
+  "baseline": "Classify coverage gaps without detecting disagreement among reported directions.",
+  "id": "C6",
+  "configuration_snapshot": {
+    "agent_id": "C6",
+    "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+  },
+  "run_method": "python -m commons run C6",
+  "permissions": [],
+  "human_review_required": true
+}

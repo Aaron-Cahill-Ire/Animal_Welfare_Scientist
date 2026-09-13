@@ -1,0 +1,80 @@
+{
+  "name": "Hypothesis and Crucial-Uncertainty Agent",
+  "task": "Draft falsifiable hypotheses from a structured brief",
+  "required": [
+    "brief"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "brief"
+    ],
+    "properties": {
+      "brief": {
+        "type": "object"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "hypotheses": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "claim": {
+              "type": "string"
+            },
+            "test_ready": {
+              "type": "boolean"
+            },
+            "falsifier": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "theory_of_change": {
+        "type": "array"
+      },
+      "unresolved_decisions": {
+        "type": "array"
+      },
+      "belief_forecast": {
+        "type": "object"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "modalities": [
+    "structured-json"
+  ],
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "id": "B1",
+  "configuration_snapshot": {
+    "agent_id": "B1",
+    "agent_version": "6c368b4605ed36f177e79a63ee6d2fab311d992105aa9ffee249064af064d8a5",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+  },
+  "run_method": "python -m commons run B1",
+  "permissions": [],
+  "human_review_required": true
+}

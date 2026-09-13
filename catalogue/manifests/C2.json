@@ -1,0 +1,123 @@
+{
+  "name": "Dataset and Measurement Auditor",
+  "task": "Calculate missingness, group frequencies, paired categorical agreement and cross-split overlap.",
+  "required": [
+    "rows",
+    "data_dictionary"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "rows",
+      "data_dictionary"
+    ],
+    "properties": {
+      "rows": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "data_dictionary": {
+        "type": "object"
+      },
+      "group_by": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "rater_columns": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "unit_id_column": {
+        "type": "string"
+      },
+      "split_column": {
+        "type": "string"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "row_count",
+      "missingness",
+      "representation",
+      "annotation_reliability",
+      "cross_split_units",
+      "undeclared_columns",
+      "sensor_validity",
+      "generalisation"
+    ],
+    "properties": {
+      "row_count": {
+        "type": "integer"
+      },
+      "missingness": {
+        "type": "object"
+      },
+      "representation": {
+        "type": "object"
+      },
+      "annotation_reliability": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "cross_split_units": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "undeclared_columns": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "sensor_validity": {
+        "type": "string"
+      },
+      "generalisation": {
+        "type": "string"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "modalities": [
+    "text",
+    "structured_data"
+  ],
+  "baseline": "Missingness and group frequency audit without categorical reliability calculations.",
+  "id": "C2",
+  "configuration_snapshot": {
+    "agent_id": "C2",
+    "agent_version": "4d12de1168e487bd86f5377b27b51cdcbabc655146f47ebb852f1d45fa44909b",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "5398c61b2e46ca86930d59ac96ffe398facfe9365a29669ead89c50238b28ec2"
+  },
+  "run_method": "python -m commons run C2",
+  "permissions": [],
+  "human_review_required": true
+}

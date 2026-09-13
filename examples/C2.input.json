@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "id": 1,
+      "species": "pig",
+      "r1": "active",
+      "r2": "active"
+    },
+    {
+      "id": 2,
+      "species": "pig",
+      "r1": "rest",
+      "r2": "active"
+    }
+  ],
+  "data_dictionary": {
+    "id": {},
+    "species": {},
+    "r1": {},
+    "r2": {}
+  },
+  "group_by": [
+    "species"
+  ],
+  "rater_columns": [
+    "r1",
+    "r2"
+  ],
+  "data_classification": "synthetic"
+}

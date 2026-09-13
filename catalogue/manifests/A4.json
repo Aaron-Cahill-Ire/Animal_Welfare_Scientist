@@ -1,0 +1,249 @@
+{
+  "name": "Opportunity Prioritisation Orchestrator",
+  "task": "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented.",
+  "required": [
+    "candidates",
+    "criteria"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "candidates",
+      "criteria"
+    ],
+    "properties": {
+      "candidates": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "scores": {
+              "type": "object"
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "requirements_met": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "requirements_unmet": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "constraint_fit": {
+              "type": "object"
+            },
+            "context": {
+              "type": "object"
+            },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "criteria": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "weight": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "maximize",
+                "minimize"
+              ]
+            }
+          }
+        }
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "passage": {
+              "type": "string"
+            },
+            "accessible": {
+              "type": "boolean"
+            },
+            "context": {
+              "type": "object"
+            },
+            "capability_matches": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "capability_id",
+                  "evidence_quote"
+                ],
+                "properties": {
+                  "capability_id": {
+                    "type": "string"
+                  },
+                  "evidence_quote": {
+                    "type": "string"
+                  },
+                  "requirements_met": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "requirements_unmet": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "constraint_fit": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "solution": {
+              "type": "object"
+            },
+            "tool": {
+              "type": "object"
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "claim_id",
+                  "relation",
+                  "evidence_quote"
+                ],
+                "properties": {
+                  "claim_id": {
+                    "type": "string"
+                  },
+                  "relation": {
+                    "type": "string",
+                    "enum": [
+                      "supports",
+                      "contradicts",
+                      "neutral"
+                    ]
+                  },
+                  "evidence_quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "data_classification": {
+        "type": "string",
+        "enum": [
+          "public",
+          "synthetic"
+        ]
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "comparison",
+      "proposed_shortlist",
+      "crucial_uncertainties",
+      "human_review_required",
+      "gate"
+    ],
+    "properties": {
+      "comparison": {
+        "type": "array"
+      },
+      "proposed_shortlist": {
+        "type": "array"
+      },
+      "crucial_uncertainties": {
+        "type": "array"
+      },
+      "human_review_required": {
+        "type": "boolean"
+      },
+      "gate": {
+        "type": "string"
+      }
+    }
+  },
+  "limitations": [
+    "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented.",
+    "Synthetic examples are not field validation."
+  ],
+  "modalities": [
+    "text",
+    "structured_data"
+  ],
+  "baseline": "Rank by the first criterion only.",
+  "id": "A4",
+  "configuration_snapshot": {
+    "agent_id": "A4",
+    "agent_version": "6ab83d2d0f4d95d3d610a9c9a1a0beddd5be6368d2c7cb8e725465f29fc07885",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+  },
+  "run_method": "python -m commons run A4",
+  "permissions": [],
+  "human_review_required": true
+}

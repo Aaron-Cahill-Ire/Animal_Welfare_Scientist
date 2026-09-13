@@ -1,0 +1,72 @@
+{
+  "brief": "Delayed gait detection may worsen welfare in dairy cows.",
+  "context": {
+    "affected_animals": "dairy cows",
+    "production_system": "dairy"
+  },
+  "constraints": {
+    "budget": "unknown"
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+      "url": "https://example.org/sensor",
+      "context": {
+        "affected_animals": "dairy cows"
+      },
+      "solution": {
+        "name": "Synthetic gait sensor",
+        "classification": "prototype"
+      },
+      "capability_matches": [
+        {
+          "capability_id": "gait",
+          "evidence_quote": "detects abnormal gait",
+          "requirements_met": [
+            "gait detection"
+          ]
+        }
+      ],
+      "tool": {
+        "name": "Synthetic gait sensor",
+        "canonical_url": "https://example.org/sensor",
+        "capabilities": [
+          {
+            "name": "gait detection",
+            "evidence_quote": "detects abnormal gait"
+          }
+        ],
+        "version": "1.0",
+        "version_evidence_quote": "Version 1.0",
+        "access": "open source",
+        "access_evidence_quote": "open source"
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "measurement-gait",
+      "type": "measurement",
+      "description": "Delayed gait detection",
+      "source_ids": [
+        "s1"
+      ],
+      "epistemic_status": "hypothesis",
+      "downstream_action": "Route animal for qualified examination",
+      "dependencies": [
+        "examination-access"
+      ],
+      "required_capabilities": [
+        {
+          "id": "gait",
+          "description": "Detect abnormal gait",
+          "requirements": [
+            "gait detection"
+          ]
+        }
+      ]
+    }
+  ],
+  "data_classification": "synthetic"
+}

@@ -1,0 +1,209 @@
+{
+  "name": "Missing-Capability Analyst",
+  "task": "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+  "required": [
+    "problem_map",
+    "candidates"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "problem_map",
+      "candidates"
+    ],
+    "properties": {
+      "problem_map": {
+        "type": "object"
+      },
+      "candidates": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "scores": {
+              "type": "object"
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "requirements_met": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "requirements_unmet": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "constraint_fit": {
+              "type": "object"
+            },
+            "context": {
+              "type": "object"
+            },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "coverage": {
+        "type": "array"
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "passage": {
+              "type": "string"
+            },
+            "accessible": {
+              "type": "boolean"
+            },
+            "context": {
+              "type": "object"
+            },
+            "capability_matches": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "capability_id",
+                  "evidence_quote"
+                ],
+                "properties": {
+                  "capability_id": {
+                    "type": "string"
+                  },
+                  "evidence_quote": {
+                    "type": "string"
+                  },
+                  "requirements_met": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "requirements_unmet": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "constraint_fit": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "solution": {
+              "type": "object"
+            },
+            "tool": {
+              "type": "object"
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "claim_id",
+                  "relation",
+                  "evidence_quote"
+                ],
+                "properties": {
+                  "claim_id": {
+                    "type": "string"
+                  },
+                  "relation": {
+                    "type": "string",
+                    "enum": [
+                      "supports",
+                      "contradicts",
+                      "neutral"
+                    ]
+                  },
+                  "evidence_quote": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "data_classification": {
+        "type": "string",
+        "enum": [
+          "public",
+          "synthetic"
+        ]
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "gaps"
+    ],
+    "properties": {
+      "gaps": {
+        "type": "array"
+      }
+    }
+  },
+  "limitations": [
+    "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+    "Synthetic examples are not field validation."
+  ],
+  "modalities": [
+    "text",
+    "structured_data"
+  ],
+  "baseline": "Compare only the first candidate.",
+  "id": "A3",
+  "configuration_snapshot": {
+    "agent_id": "A3",
+    "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+  },
+  "run_method": "python -m commons run A3",
+  "permissions": [],
+  "human_review_required": true
+}

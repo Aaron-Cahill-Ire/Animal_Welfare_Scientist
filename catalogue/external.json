@@ -1,0 +1,127 @@
+[
+  {
+    "name": "DeepLabCut",
+    "repository": "https://github.com/DeepLabCut/DeepLabCut",
+    "description": "Official implementation of DeepLabCut: Markerless pose estimation of user-defined features with deep learning for all animals incl. humans",
+    "commit": "53e95879b9a090ccd095c3f9c724e1ade4be8fb4",
+    "checked_at": "2026-09-13",
+    "license": "LGPL-3.0",
+    "archived": false,
+    "id": "E1",
+    "type": "external",
+    "maturity": "Identified",
+    "security": "Unreviewed",
+    "maintenance": "Active",
+    "track": "B",
+    "modalities": [
+      "video"
+    ],
+    "task": "Markerless animal pose estimation",
+    "evidence_review": {
+      "method": "Primary repository documentation and GitHub API metadata inspected on 2026-09-13.",
+      "finding": "Runnable tool documented upstream. Not executed, security-reviewed or evaluated on welfare data by the Commons.",
+      "limitation": "Keypoint tracking requires task-specific labels and validation; it does not diagnose welfare."
+    },
+    "source": "https://github.com/DeepLabCut/DeepLabCut/tree/53e95879b9a090ccd095c3f9c724e1ade4be8fb4"
+  },
+  {
+    "name": "sleap",
+    "repository": "https://github.com/talmolab/sleap",
+    "description": "A deep learning framework for multi-animal pose tracking.",
+    "commit": "23b02e6521c7e9e813275f6374d8be74840585a8",
+    "checked_at": "2026-09-13",
+    "license": "BSD-3-Clause-Clear",
+    "archived": false,
+    "id": "E2",
+    "type": "external",
+    "maturity": "Identified",
+    "security": "Unreviewed",
+    "maintenance": "Active",
+    "track": "B",
+    "modalities": [
+      "video"
+    ],
+    "task": "Multi-animal pose tracking",
+    "evidence_review": {
+      "method": "Primary repository documentation and GitHub API metadata inspected on 2026-09-13.",
+      "finding": "Runnable tool documented upstream. Not executed, security-reviewed or evaluated on welfare data by the Commons.",
+      "limitation": "Tracking performance and welfare interpretation require separate dataset-specific validation."
+    },
+    "source": "https://github.com/talmolab/sleap/tree/23b02e6521c7e9e813275f6374d8be74840585a8"
+  },
+  {
+    "name": "asreview",
+    "repository": "https://github.com/asreview/asreview",
+    "description": "Active learning for systematic reviews",
+    "commit": "79d568212b2b0a78f9fd7be3c5117dfb890489f9",
+    "checked_at": "2026-09-13",
+    "license": "Apache-2.0",
+    "archived": false,
+    "id": "E3",
+    "type": "external",
+    "maturity": "Identified",
+    "security": "Unreviewed",
+    "maintenance": "Active",
+    "track": "C",
+    "modalities": [
+      "text"
+    ],
+    "task": "Literature screening prioritisation",
+    "evidence_review": {
+      "method": "Primary repository documentation and GitHub API metadata inspected on 2026-09-13.",
+      "finding": "Runnable tool documented upstream. Not executed, security-reviewed or evaluated on welfare data by the Commons.",
+      "limitation": "Screening prioritisation cannot replace inclusion decisions or establish review completeness."
+    },
+    "source": "https://github.com/asreview/asreview/tree/79d568212b2b0a78f9fd7be3c5117dfb890489f9"
+  },
+  {
+    "name": "statsmodels",
+    "repository": "https://github.com/statsmodels/statsmodels",
+    "description": "Statsmodels: statistical modeling and econometrics in Python",
+    "commit": "77ecdfa3e93ea16ec2179e696753af885759fb01",
+    "checked_at": "2026-09-13",
+    "license": "BSD-3-Clause",
+    "archived": false,
+    "id": "E4",
+    "type": "external",
+    "maturity": "Identified",
+    "security": "Unreviewed",
+    "maintenance": "Active",
+    "track": "C",
+    "modalities": [
+      "tabular"
+    ],
+    "task": "Statistical modelling",
+    "evidence_review": {
+      "method": "Primary repository documentation and GitHub API metadata inspected on 2026-09-13.",
+      "finding": "Runnable tool documented upstream. Not executed, security-reviewed or evaluated on welfare data by the Commons.",
+      "limitation": "Statistical implementation does not establish design validity or causal identification."
+    },
+    "source": "https://github.com/statsmodels/statsmodels/tree/77ecdfa3e93ea16ec2179e696753af885759fb01"
+  },
+  {
+    "name": "pymc",
+    "repository": "https://github.com/pymc-devs/pymc",
+    "description": "Bayesian Modeling and Probabilistic Programming in Python",
+    "commit": "3f3b1082e5681503df3a79ae5a790475eed5c626",
+    "checked_at": "2026-09-13",
+    "license": "NOASSERTION",
+    "archived": false,
+    "id": "E5",
+    "type": "external",
+    "maturity": "Identified",
+    "security": "Unreviewed",
+    "maintenance": "Active",
+    "track": "C",
+    "modalities": [
+      "tabular"
+    ],
+    "task": "Bayesian statistical modelling",
+    "evidence_review": {
+      "method": "Primary repository documentation and GitHub API metadata inspected on 2026-09-13.",
+      "finding": "Runnable tool documented upstream. Not executed, security-reviewed or evaluated on welfare data by the Commons.",
+      "limitation": "Posterior inference depends on model specification, priors and diagnostic checks."
+    },
+    "source": "https://github.com/pymc-devs/pymc/tree/3f3b1082e5681503df3a79ae5a790475eed5c626"
+  }
+]

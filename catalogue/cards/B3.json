@@ -1,0 +1,146 @@
+{
+  "name": "Experiment and Analysis Planner",
+  "purpose": "Plan a comparison and approximate sample requirements",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Plan a comparison and approximate sample requirements"
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000157,
+  "human_review_required": true,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "Power approximation is limited to two independent continuous-outcome groups; no clustering adjustment"
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "protocol": {
+      "experimental_unit": "synthetic enclosure",
+      "comparator": "standard enclosure",
+      "primary_outcome": "sound level"
+    },
+    "resources": {
+      "available_units": 100,
+      "minimum_effect": 2,
+      "outcome_sd": 3,
+      "randomization_feasible": true
+    },
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "49e1f758-5d6a-466f-9a7a-bb7784e758e8",
+    "agent_id": "B3",
+    "agent_version": "3fe7c4922aca2dd702d58a06036e97a467ec7647dd64788ff95af7ffe657fd26",
+    "configuration_snapshot": {
+      "agent_id": "B3",
+      "agent_version": "3fe7c4922aca2dd702d58a06036e97a467ec7647dd64788ff95af7ffe657fd26",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+    },
+    "input_sha256": "e74de9b76b4a77be63f94e6096cf6bed027c072c3bd739752a4de122bae0262b",
+    "sources": [],
+    "runtime_seconds": 0.000157,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "design": "parallel randomized comparison",
+      "experimental_unit": "synthetic enclosure",
+      "comparator": "standard enclosure",
+      "sampling": {
+        "available_units": 100,
+        "approximate_units_per_arm": 36,
+        "resource_feasible": true,
+        "formula": "ceil(2*(z_(1-alpha/2)+z_power)^2*sd^2/effect^2)",
+        "assumptions": [
+          "Independent units",
+          "Two equally sized groups",
+          "Continuous approximately normal outcome",
+          "No attrition, clustering or multiplicity adjustment",
+          "Large-sample approximation; statistician review required"
+        ]
+      },
+      "power_inputs": {
+        "minimum_effect": 2,
+        "outcome_sd": 3,
+        "alpha": 0.05,
+        "power": 0.8
+      },
+      "analysis_plan": {
+        "confirmatory": {
+          "outcome": "sound level",
+          "contrast": "between-group mean difference",
+          "prespecification_required": true
+        },
+        "exploratory": [],
+        "missing_data": "Report missingness by group; prespecify handling and sensitivity analysis"
+      },
+      "stopping_assumptions": [
+        "No efficacy peeking without prespecified sequential boundaries",
+        "Human-approved humane stopping rules override study completion"
+      ],
+      "unresolved_decisions": []
+    },
+    "warnings": [
+      "Planning approximation only; do not start a study from this output."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+      "Human review required before consequential research decisions",
+      "Power approximation is limited to two independent continuous-outcome groups; no clustering adjustment"
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "run_id": "8afb68d0-9ed3-455e-90df-71397229b78e",
+  "agent_id": "C5",
+  "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+  "configuration_snapshot": {
+    "agent_id": "C5",
+    "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+  },
+  "input_sha256": "612373c422a5a85a638cb4c38a2d9e9e16768812037e8c77fe72fcfc378fa5f4",
+  "sources": [],
+  "runtime_seconds": 0.000154,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "partial",
+  "data": {
+    "manifest": [
+      {
+        "id": "methods",
+        "type": "methods",
+        "path": null,
+        "source_ids": [],
+        "derived_from": [],
+        "sha256": "a2d81e6fdf2318360ab0cd2d8d31a512c4c9ed790f666980a648068848968857",
+        "content_supplied": true,
+        "availability": "supplied inline"
+      }
+    ],
+    "missing_artifact_checklist": [
+      "protocol",
+      "code",
+      "configuration",
+      "data",
+      "results",
+      "deviations",
+      "limitations",
+      "run_records"
+    ],
+    "provenance_issues": [],
+    "run_records": [],
+    "methods_draft": [
+      {
+        "artifact_id": "methods",
+        "type": "methods",
+        "supplied_text": "Synthetic observer labels activity at fixed intervals."
+      }
+    ],
+    "reproduced_execution": false
+  },
+  "warnings": [
+    "Manifest audits supplied content; referenced paths and code are not opened or executed."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

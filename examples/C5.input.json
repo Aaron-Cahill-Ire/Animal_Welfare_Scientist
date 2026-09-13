@@ -1,0 +1,11 @@
+{
+  "artifacts": [
+    {
+      "id": "methods",
+      "type": "methods",
+      "content": "Synthetic observer labels activity at fixed intervals."
+    }
+  ],
+  "run_records": [],
+  "data_classification": "synthetic"
+}

@@ -1,0 +1,9 @@
+{
+  "brief": {
+    "animals": "pigs",
+    "activity": "camera observation",
+    "setting": "sanctuary",
+    "deployment_scale": "single site"
+  },
+  "data_classification": "synthetic"
+}

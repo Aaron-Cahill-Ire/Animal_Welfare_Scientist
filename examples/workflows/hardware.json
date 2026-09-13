@@ -1,0 +1,2105 @@
+{
+  "label": "Actual software execution on synthetic inputs with simulated human/external artifacts. No real approval or experiment.",
+  "steps": [
+    {
+      "input": {
+        "requirements": [
+          {
+            "id": "r1",
+            "kind": "measurement",
+            "quantity": "temperature",
+            "acceptance": "error <= 0.5 C against reference"
+          }
+        ],
+        "environment": {
+          "location": "synthetic bench"
+        },
+        "data_classification": "synthetic",
+        "component_requirements": {
+          "voltage": 3.3
+        },
+        "supplier_records": [
+          {
+            "part_id": "synthetic-part",
+            "supplier": "Synthetic supplier",
+            "approved": true,
+            "specifications": {
+              "voltage": 3.3
+            },
+            "checked_at": "2026-09-01",
+            "cost": 12,
+            "currency": "USD",
+            "availability": "synthetic in-stock claim",
+            "source_id": "synthetic-catalogue"
+          }
+        ],
+        "as_of": "2026-09-13",
+        "criteria": [
+          {
+            "id": "c1",
+            "metric": "error",
+            "operator": "<=",
+            "threshold": 0.5,
+            "unit": "C"
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-catalogue",
+            "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+            "context": "synthetic supplier"
+          }
+        ]
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "hardware",
+        "input": {
+          "requirements": [
+            {
+              "id": "r1",
+              "kind": "measurement",
+              "quantity": "temperature",
+              "acceptance": "error <= 0.5 C against reference"
+            }
+          ],
+          "environment": {
+            "location": "synthetic bench"
+          },
+          "data_classification": "synthetic",
+          "component_requirements": {
+            "voltage": 3.3
+          },
+          "supplier_records": [
+            {
+              "part_id": "synthetic-part",
+              "supplier": "Synthetic supplier",
+              "approved": true,
+              "specifications": {
+                "voltage": 3.3
+              },
+              "checked_at": "2026-09-01",
+              "cost": 12,
+              "currency": "USD",
+              "availability": "synthetic in-stock claim",
+              "source_id": "synthetic-catalogue"
+            }
+          ],
+          "as_of": "2026-09-13",
+          "criteria": [
+            {
+              "id": "c1",
+              "metric": "error",
+              "operator": "<=",
+              "threshold": 0.5,
+              "unit": "C"
+            }
+          ],
+          "sources": [
+            {
+              "id": "synthetic-catalogue",
+              "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+              "context": "synthetic supplier"
+            }
+          ]
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+            "agent_id": "B6",
+            "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+            "configuration_snapshot": {
+              "agent_id": "B6",
+              "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+            },
+            "input_sha256": "3e4f9717ee97825fc79d98c7d7464854fecf11728ef4099cbf0da694939cbc71",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000306,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "concept_specification": {
+                "components": [
+                  {
+                    "requirement_id": "r1",
+                    "class": "temperature sensor",
+                    "purpose": "measurement",
+                    "quantity": "temperature"
+                  }
+                ],
+                "interfaces": [
+                  {
+                    "requirement_id": "r1",
+                    "signal": "digital or analog signal",
+                    "connector": null,
+                    "voltage": null
+                  }
+                ],
+                "environment": {
+                  "location": "synthetic bench"
+                },
+                "production_ready": false
+              },
+              "bench_test_plan": [
+                {
+                  "requirement_id": "r1",
+                  "test": "Bench calibration against a reference and repeated measurements",
+                  "acceptance": "error <= 0.5 C against reference",
+                  "animal_use": false
+                }
+              ],
+              "unresolved_decisions": [],
+              "review_needs": [
+                "Engineering review",
+                "Animal ethics review before any animal use"
+              ]
+            },
+            "warnings": [
+              "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+            "agent_id": "B7",
+            "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+            "configuration_snapshot": {
+              "agent_id": "B7",
+              "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+            },
+            "input_sha256": "00c222d1bce4e312821bf8c5e47c06863dafcee3430ebd56e1a85c66ad357829",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000189,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "candidates": [
+                {
+                  "part_id": "synthetic-part",
+                  "supplier": "Synthetic supplier",
+                  "source_id": "synthetic-catalogue",
+                  "url": null,
+                  "compatibility": "matches_supplied_constraints",
+                  "gaps": [],
+                  "conflicts": [],
+                  "checked_at": "2026-09-01",
+                  "age_days": 12,
+                  "freshness": "within_requested_age",
+                  "cost": 12,
+                  "currency": "USD",
+                  "availability": "synthetic in-stock claim",
+                  "lead_time_days": null,
+                  "independent_confirmation_required": true
+                }
+              ],
+              "rejected": [],
+              "as_of": "2026-09-13",
+              "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+            },
+            "warnings": [
+              "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions",
+              "Exact specification matching only; no live availability or pricing lookup"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported.",
+          "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+          "Human review required before consequential research decisions",
+          "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase.",
+          "Exact specification matching only; no live availability or pricing lookup"
+        ],
+        "created_at": "2026-09-13T13:44:10.174086+00:00",
+        "predefined_criteria": [
+          {
+            "id": "c1",
+            "metric": "error",
+            "operator": "<=",
+            "threshold": 0.5,
+            "unit": "C"
+          }
+        ],
+        "gate": "concept_review",
+        "status": "awaiting_human",
+        "required_action": "Review concept, component constraints and predefined bench criteria. Approval does not authorise purchasing or animal use.",
+        "checkpoint_id": "3b59559aaeeea8a04e4291ef43c9440bd322d809be4f602fe8da878b14473634"
+      }
+    },
+    {
+      "artifact": {
+        "checkpoint_id": "3b59559aaeeea8a04e4291ef43c9440bd322d809be4f602fe8da878b14473634",
+        "data_classification": "synthetic",
+        "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+        "reviewer": "Synthetic demonstration reviewer",
+        "approved": true
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "hardware",
+        "input": {
+          "requirements": [
+            {
+              "id": "r1",
+              "kind": "measurement",
+              "quantity": "temperature",
+              "acceptance": "error <= 0.5 C against reference"
+            }
+          ],
+          "environment": {
+            "location": "synthetic bench"
+          },
+          "data_classification": "synthetic",
+          "component_requirements": {
+            "voltage": 3.3
+          },
+          "supplier_records": [
+            {
+              "part_id": "synthetic-part",
+              "supplier": "Synthetic supplier",
+              "approved": true,
+              "specifications": {
+                "voltage": 3.3
+              },
+              "checked_at": "2026-09-01",
+              "cost": 12,
+              "currency": "USD",
+              "availability": "synthetic in-stock claim",
+              "source_id": "synthetic-catalogue"
+            }
+          ],
+          "as_of": "2026-09-13",
+          "criteria": [
+            {
+              "id": "c1",
+              "metric": "error",
+              "operator": "<=",
+              "threshold": 0.5,
+              "unit": "C"
+            }
+          ],
+          "sources": [
+            {
+              "id": "synthetic-catalogue",
+              "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+              "context": "synthetic supplier"
+            }
+          ]
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+            "agent_id": "B6",
+            "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+            "configuration_snapshot": {
+              "agent_id": "B6",
+              "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+            },
+            "input_sha256": "3e4f9717ee97825fc79d98c7d7464854fecf11728ef4099cbf0da694939cbc71",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000306,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "concept_specification": {
+                "components": [
+                  {
+                    "requirement_id": "r1",
+                    "class": "temperature sensor",
+                    "purpose": "measurement",
+                    "quantity": "temperature"
+                  }
+                ],
+                "interfaces": [
+                  {
+                    "requirement_id": "r1",
+                    "signal": "digital or analog signal",
+                    "connector": null,
+                    "voltage": null
+                  }
+                ],
+                "environment": {
+                  "location": "synthetic bench"
+                },
+                "production_ready": false
+              },
+              "bench_test_plan": [
+                {
+                  "requirement_id": "r1",
+                  "test": "Bench calibration against a reference and repeated measurements",
+                  "acceptance": "error <= 0.5 C against reference",
+                  "animal_use": false
+                }
+              ],
+              "unresolved_decisions": [],
+              "review_needs": [
+                "Engineering review",
+                "Animal ethics review before any animal use"
+              ]
+            },
+            "warnings": [
+              "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+            "agent_id": "B7",
+            "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+            "configuration_snapshot": {
+              "agent_id": "B7",
+              "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+            },
+            "input_sha256": "00c222d1bce4e312821bf8c5e47c06863dafcee3430ebd56e1a85c66ad357829",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000189,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "candidates": [
+                {
+                  "part_id": "synthetic-part",
+                  "supplier": "Synthetic supplier",
+                  "source_id": "synthetic-catalogue",
+                  "url": null,
+                  "compatibility": "matches_supplied_constraints",
+                  "gaps": [],
+                  "conflicts": [],
+                  "checked_at": "2026-09-01",
+                  "age_days": 12,
+                  "freshness": "within_requested_age",
+                  "cost": 12,
+                  "currency": "USD",
+                  "availability": "synthetic in-stock claim",
+                  "lead_time_days": null,
+                  "independent_confirmation_required": true
+                }
+              ],
+              "rejected": [],
+              "as_of": "2026-09-13",
+              "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+            },
+            "warnings": [
+              "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions",
+              "Exact specification matching only; no live availability or pricing lookup"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [
+          {
+            "checkpoint_id": "3b59559aaeeea8a04e4291ef43c9440bd322d809be4f602fe8da878b14473634",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true
+          }
+        ],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported.",
+          "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+          "Human review required before consequential research decisions",
+          "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase.",
+          "Exact specification matching only; no live availability or pricing lookup"
+        ],
+        "created_at": "2026-09-13T13:44:10.174086+00:00",
+        "predefined_criteria": [
+          {
+            "id": "c1",
+            "metric": "error",
+            "operator": "<=",
+            "threshold": 0.5,
+            "unit": "C"
+          }
+        ],
+        "gate": "bench_results",
+        "status": "awaiting_external",
+        "required_action": "Supply actual bench results and their source records; the software cannot perform physical testing",
+        "checkpoint_id": "ebe63c0f8401f3cee88a4f2faa295adfec2595f0213b17fee7114523c12a857d"
+      }
+    },
+    {
+      "artifact": {
+        "checkpoint_id": "ebe63c0f8401f3cee88a4f2faa295adfec2595f0213b17fee7114523c12a857d",
+        "data_classification": "synthetic",
+        "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+        "reviewer": "Synthetic demonstration reviewer",
+        "approved": true,
+        "results": [
+          {
+            "metric": "error",
+            "value": 0.2,
+            "unit": "C"
+          }
+        ],
+        "sources": [
+          {
+            "id": "synthetic-test-results",
+            "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+          }
+        ],
+        "rows": [
+          {
+            "reading": 1
+          },
+          {
+            "reading": 3
+          }
+        ],
+        "columns": [
+          "reading"
+        ],
+        "deviations": []
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "hardware",
+        "input": {
+          "requirements": [
+            {
+              "id": "r1",
+              "kind": "measurement",
+              "quantity": "temperature",
+              "acceptance": "error <= 0.5 C against reference"
+            }
+          ],
+          "environment": {
+            "location": "synthetic bench"
+          },
+          "data_classification": "synthetic",
+          "component_requirements": {
+            "voltage": 3.3
+          },
+          "supplier_records": [
+            {
+              "part_id": "synthetic-part",
+              "supplier": "Synthetic supplier",
+              "approved": true,
+              "specifications": {
+                "voltage": 3.3
+              },
+              "checked_at": "2026-09-01",
+              "cost": 12,
+              "currency": "USD",
+              "availability": "synthetic in-stock claim",
+              "source_id": "synthetic-catalogue"
+            }
+          ],
+          "as_of": "2026-09-13",
+          "criteria": [
+            {
+              "id": "c1",
+              "metric": "error",
+              "operator": "<=",
+              "threshold": 0.5,
+              "unit": "C"
+            }
+          ],
+          "sources": [
+            {
+              "id": "synthetic-catalogue",
+              "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+              "context": "synthetic supplier"
+            },
+            {
+              "id": "synthetic-test-results",
+              "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+            }
+          ]
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+            "agent_id": "B6",
+            "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+            "configuration_snapshot": {
+              "agent_id": "B6",
+              "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+            },
+            "input_sha256": "3e4f9717ee97825fc79d98c7d7464854fecf11728ef4099cbf0da694939cbc71",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000306,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "concept_specification": {
+                "components": [
+                  {
+                    "requirement_id": "r1",
+                    "class": "temperature sensor",
+                    "purpose": "measurement",
+                    "quantity": "temperature"
+                  }
+                ],
+                "interfaces": [
+                  {
+                    "requirement_id": "r1",
+                    "signal": "digital or analog signal",
+                    "connector": null,
+                    "voltage": null
+                  }
+                ],
+                "environment": {
+                  "location": "synthetic bench"
+                },
+                "production_ready": false
+              },
+              "bench_test_plan": [
+                {
+                  "requirement_id": "r1",
+                  "test": "Bench calibration against a reference and repeated measurements",
+                  "acceptance": "error <= 0.5 C against reference",
+                  "animal_use": false
+                }
+              ],
+              "unresolved_decisions": [],
+              "review_needs": [
+                "Engineering review",
+                "Animal ethics review before any animal use"
+              ]
+            },
+            "warnings": [
+              "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+            "agent_id": "B7",
+            "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+            "configuration_snapshot": {
+              "agent_id": "B7",
+              "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+            },
+            "input_sha256": "00c222d1bce4e312821bf8c5e47c06863dafcee3430ebd56e1a85c66ad357829",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000189,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "candidates": [
+                {
+                  "part_id": "synthetic-part",
+                  "supplier": "Synthetic supplier",
+                  "source_id": "synthetic-catalogue",
+                  "url": null,
+                  "compatibility": "matches_supplied_constraints",
+                  "gaps": [],
+                  "conflicts": [],
+                  "checked_at": "2026-09-01",
+                  "age_days": 12,
+                  "freshness": "within_requested_age",
+                  "cost": 12,
+                  "currency": "USD",
+                  "availability": "synthetic in-stock claim",
+                  "lead_time_days": null,
+                  "independent_confirmation_required": true
+                }
+              ],
+              "rejected": [],
+              "as_of": "2026-09-13",
+              "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+            },
+            "warnings": [
+              "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions",
+              "Exact specification matching only; no live availability or pricing lookup"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "4e2b98e6-488b-40b2-bc13-76ec14b4b6dc",
+            "agent_id": "B8",
+            "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+            "configuration_snapshot": {
+              "agent_id": "B8",
+              "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+            },
+            "input_sha256": "ebf810e86078530e8a6a23bf3ce4152c8f4c6862bd59e6c585b68a8d94e3eab9",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              },
+              {
+                "id": "synthetic-test-results",
+                "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+              }
+            ],
+            "runtime_seconds": 0.000201,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "awaiting_human",
+            "data": {
+              "criteria": [
+                {
+                  "criterion_id": "c1",
+                  "metric": "error",
+                  "value": 0.2,
+                  "threshold": 0.5,
+                  "operator": "<=",
+                  "status": "pass",
+                  "reason": "Compared supplied measurement with predefined threshold",
+                  "critical": false
+                }
+              ],
+              "recommendation": "advance",
+              "recommendation_scope": "Human-reviewed next bench stage only; no animal deployment authorization",
+              "deviations": [],
+              "unexpected_outcomes": [],
+              "belief_update": {
+                "prior_probability": null,
+                "posterior_probability": null,
+                "likelihood_ratio": null,
+                "assumptions": [],
+                "basis": "User-supplied likelihood ratio and assumptions; no automatic inference from passing criteria"
+              }
+            },
+            "warnings": [
+              "Bench pass does not establish animal welfare benefit, field performance or safety."
+            ],
+            "required_action": "Review deviations, evidence quality and recommendation before advancing.",
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "c64e340f-5bf1-488d-963b-32e2e512b4b3",
+            "agent_id": "C5",
+            "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+            "configuration_snapshot": {
+              "agent_id": "C5",
+              "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+            },
+            "input_sha256": "684d5bb7df0fbbc879d226c999f0adfae90ba68f43190df45d4bd0c9907c1097",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              },
+              {
+                "id": "synthetic-test-results",
+                "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+              }
+            ],
+            "runtime_seconds": 0.001666,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "manifest": [
+                {
+                  "id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "synthetic-catalogue"
+                  ],
+                  "derived_from": [],
+                  "sha256": "407304f77d9283be569bbe1959b35d03ec06db34a2a90e5949f91e5bcf5c8f6c",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "synthetic-catalogue"
+                  ],
+                  "derived_from": [],
+                  "sha256": "54117dc1018b2df450c8c0ed11af1f4c5db649b30aaeea8b3c772a0da0068837",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "4e2b98e6-488b-40b2-bc13-76ec14b4b6dc",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "synthetic-catalogue",
+                    "synthetic-test-results"
+                  ],
+                  "derived_from": [],
+                  "sha256": "9390a2806fe9ff78679cf5187f9c61c9d0221b3515debaddd85d303f2a13a984",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                }
+              ],
+              "missing_artifact_checklist": [
+                "protocol",
+                "methods",
+                "code",
+                "configuration",
+                "data",
+                "deviations",
+                "limitations"
+              ],
+              "provenance_issues": [],
+              "run_records": [
+                {
+                  "schema_version": "1.0",
+                  "run_id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+                  "agent_id": "B6",
+                  "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+                  "configuration_snapshot": {
+                    "agent_id": "B6",
+                    "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+                  },
+                  "input_sha256": "3e4f9717ee97825fc79d98c7d7464854fecf11728ef4099cbf0da694939cbc71",
+                  "sources": [
+                    {
+                      "id": "synthetic-catalogue",
+                      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                      "context": "synthetic supplier"
+                    }
+                  ],
+                  "runtime_seconds": 0.000306,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "partial",
+                  "data": {
+                    "concept_specification": {
+                      "components": [
+                        {
+                          "requirement_id": "r1",
+                          "class": "temperature sensor",
+                          "purpose": "measurement",
+                          "quantity": "temperature"
+                        }
+                      ],
+                      "interfaces": [
+                        {
+                          "requirement_id": "r1",
+                          "signal": "digital or analog signal",
+                          "connector": null,
+                          "voltage": null
+                        }
+                      ],
+                      "environment": {
+                        "location": "synthetic bench"
+                      },
+                      "production_ready": false
+                    },
+                    "bench_test_plan": [
+                      {
+                        "requirement_id": "r1",
+                        "test": "Bench calibration against a reference and repeated measurements",
+                        "acceptance": "error <= 0.5 C against reference",
+                        "animal_use": false
+                      }
+                    ],
+                    "unresolved_decisions": [],
+                    "review_needs": [
+                      "Engineering review",
+                      "Animal ethics review before any animal use"
+                    ]
+                  },
+                  "warnings": [
+                    "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+                    "Human review required before consequential research decisions"
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+                  "agent_id": "B7",
+                  "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+                  "configuration_snapshot": {
+                    "agent_id": "B7",
+                    "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+                  },
+                  "input_sha256": "00c222d1bce4e312821bf8c5e47c06863dafcee3430ebd56e1a85c66ad357829",
+                  "sources": [
+                    {
+                      "id": "synthetic-catalogue",
+                      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                      "context": "synthetic supplier"
+                    }
+                  ],
+                  "runtime_seconds": 0.000189,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "partial",
+                  "data": {
+                    "candidates": [
+                      {
+                        "part_id": "synthetic-part",
+                        "supplier": "Synthetic supplier",
+                        "source_id": "synthetic-catalogue",
+                        "url": null,
+                        "compatibility": "matches_supplied_constraints",
+                        "gaps": [],
+                        "conflicts": [],
+                        "checked_at": "2026-09-01",
+                        "age_days": 12,
+                        "freshness": "within_requested_age",
+                        "cost": 12,
+                        "currency": "USD",
+                        "availability": "synthetic in-stock claim",
+                        "lead_time_days": null,
+                        "independent_confirmation_required": true
+                      }
+                    ],
+                    "rejected": [],
+                    "as_of": "2026-09-13",
+                    "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+                  },
+                  "warnings": [
+                    "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+                    "Human review required before consequential research decisions",
+                    "Exact specification matching only; no live availability or pricing lookup"
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "4e2b98e6-488b-40b2-bc13-76ec14b4b6dc",
+                  "agent_id": "B8",
+                  "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+                  "configuration_snapshot": {
+                    "agent_id": "B8",
+                    "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+                  },
+                  "input_sha256": "ebf810e86078530e8a6a23bf3ce4152c8f4c6862bd59e6c585b68a8d94e3eab9",
+                  "sources": [
+                    {
+                      "id": "synthetic-catalogue",
+                      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                      "context": "synthetic supplier"
+                    },
+                    {
+                      "id": "synthetic-test-results",
+                      "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+                    }
+                  ],
+                  "runtime_seconds": 0.000201,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "awaiting_human",
+                  "data": {
+                    "criteria": [
+                      {
+                        "criterion_id": "c1",
+                        "metric": "error",
+                        "value": 0.2,
+                        "threshold": 0.5,
+                        "operator": "<=",
+                        "status": "pass",
+                        "reason": "Compared supplied measurement with predefined threshold",
+                        "critical": false
+                      }
+                    ],
+                    "recommendation": "advance",
+                    "recommendation_scope": "Human-reviewed next bench stage only; no animal deployment authorization",
+                    "deviations": [],
+                    "unexpected_outcomes": [],
+                    "belief_update": {
+                      "prior_probability": null,
+                      "posterior_probability": null,
+                      "likelihood_ratio": null,
+                      "assumptions": [],
+                      "basis": "User-supplied likelihood ratio and assumptions; no automatic inference from passing criteria"
+                    }
+                  },
+                  "warnings": [
+                    "Bench pass does not establish animal welfare benefit, field performance or safety."
+                  ],
+                  "required_action": "Review deviations, evidence quality and recommendation before advancing.",
+                  "limitations": [
+                    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+                    "Human review required before consequential research decisions"
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                }
+              ],
+              "methods_draft": [],
+              "reproduced_execution": false
+            },
+            "warnings": [
+              "Manifest audits supplied content; referenced paths and code are not opened or executed."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [
+          {
+            "checkpoint_id": "3b59559aaeeea8a04e4291ef43c9440bd322d809be4f602fe8da878b14473634",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true
+          },
+          {
+            "checkpoint_id": "ebe63c0f8401f3cee88a4f2faa295adfec2595f0213b17fee7114523c12a857d",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true,
+            "results": [
+              {
+                "metric": "error",
+                "value": 0.2,
+                "unit": "C"
+              }
+            ],
+            "sources": [
+              {
+                "id": "synthetic-test-results",
+                "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+              }
+            ],
+            "rows": [
+              {
+                "reading": 1
+              },
+              {
+                "reading": 3
+              }
+            ],
+            "columns": [
+              "reading"
+            ],
+            "deviations": []
+          }
+        ],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported.",
+          "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+          "Human review required before consequential research decisions",
+          "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase.",
+          "Exact specification matching only; no live availability or pricing lookup",
+          "Bench pass does not establish animal welfare benefit, field performance or safety.",
+          "Manifest audits supplied content; referenced paths and code are not opened or executed.",
+          "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+        ],
+        "created_at": "2026-09-13T13:44:10.174086+00:00",
+        "predefined_criteria": [
+          {
+            "id": "c1",
+            "metric": "error",
+            "operator": "<=",
+            "threshold": 0.5,
+            "unit": "C"
+          }
+        ],
+        "gate": "final_review",
+        "status": "awaiting_human",
+        "required_action": "Review supplied-result evaluation and reporting limitations; no welfare benefit or permission is inferred",
+        "checkpoint_id": "67ca4198d5bf0b65d47d2198abd0800bb4f1e1c85c400a5db330b360314b55b7"
+      }
+    },
+    {
+      "artifact": {
+        "checkpoint_id": "67ca4198d5bf0b65d47d2198abd0800bb4f1e1c85c400a5db330b360314b55b7",
+        "data_classification": "synthetic",
+        "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+        "reviewer": "Synthetic demonstration reviewer",
+        "approved": true
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "hardware",
+        "input": {
+          "requirements": [
+            {
+              "id": "r1",
+              "kind": "measurement",
+              "quantity": "temperature",
+              "acceptance": "error <= 0.5 C against reference"
+            }
+          ],
+          "environment": {
+            "location": "synthetic bench"
+          },
+          "data_classification": "synthetic",
+          "component_requirements": {
+            "voltage": 3.3
+          },
+          "supplier_records": [
+            {
+              "part_id": "synthetic-part",
+              "supplier": "Synthetic supplier",
+              "approved": true,
+              "specifications": {
+                "voltage": 3.3
+              },
+              "checked_at": "2026-09-01",
+              "cost": 12,
+              "currency": "USD",
+              "availability": "synthetic in-stock claim",
+              "source_id": "synthetic-catalogue"
+            }
+          ],
+          "as_of": "2026-09-13",
+          "criteria": [
+            {
+              "id": "c1",
+              "metric": "error",
+              "operator": "<=",
+              "threshold": 0.5,
+              "unit": "C"
+            }
+          ],
+          "sources": [
+            {
+              "id": "synthetic-catalogue",
+              "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+              "context": "synthetic supplier"
+            },
+            {
+              "id": "synthetic-test-results",
+              "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+            }
+          ]
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+            "agent_id": "B6",
+            "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+            "configuration_snapshot": {
+              "agent_id": "B6",
+              "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+            },
+            "input_sha256": "3e4f9717ee97825fc79d98c7d7464854fecf11728ef4099cbf0da694939cbc71",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000306,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "concept_specification": {
+                "components": [
+                  {
+                    "requirement_id": "r1",
+                    "class": "temperature sensor",
+                    "purpose": "measurement",
+                    "quantity": "temperature"
+                  }
+                ],
+                "interfaces": [
+                  {
+                    "requirement_id": "r1",
+                    "signal": "digital or analog signal",
+                    "connector": null,
+                    "voltage": null
+                  }
+                ],
+                "environment": {
+                  "location": "synthetic bench"
+                },
+                "production_ready": false
+              },
+              "bench_test_plan": [
+                {
+                  "requirement_id": "r1",
+                  "test": "Bench calibration against a reference and repeated measurements",
+                  "acceptance": "error <= 0.5 C against reference",
+                  "animal_use": false
+                }
+              ],
+              "unresolved_decisions": [],
+              "review_needs": [
+                "Engineering review",
+                "Animal ethics review before any animal use"
+              ]
+            },
+            "warnings": [
+              "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+            "agent_id": "B7",
+            "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+            "configuration_snapshot": {
+              "agent_id": "B7",
+              "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+            },
+            "input_sha256": "00c222d1bce4e312821bf8c5e47c06863dafcee3430ebd56e1a85c66ad357829",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              }
+            ],
+            "runtime_seconds": 0.000189,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "candidates": [
+                {
+                  "part_id": "synthetic-part",
+                  "supplier": "Synthetic supplier",
+                  "source_id": "synthetic-catalogue",
+                  "url": null,
+                  "compatibility": "matches_supplied_constraints",
+                  "gaps": [],
+                  "conflicts": [],
+                  "checked_at": "2026-09-01",
+                  "age_days": 12,
+                  "freshness": "within_requested_age",
+                  "cost": 12,
+                  "currency": "USD",
+                  "availability": "synthetic in-stock claim",
+                  "lead_time_days": null,
+                  "independent_confirmation_required": true
+                }
+              ],
+              "rejected": [],
+              "as_of": "2026-09-13",
+              "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+            },
+            "warnings": [
+              "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions",
+              "Exact specification matching only; no live availability or pricing lookup"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "4e2b98e6-488b-40b2-bc13-76ec14b4b6dc",
+            "agent_id": "B8",
+            "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+            "configuration_snapshot": {
+              "agent_id": "B8",
+              "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+            },
+            "input_sha256": "ebf810e86078530e8a6a23bf3ce4152c8f4c6862bd59e6c585b68a8d94e3eab9",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              },
+              {
+                "id": "synthetic-test-results",
+                "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+              }
+            ],
+            "runtime_seconds": 0.000201,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "awaiting_human",
+            "data": {
+              "criteria": [
+                {
+                  "criterion_id": "c1",
+                  "metric": "error",
+                  "value": 0.2,
+                  "threshold": 0.5,
+                  "operator": "<=",
+                  "status": "pass",
+                  "reason": "Compared supplied measurement with predefined threshold",
+                  "critical": false
+                }
+              ],
+              "recommendation": "advance",
+              "recommendation_scope": "Human-reviewed next bench stage only; no animal deployment authorization",
+              "deviations": [],
+              "unexpected_outcomes": [],
+              "belief_update": {
+                "prior_probability": null,
+                "posterior_probability": null,
+                "likelihood_ratio": null,
+                "assumptions": [],
+                "basis": "User-supplied likelihood ratio and assumptions; no automatic inference from passing criteria"
+              }
+            },
+            "warnings": [
+              "Bench pass does not establish animal welfare benefit, field performance or safety."
+            ],
+            "required_action": "Review deviations, evidence quality and recommendation before advancing.",
+            "limitations": [
+              "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+              "Human review required before consequential research decisions"
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "c64e340f-5bf1-488d-963b-32e2e512b4b3",
+            "agent_id": "C5",
+            "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+            "configuration_snapshot": {
+              "agent_id": "C5",
+              "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+            },
+            "input_sha256": "684d5bb7df0fbbc879d226c999f0adfae90ba68f43190df45d4bd0c9907c1097",
+            "sources": [
+              {
+                "id": "synthetic-catalogue",
+                "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                "context": "synthetic supplier"
+              },
+              {
+                "id": "synthetic-test-results",
+                "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+              }
+            ],
+            "runtime_seconds": 0.001666,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "manifest": [
+                {
+                  "id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "synthetic-catalogue"
+                  ],
+                  "derived_from": [],
+                  "sha256": "407304f77d9283be569bbe1959b35d03ec06db34a2a90e5949f91e5bcf5c8f6c",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "synthetic-catalogue"
+                  ],
+                  "derived_from": [],
+                  "sha256": "54117dc1018b2df450c8c0ed11af1f4c5db649b30aaeea8b3c772a0da0068837",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "4e2b98e6-488b-40b2-bc13-76ec14b4b6dc",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "synthetic-catalogue",
+                    "synthetic-test-results"
+                  ],
+                  "derived_from": [],
+                  "sha256": "9390a2806fe9ff78679cf5187f9c61c9d0221b3515debaddd85d303f2a13a984",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                }
+              ],
+              "missing_artifact_checklist": [
+                "protocol",
+                "methods",
+                "code",
+                "configuration",
+                "data",
+                "deviations",
+                "limitations"
+              ],
+              "provenance_issues": [],
+              "run_records": [
+                {
+                  "schema_version": "1.0",
+                  "run_id": "1c9ab6fc-9bee-4607-8c82-87413a008e9a",
+                  "agent_id": "B6",
+                  "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+                  "configuration_snapshot": {
+                    "agent_id": "B6",
+                    "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+                  },
+                  "input_sha256": "3e4f9717ee97825fc79d98c7d7464854fecf11728ef4099cbf0da694939cbc71",
+                  "sources": [
+                    {
+                      "id": "synthetic-catalogue",
+                      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                      "context": "synthetic supplier"
+                    }
+                  ],
+                  "runtime_seconds": 0.000306,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "partial",
+                  "data": {
+                    "concept_specification": {
+                      "components": [
+                        {
+                          "requirement_id": "r1",
+                          "class": "temperature sensor",
+                          "purpose": "measurement",
+                          "quantity": "temperature"
+                        }
+                      ],
+                      "interfaces": [
+                        {
+                          "requirement_id": "r1",
+                          "signal": "digital or analog signal",
+                          "connector": null,
+                          "voltage": null
+                        }
+                      ],
+                      "environment": {
+                        "location": "synthetic bench"
+                      },
+                      "production_ready": false
+                    },
+                    "bench_test_plan": [
+                      {
+                        "requirement_id": "r1",
+                        "test": "Bench calibration against a reference and repeated measurements",
+                        "acceptance": "error <= 0.5 C against reference",
+                        "animal_use": false
+                      }
+                    ],
+                    "unresolved_decisions": [],
+                    "review_needs": [
+                      "Engineering review",
+                      "Animal ethics review before any animal use"
+                    ]
+                  },
+                  "warnings": [
+                    "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+                    "Human review required before consequential research decisions"
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "c2d2b8be-3caa-4be3-825f-3292506573ad",
+                  "agent_id": "B7",
+                  "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+                  "configuration_snapshot": {
+                    "agent_id": "B7",
+                    "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+                  },
+                  "input_sha256": "00c222d1bce4e312821bf8c5e47c06863dafcee3430ebd56e1a85c66ad357829",
+                  "sources": [
+                    {
+                      "id": "synthetic-catalogue",
+                      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                      "context": "synthetic supplier"
+                    }
+                  ],
+                  "runtime_seconds": 0.000189,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "partial",
+                  "data": {
+                    "candidates": [
+                      {
+                        "part_id": "synthetic-part",
+                        "supplier": "Synthetic supplier",
+                        "source_id": "synthetic-catalogue",
+                        "url": null,
+                        "compatibility": "matches_supplied_constraints",
+                        "gaps": [],
+                        "conflicts": [],
+                        "checked_at": "2026-09-01",
+                        "age_days": 12,
+                        "freshness": "within_requested_age",
+                        "cost": 12,
+                        "currency": "USD",
+                        "availability": "synthetic in-stock claim",
+                        "lead_time_days": null,
+                        "independent_confirmation_required": true
+                      }
+                    ],
+                    "rejected": [],
+                    "as_of": "2026-09-13",
+                    "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+                  },
+                  "warnings": [
+                    "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+                    "Human review required before consequential research decisions",
+                    "Exact specification matching only; no live availability or pricing lookup"
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "4e2b98e6-488b-40b2-bc13-76ec14b4b6dc",
+                  "agent_id": "B8",
+                  "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+                  "configuration_snapshot": {
+                    "agent_id": "B8",
+                    "agent_version": "682a21c606e5750f0cf2ee0b7725d31ce2ba079c4c6b4583a9b38bd94c7f4d14",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "08a4a7d2f3cf31ceb09cc1ca997bf23187a7bf80fb2cff4195463381259e5027"
+                  },
+                  "input_sha256": "ebf810e86078530e8a6a23bf3ce4152c8f4c6862bd59e6c585b68a8d94e3eab9",
+                  "sources": [
+                    {
+                      "id": "synthetic-catalogue",
+                      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+                      "context": "synthetic supplier"
+                    },
+                    {
+                      "id": "synthetic-test-results",
+                      "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+                    }
+                  ],
+                  "runtime_seconds": 0.000201,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "awaiting_human",
+                  "data": {
+                    "criteria": [
+                      {
+                        "criterion_id": "c1",
+                        "metric": "error",
+                        "value": 0.2,
+                        "threshold": 0.5,
+                        "operator": "<=",
+                        "status": "pass",
+                        "reason": "Compared supplied measurement with predefined threshold",
+                        "critical": false
+                      }
+                    ],
+                    "recommendation": "advance",
+                    "recommendation_scope": "Human-reviewed next bench stage only; no animal deployment authorization",
+                    "deviations": [],
+                    "unexpected_outcomes": [],
+                    "belief_update": {
+                      "prior_probability": null,
+                      "posterior_probability": null,
+                      "likelihood_ratio": null,
+                      "assumptions": [],
+                      "basis": "User-supplied likelihood ratio and assumptions; no automatic inference from passing criteria"
+                    }
+                  },
+                  "warnings": [
+                    "Bench pass does not establish animal welfare benefit, field performance or safety."
+                  ],
+                  "required_action": "Review deviations, evidence quality and recommendation before advancing.",
+                  "limitations": [
+                    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+                    "Human review required before consequential research decisions"
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                }
+              ],
+              "methods_draft": [],
+              "reproduced_execution": false
+            },
+            "warnings": [
+              "Manifest audits supplied content; referenced paths and code are not opened or executed."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [
+          {
+            "checkpoint_id": "3b59559aaeeea8a04e4291ef43c9440bd322d809be4f602fe8da878b14473634",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true
+          },
+          {
+            "checkpoint_id": "ebe63c0f8401f3cee88a4f2faa295adfec2595f0213b17fee7114523c12a857d",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true,
+            "results": [
+              {
+                "metric": "error",
+                "value": 0.2,
+                "unit": "C"
+              }
+            ],
+            "sources": [
+              {
+                "id": "synthetic-test-results",
+                "passage": "Synthetic example error: 0.2 C. No physical test was conducted."
+              }
+            ],
+            "rows": [
+              {
+                "reading": 1
+              },
+              {
+                "reading": 3
+              }
+            ],
+            "columns": [
+              "reading"
+            ],
+            "deviations": []
+          },
+          {
+            "checkpoint_id": "67ca4198d5bf0b65d47d2198abd0800bb4f1e1c85c400a5db330b360314b55b7",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true
+          }
+        ],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Component classes only; electrical compatibility and safety are not certified. CAD generation unsupported.",
+          "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+          "Human review required before consequential research decisions",
+          "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase.",
+          "Exact specification matching only; no live availability or pricing lookup",
+          "Bench pass does not establish animal welfare benefit, field performance or safety.",
+          "Manifest audits supplied content; referenced paths and code are not opened or executed.",
+          "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+        ],
+        "created_at": "2026-09-13T13:44:10.174086+00:00",
+        "predefined_criteria": [
+          {
+            "id": "c1",
+            "metric": "error",
+            "operator": "<=",
+            "threshold": 0.5,
+            "unit": "C"
+          }
+        ],
+        "gate": "complete",
+        "status": "completed",
+        "required_action": "Human-reviewed record only; no deployment, experiment or procurement has occurred",
+        "checkpoint_id": "cefd3f8c96654c867926662c3cdead4354c3cd768dc1f46e9c0bec9876a04efe"
+      }
+    }
+  ]
+}

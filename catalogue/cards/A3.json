@@ -1,0 +1,251 @@
+{
+  "name": "Missing-Capability Analyst",
+  "purpose": "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000423,
+  "human_review_required": true,
+  "limitations": [
+    "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+    "Synthetic examples are not field validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "problem_map": {
+      "capabilities": [
+        {
+          "id": "gait",
+          "component_id": "measurement-gait",
+          "capability_id": "gait",
+          "component_type": "measurement",
+          "description": "Detect abnormal gait",
+          "requirements": [
+            "gait detection"
+          ],
+          "constraints": {},
+          "context": {
+            "affected_animals": "dairy cows"
+          }
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "id": "sensor",
+        "capability_id": "gait",
+        "component_type": "measurement",
+        "classification": "prototype",
+        "source_ids": [
+          "s1"
+        ],
+        "requirements_met": [
+          "gait detection"
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "capability_id": "gait",
+        "status": "candidates_found",
+        "complete": false
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "e5442147-d81f-486a-bd41-16f1eb89524f",
+    "agent_id": "A3",
+    "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+    "configuration_snapshot": {
+      "agent_id": "A3",
+      "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+    },
+    "input_sha256": "572ed50829563d4401b2cfd291ea37f681837c403ade0282edd567bc43640788",
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "runtime_seconds": 0.000423,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "gaps": [
+        {
+          "capability_id": "gait",
+          "component_id": "measurement-gait",
+          "component_type": "measurement",
+          "status": "provisionally_covered",
+          "candidate_ids": [
+            "sensor"
+          ],
+          "candidate_fits": [
+            {
+              "candidate_id": "sensor",
+              "meets_all_requirements": true,
+              "meets_all_constraints": true
+            }
+          ],
+          "rejected_candidate_ids": [],
+          "unmet_requirements": [],
+          "not_evidenced_requirements": [],
+          "constraint_status": {},
+          "search_unresolved": true,
+          "search_coverage": "candidates_found",
+          "nonexistence_established": false,
+          "current_limitations": [],
+          "dependencies": [],
+          "development_brief": {
+            "who_needs_capability": "Researcher must identify operator or decision owner",
+            "decision_supported": "Detect abnormal gait",
+            "available_inputs": [],
+            "useful_output": "Detect abnormal gait",
+            "why_current_tools_fail": [],
+            "unresolved_evidence": [],
+            "success_criteria": [
+              "gait detection"
+            ],
+            "constraints": {}
+          },
+          "source_ids": [
+            "s1"
+          ]
+        }
+      ]
+    },
+    "warnings": [
+      "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+      "Synthetic examples are not field validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+}

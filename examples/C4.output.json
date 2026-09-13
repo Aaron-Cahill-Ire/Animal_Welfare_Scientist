@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "run_id": "76a28fbb-1ae2-4d12-93ee-bdfa64e15276",
+  "agent_id": "C4",
+  "agent_version": "25b9e4961114d1ef9b223e27ea9e7fb07445383febc02387da53b802d9ffbc4e",
+  "configuration_snapshot": {
+    "agent_id": "C4",
+    "agent_version": "25b9e4961114d1ef9b223e27ea9e7fb07445383febc02387da53b802d9ffbc4e",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "2fb1b814bb8f49231e3b1b1cb60668a001448f0780ba5614bc15e0a4083bbbf0"
+  },
+  "input_sha256": "26bcebbb6b7958dc52c9548e36efab4a50534a6f1ae181ee76949b3cbe8ae5e1",
+  "sources": [],
+  "runtime_seconds": 0.000153,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "completed",
+  "data": {
+    "context": {
+      "animals": "pigs",
+      "activity": "camera observation",
+      "setting": "sanctuary",
+      "deployment_scale": "single site"
+    },
+    "risk_questions": [
+      {
+        "domain": "animal",
+        "topic": "direct welfare",
+        "question": "For pigs, how will distress, injury and humane stopping criteria be measured?",
+        "mitigation_option": "Use noninvasive measurement where feasible and predefine welfare stopping criteria with qualified reviewers."
+      },
+      {
+        "domain": "human",
+        "topic": "people and data",
+        "question": "Who performs or is observed during camera observation, and what consent and data protections apply?",
+        "mitigation_option": "Document consent, access restrictions, retention and worker safety responsibilities."
+      },
+      {
+        "domain": "environment",
+        "topic": "resource and ecological effects",
+        "question": "What waste, energy use or ecological disturbance could result in sanctuary?",
+        "mitigation_option": "Assess disposal, resource use and disturbance; consider lower-impact alternatives."
+      },
+      {
+        "domain": "animal",
+        "topic": "rebound and intensification",
+        "question": "Could scaling or efficiency gains increase animal numbers or production intensity despite per-animal improvements?",
+        "mitigation_option": "Track total animals affected and aggregate welfare outcomes alongside per-animal measures."
+      },
+      {
+        "domain": "governance",
+        "topic": "values and oversight",
+        "question": "Whose welfare priorities and tradeoffs define success, and which formal review bodies apply?",
+        "mitigation_option": "Record stakeholder perspectives and obtain applicable institutional ethics and welfare review."
+      }
+    ],
+    "approval_granted": false,
+    "required_formal_review": "Determine applicable animal ethics, human participant, data and environmental review with the responsible institution."
+  },
+  "warnings": [
+    "Questions and mitigation options are contextual review support, not risk clearance or ethics approval."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "n": 4,
+  "passed": 4,
+  "baseline_passed": 3,
+  "baseline": "Rank by the first criterion only.",
+  "configuration_snapshot": {
+    "agent_id": "A4",
+    "agent_version": "6ab83d2d0f4d95d3d610a9c9a1a0beddd5be6368d2c7cb8e725465f29fc07885",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+  },
+  "failures": [],
+  "abstentions": 1,
+  "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+  "maturity": "Prototype"
+}

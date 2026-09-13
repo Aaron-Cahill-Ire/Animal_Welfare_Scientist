@@ -1,0 +1,15 @@
+{
+  "scope": {
+    "questions": [
+      "How does enrichment affect pig activity?"
+    ]
+  },
+  "synthesis": {
+    "findings": [],
+    "search_coverage": {
+      "description": "Two supplied synthetic abstracts",
+      "complete_within_scope": false
+    }
+  },
+  "data_classification": "synthetic"
+}

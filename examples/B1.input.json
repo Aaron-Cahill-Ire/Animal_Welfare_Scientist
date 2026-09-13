@@ -1,0 +1,12 @@
+{
+  "brief": {
+    "intervention": "quieter synthetic enclosure",
+    "outcome": "sound level",
+    "population": "synthetic enclosure",
+    "comparator": "standard enclosure",
+    "duration": "one hour",
+    "direction": "decrease",
+    "minimum_effect": 3
+  },
+  "data_classification": "synthetic"
+}

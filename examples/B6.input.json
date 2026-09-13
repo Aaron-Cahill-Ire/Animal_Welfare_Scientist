@@ -1,0 +1,14 @@
+{
+  "requirements": [
+    {
+      "id": "r1",
+      "kind": "measurement",
+      "quantity": "temperature",
+      "acceptance": "error <= 0.5 C against reference"
+    }
+  ],
+  "environment": {
+    "location": "synthetic bench"
+  },
+  "data_classification": "synthetic"
+}

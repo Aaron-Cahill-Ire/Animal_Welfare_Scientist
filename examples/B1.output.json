@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "run_id": "606a88af-ba25-465f-ba71-0c9f474e6791",
+  "agent_id": "B1",
+  "agent_version": "6c368b4605ed36f177e79a63ee6d2fab311d992105aa9ffee249064af064d8a5",
+  "configuration_snapshot": {
+    "agent_id": "B1",
+    "agent_version": "6c368b4605ed36f177e79a63ee6d2fab311d992105aa9ffee249064af064d8a5",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "736f2845eaf747efe62795c2940985c3df629553026cbe6f2fb4b9654ff6d9ce"
+  },
+  "input_sha256": "29889411abfa1b515007aec1e0101e0ab72c27b4f1131badd1a6bb691ec408ae",
+  "sources": [],
+  "runtime_seconds": 0.000142,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "partial",
+  "data": {
+    "hypotheses": [
+      {
+        "claim": "In synthetic enclosure, quieter synthetic enclosure changes sound level compared with standard enclosure over one hour.",
+        "minimum_effect": 3,
+        "direction": "decrease",
+        "falsifier": "A sufficiently precise comparison incompatible with the predefined direction and minimum effect on sound level.",
+        "test_ready": true
+      }
+    ],
+    "theory_of_change": [
+      "quieter synthetic enclosure",
+      "Mechanism unresolved",
+      "sound level"
+    ],
+    "competing_explanations": [
+      "Baseline group differences",
+      "Measurement drift or observer effects",
+      "Time trends unrelated to the intervention"
+    ],
+    "assumptions": [
+      "Indicator changes may not establish welfare changes",
+      "Comparison must control credible competing explanations"
+    ],
+    "belief_forecast": {
+      "probability": null,
+      "basis": "No valid calibrated prior supplied"
+    },
+    "evidence_that_would_change_conclusion": [
+      "Independent replication measuring sound level",
+      "Evidence that the indicator does not measure the intended construct",
+      "Adequately powered null or opposite-direction results"
+    ],
+    "unresolved_decisions": []
+  },
+  "warnings": [
+    "Hypothesis draft; causal and welfare claims remain unvalidated."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

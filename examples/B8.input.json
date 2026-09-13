@@ -1,0 +1,19 @@
+{
+  "criteria": [
+    {
+      "id": "c1",
+      "metric": "error",
+      "operator": "<=",
+      "threshold": 0.5,
+      "unit": "C"
+    }
+  ],
+  "results": [
+    {
+      "metric": "error",
+      "value": 0.2,
+      "unit": "C"
+    }
+  ],
+  "data_classification": "synthetic"
+}

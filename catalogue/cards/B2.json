@@ -1,0 +1,165 @@
+{
+  "name": "Welfare Protocol Design Agent",
+  "purpose": "Draft a protocol from a user welfare framework",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Draft a protocol from a user welfare framework"
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000198,
+  "human_review_required": true,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "hypothesis": {
+      "population": "synthetic enclosure",
+      "outcome": "sound level",
+      "comparator": "standard enclosure",
+      "duration": "one hour"
+    },
+    "framework": {
+      "name": "User-supplied environmental measurement framework",
+      "indicators": [
+        {
+          "name": "sound level",
+          "unit": "dB",
+          "construct": "environmental noise",
+          "procedure": "Record calibrated readings at predefined positions",
+          "source_id": "synthetic-protocol",
+          "validation_population": "synthetic enclosure"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "id": "synthetic-protocol",
+        "passage": "Synthetic protocol: record calibrated sound readings at predefined positions in a synthetic enclosure. No animal welfare validation is claimed.",
+        "context": "synthetic enclosure"
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "974aba49-c10f-4335-bc5d-60522d79bec2",
+    "agent_id": "B2",
+    "agent_version": "7384d90d218c8e78d2060c2c2c1f55064be46c3b7f804c728b4ac1a8c207f7d4",
+    "configuration_snapshot": {
+      "agent_id": "B2",
+      "agent_version": "7384d90d218c8e78d2060c2c2c1f55064be46c3b7f804c728b4ac1a8c207f7d4",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+    },
+    "input_sha256": "5fa3bed49a836d1993193a05577c34aecc1e3a0cc756666fc9167700e1ed6f84",
+    "sources": [
+      {
+        "id": "synthetic-protocol",
+        "passage": "Synthetic protocol: record calibrated sound readings at predefined positions in a synthetic enclosure. No animal welfare validation is claimed.",
+        "context": "synthetic enclosure"
+      }
+    ],
+    "runtime_seconds": 0.000198,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "awaiting_human",
+    "data": {
+      "protocol_draft": {
+        "framework": "User-supplied environmental measurement framework",
+        "population": "synthetic enclosure",
+        "hypothesis": {
+          "population": "synthetic enclosure",
+          "outcome": "sound level",
+          "comparator": "standard enclosure",
+          "duration": "one hour"
+        },
+        "indicators": [
+          {
+            "name": "sound level",
+            "unit": "dB",
+            "construct": "environmental noise",
+            "source_id": "synthetic-protocol",
+            "validation_status": "user_reported_context_match",
+            "procedure": "Record calibrated readings at predefined positions",
+            "gold_standard": null
+          }
+        ],
+        "procedures": [
+          "Record calibrated readings at predefined positions"
+        ],
+        "aggregation": "Unresolved; no default welfare score is computed"
+      },
+      "unresolved_decisions": [
+        "aggregation across indicators and time",
+        "sampling schedule",
+        "adverse event and humane stopping rules",
+        "allocation and blinding"
+      ],
+      "review_needs": [
+        "Qualified researcher review",
+        "Ethics review before any animal study",
+        "Construct validity and species/context transfer review"
+      ]
+    },
+    "warnings": [
+      "A source reference and matching population do not independently validate an indicator."
+    ],
+    "required_action": "Obtain qualified researcher and ethics approval before conducting the protocol.",
+    "limitations": [
+      "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+      "Human review required before consequential research decisions"
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+}

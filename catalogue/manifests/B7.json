@@ -1,0 +1,121 @@
+{
+  "name": "Component and Supply-Chain Agent",
+  "task": "Compare approved dated supplier records",
+  "required": [
+    "requirements",
+    "supplier_records",
+    "as_of"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "requirements",
+      "supplier_records",
+      "as_of"
+    ],
+    "properties": {
+      "requirements": {
+        "type": "object"
+      },
+      "supplier_records": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "as_of": {
+        "type": "string"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "candidates": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "compatibility",
+            "gaps",
+            "conflicts",
+            "freshness",
+            "independent_confirmation_required"
+          ],
+          "properties": {
+            "compatibility": {
+              "type": "string",
+              "enum": [
+                "conflict",
+                "unknown",
+                "matches_supplied_constraints"
+              ]
+            },
+            "gaps": {
+              "type": "array"
+            },
+            "conflicts": {
+              "type": "array"
+            },
+            "age_days": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "freshness": {
+              "type": "string",
+              "enum": [
+                "unknown",
+                "future_timestamp",
+                "stale",
+                "within_requested_age"
+              ]
+            },
+            "independent_confirmation_required": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "rejected": {
+        "type": "array"
+      },
+      "as_of": {
+        "type": "string"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "Exact specification matching only; no live availability or pricing lookup"
+  ],
+  "modalities": [
+    "structured-json"
+  ],
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "id": "B7",
+  "configuration_snapshot": {
+    "agent_id": "B7",
+    "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+  },
+  "run_method": "python -m commons run B7",
+  "permissions": [],
+  "human_review_required": true
+}

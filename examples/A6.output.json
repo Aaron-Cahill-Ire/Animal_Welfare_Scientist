@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "run_id": "e2aa8692-38e9-4656-a219-48aecb1b27ed",
+  "agent_id": "A6",
+  "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+  "configuration_snapshot": {
+    "agent_id": "A6",
+    "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+  },
+  "input_sha256": "3be36c99bfd1307b37a6d06cabcf9bab950c4e4f05a125b34782e88746fa1e02",
+  "sources": [
+    {
+      "id": "s1",
+      "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+      "url": "https://example.org/sensor",
+      "context": {
+        "affected_animals": "dairy cows"
+      },
+      "solution": {
+        "name": "Synthetic gait sensor",
+        "classification": "prototype"
+      },
+      "capability_matches": [
+        {
+          "capability_id": "gait",
+          "evidence_quote": "detects abnormal gait",
+          "requirements_met": [
+            "gait detection"
+          ]
+        }
+      ],
+      "tool": {
+        "name": "Synthetic gait sensor",
+        "canonical_url": "https://example.org/sensor",
+        "capabilities": [
+          {
+            "name": "gait detection",
+            "evidence_quote": "detects abnormal gait"
+          }
+        ],
+        "version": "1.0",
+        "version_evidence_quote": "Version 1.0",
+        "access": "open source",
+        "access_evidence_quote": "open source"
+      }
+    }
+  ],
+  "runtime_seconds": 0.000294,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "partial",
+  "data": {
+    "findings": [
+      {
+        "claim_id": "claim1",
+        "claim": "Synthetic gait sensor detects abnormal gait.",
+        "verdict": "quotation_verified",
+        "assessments": [
+          {
+            "source_id": "s1",
+            "support": "direct_quotation_present",
+            "contradiction": "not_assessed",
+            "scope": "context_aligned",
+            "strength": "unknown",
+            "strength_basis": "unassessed",
+            "evidence_quotes": [],
+            "review_flags": [
+              "Evidence strength has not been established."
+            ]
+          }
+        ],
+        "human_review_required": true,
+        "causal_support_established": false
+      }
+    ]
+  },
+  "warnings": [
+    "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+    "Synthetic examples are not field validation."
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

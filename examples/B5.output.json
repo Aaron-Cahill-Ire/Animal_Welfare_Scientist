@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "run_id": "c1d408ff-2f8e-4511-87aa-121294e12371",
+  "agent_id": "B5",
+  "agent_version": "96a02832c07aa7a83d90d075741b3694b1fe530c354526356d15f3c4ccb5d78e",
+  "configuration_snapshot": {
+    "agent_id": "B5",
+    "agent_version": "96a02832c07aa7a83d90d075741b3694b1fe530c354526356d15f3c4ccb5d78e",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "888b9814490d5497a8982d9969331cb83ba803e54d5348f6179db5eaba206d6c"
+  },
+  "input_sha256": "1b88bc0ec48e59808e2c4906503cdfb177e117ed9c0f8f3a9314fa4cc493975b",
+  "sources": [],
+  "runtime_seconds": 0.000207,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "partial",
+  "data": {
+    "question": "What is the distribution of synthetic readings?",
+    "statistics": {
+      "reading": {
+        "n": 2,
+        "missing": 1,
+        "invalid": 0,
+        "missing_fraction": 0.3333333333333333,
+        "mean": 2,
+        "median": 2.0,
+        "sample_sd": 1.4142135623730951,
+        "min": 1,
+        "max": 3
+      }
+    },
+    "reproducible_script": "PAYLOAD_JSON = '{\"rows\": [{\"reading\": 1}, {\"reading\": 3}, {\"reading\": null}], \"columns\": [\"reading\"]}'\nimport json, math, statistics\npayload = json.loads(PAYLOAD_JSON)\nrows = payload[\"rows\"]\nstats = {}\nfor column in payload[\"columns\"]:\n    raw = [row.get(column) for row in rows]\n    values = [v for v in raw if isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)]\n    missing = sum(v is None for v in raw)\n    stats[column] = {\"n\": len(values), \"missing\": missing, \"invalid\": len(raw)-missing-len(values),\n                     \"missing_fraction\": missing/len(rows) if rows else None,\n                     \"mean\": statistics.mean(values) if values else None,\n                     \"median\": statistics.median(values) if values else None,\n                     \"sample_sd\": statistics.stdev(values) if len(values)>1 else None,\n                     \"min\": min(values) if values else None, \"max\": max(values) if values else None}\nprint(json.dumps(stats, sort_keys=True))\n",
+    "analysis_method": "Available finite numeric values per column; sample standard deviation uses n-1; no imputation",
+    "causal_assessment": {
+      "causal_effect_estimated": false,
+      "conclusion": "Descriptive summaries do not establish causation",
+      "user_asserted_assumptions": {},
+      "unresolved_assumptions": [
+        "exchangeability",
+        "positivity",
+        "consistency",
+        "no_interference",
+        "temporal_order",
+        "measurement_validity"
+      ],
+      "sensitivity_needs": [
+        "Missing-not-at-random sensitivity",
+        "Unmeasured confounding assessment",
+        "Measurement error assessment"
+      ]
+    }
+  },
+  "warnings": [
+    "Missingness mechanism is unknown; available-case statistics may be biased. Independent statistical review required for consequential use."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

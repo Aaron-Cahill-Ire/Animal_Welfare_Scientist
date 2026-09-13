@@ -1,0 +1,232 @@
+{
+  "name": "Opportunity Prioritisation Orchestrator",
+  "purpose": "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000369,
+  "human_review_required": true,
+  "limitations": [
+    "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented.",
+    "Synthetic examples are not field validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "candidates": [
+      {
+        "id": "sensor",
+        "name": "Synthetic gait sensor",
+        "scores": {
+          "usefulness": 4,
+          "cost": 1
+        },
+        "source_ids": [
+          "s1"
+        ]
+      }
+    ],
+    "criteria": [
+      {
+        "id": "usefulness",
+        "weight": 2,
+        "min": 0,
+        "max": 5
+      },
+      {
+        "id": "cost",
+        "weight": 1,
+        "min": 0,
+        "max": 5,
+        "direction": "minimize"
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "e3d9e0dc-a1f4-4154-97a2-b8cd88d0c679",
+    "agent_id": "A4",
+    "agent_version": "6ab83d2d0f4d95d3d610a9c9a1a0beddd5be6368d2c7cb8e725465f29fc07885",
+    "configuration_snapshot": {
+      "agent_id": "A4",
+      "agent_version": "6ab83d2d0f4d95d3d610a9c9a1a0beddd5be6368d2c7cb8e725465f29fc07885",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "b0a95c0bc73011eef5583901e506576d300c0b8d65cafb6f2045bd7e1143fa53"
+    },
+    "input_sha256": "9e47e7331746be8542a2f0b5ac03baede39b326bcd8ffd33ff0bc042e061ac51",
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "runtime_seconds": 0.000369,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "awaiting_human",
+    "data": {
+      "comparison": [
+        {
+          "id": "sensor",
+          "name": "Synthetic gait sensor",
+          "score": 0.8,
+          "breakdown": [
+            {
+              "criterion_id": "usefulness",
+              "raw": 4,
+              "normalized": 0.8,
+              "weighted_contribution": 0.5333333333333333
+            },
+            {
+              "criterion_id": "cost",
+              "raw": 1,
+              "normalized": 0.8,
+              "weighted_contribution": 0.26666666666666666
+            }
+          ],
+          "missing_scores": [],
+          "source_ids": [
+            "s1"
+          ],
+          "scoring_basis": "User-supplied scores; no independent assessor"
+        }
+      ],
+      "proposed_shortlist": [
+        "sensor"
+      ],
+      "crucial_uncertainties": [
+        "Validate score provenance, weights and context before approval."
+      ],
+      "human_review_required": true,
+      "gate": "shortlist"
+    },
+    "warnings": [
+      "Scoring is a shallow comparison, not independent research or an adoption recommendation."
+    ],
+    "required_action": "A human must approve the proposed shortlist; deeper investigation requires a separate explicit approval.",
+    "limitations": [
+      "Weighted user scores only; independent scoring, adversarial panels and deeper research are not implemented.",
+      "Synthetic examples are not field validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+}

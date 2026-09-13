@@ -1,0 +1,29 @@
+{
+  "requirements": {
+    "voltage": 3.3
+  },
+  "supplier_records": [
+    {
+      "part_id": "synthetic-part",
+      "supplier": "Synthetic supplier",
+      "approved": true,
+      "specifications": {
+        "voltage": 3.3
+      },
+      "checked_at": "2026-09-01",
+      "cost": 12,
+      "currency": "USD",
+      "availability": "synthetic in-stock claim",
+      "source_id": "synthetic-catalogue"
+    }
+  ],
+  "as_of": "2026-09-13",
+  "sources": [
+    {
+      "id": "synthetic-catalogue",
+      "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+      "context": "synthetic supplier"
+    }
+  ],
+  "data_classification": "synthetic"
+}

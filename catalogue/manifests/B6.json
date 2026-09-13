@@ -1,0 +1,66 @@
+{
+  "name": "Hardware Concept Agent",
+  "task": "Map requirements to bench concept components",
+  "required": [
+    "requirements"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "requirements"
+    ],
+    "properties": {
+      "requirements": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "concept_specification": {
+        "type": "object"
+      },
+      "bench_test_plan": {
+        "type": "array"
+      },
+      "unresolved_decisions": {
+        "type": "array"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "modalities": [
+    "structured-json"
+  ],
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "id": "B6",
+  "configuration_snapshot": {
+    "agent_id": "B6",
+    "agent_version": "b618ec9e659f6ad36bc6237b70d32a42a124ef1413c44701454f3cc159be748b",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "7a604b24402d271535fcd934fc6539e9b9cb7a560d2e6de94fda77af98464e05"
+  },
+  "run_method": "python -m commons run B6",
+  "permissions": [],
+  "human_review_required": true
+}

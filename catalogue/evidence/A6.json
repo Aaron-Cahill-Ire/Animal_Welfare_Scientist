@@ -1,0 +1,29 @@
+{
+  "n": 5,
+  "passed": 5,
+  "baseline_passed": 4,
+  "baseline": "First-source quotation-only audit without evidence annotations.",
+  "configuration_snapshot": {
+    "agent_id": "A6",
+    "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+  },
+  "failures": [],
+  "abstentions": 1,
+  "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+  "maturity": "Prototype"
+}

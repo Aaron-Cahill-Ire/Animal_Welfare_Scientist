@@ -1,0 +1,232 @@
+{
+  "name": "Solution and Prior-Art Scout",
+  "purpose": "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000344,
+  "human_review_required": true,
+  "limitations": [
+    "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+    "Synthetic examples are not field validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "search_targets": [
+      {
+        "id": "search-gait",
+        "component_id": "measurement-gait",
+        "capability_id": "gait",
+        "component_type": "measurement",
+        "description": "Detect abnormal gait",
+        "requirements": [
+          "gait detection"
+        ],
+        "constraints": {},
+        "context": {
+          "affected_animals": "dairy cows"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "e7504336-eac0-4071-9784-82fdb8fe9c35",
+    "agent_id": "A2",
+    "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+    "configuration_snapshot": {
+      "agent_id": "A2",
+      "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+    },
+    "input_sha256": "ec8defce823a92c023c5a332bd8675b1b0318e71695933b64b298be86d713d03",
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "runtime_seconds": 0.000344,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "candidates": [
+        {
+          "id": "solution-ba49f5aef47e",
+          "name": "Synthetic gait sensor",
+          "classification": "prototype",
+          "component_id": "measurement-gait",
+          "capability_id": "gait",
+          "component_type": "measurement",
+          "source_ids": [
+            "s1"
+          ],
+          "evidence_quote": "detects abnormal gait",
+          "match_basis": "Caller-annotated capability match; passage presence checked only",
+          "context": {
+            "affected_animals": "dairy cows"
+          },
+          "context_mismatches": [],
+          "constraint_fit": {},
+          "requirements_met": [
+            "gait detection"
+          ],
+          "requirements_unmet": [],
+          "dependencies": [],
+          "limitations": [],
+          "verification_status": "requires_human_review"
+        }
+      ],
+      "coverage": [
+        {
+          "search_target_id": "search-gait",
+          "component_id": "measurement-gait",
+          "capability_id": "gait",
+          "status": "candidates_found",
+          "candidate_ids": [
+            "solution-ba49f5aef47e"
+          ],
+          "inaccessible_source_ids": [],
+          "insufficient_source_ids": [],
+          "searched_source_ids": [
+            "s1"
+          ],
+          "scope": "Supplied approved source collection only",
+          "complete": false,
+          "nonexistence_established": false
+        }
+      ]
+    },
+    "warnings": [
+      "No external search performed. Source annotations and availability classifications require verification."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+      "Synthetic examples are not field validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:44:10.300634+00:00"
+}
