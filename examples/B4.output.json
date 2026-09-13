@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "run_id": "cf892c51-fe3e-4c4f-9115-eff92e8c0a34",
+  "agent_id": "B4",
+  "agent_version": "19975e455cc2b9c9e3e4c5544c90a259feff7feb2df74c9f7df38b5d52e220ef",
+  "configuration_snapshot": {
+    "agent_id": "B4",
+    "agent_version": "19975e455cc2b9c9e3e4c5544c90a259feff7feb2df74c9f7df38b5d52e220ef",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "066c21b57ee8bfac1670c0d6fd12d00d0597fe7e4d9caa459fe5549beed1968f"
+  },
+  "input_sha256": "0aac822f3de7a0bea7d4d210e77394aae4cc1b9acc17879000ad03c6afb98fcd",
+  "sources": [],
+  "runtime_seconds": 0.000215,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "completed",
+  "data": {
+    "annotations": [
+      {
+        "timestamp_seconds": 0,
+        "mean_brightness": 0,
+        "mean_absolute_pixel_change": null,
+        "observation": "initial frame",
+        "uncertainty": "Pixel change can reflect lighting, camera or object motion; no animal identity, behaviour or welfare inference."
+      },
+      {
+        "timestamp_seconds": 1,
+        "mean_brightness": 10,
+        "mean_absolute_pixel_change": 10.0,
+        "observation": "pixel intensities changed",
+        "uncertainty": "Pixel change can reflect lighting, camera or object motion; no animal identity, behaviour or welfare inference."
+      }
+    ],
+    "backend": "native-python-frame-differences",
+    "duration_seconds": 1,
+    "annotation_format": "timestamped-descriptive-json-v1",
+    "welfare_diagnosis": null
+  },
+  "warnings": [
+    "Synthetic frame analysis only; no validated behaviour classifier or human-labelled welfare evaluation."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "2\u2013120 grayscale frames, <=64x64 pixels, <=60 seconds; no audio, compressed-video decoding or welfare diagnosis"
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

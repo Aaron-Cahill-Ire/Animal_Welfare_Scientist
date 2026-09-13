@@ -1,0 +1,29 @@
+{
+  "n": 4,
+  "passed": 4,
+  "baseline_passed": 1,
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "configuration_snapshot": {
+    "agent_id": "B2",
+    "agent_version": "7384d90d218c8e78d2060c2c2c1f55064be46c3b7f804c728b4ac1a8c207f7d4",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+  },
+  "failures": [],
+  "abstentions": 1,
+  "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+  "maturity": "Prototype"
+}

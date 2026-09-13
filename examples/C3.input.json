@@ -1,0 +1,21 @@
+{
+  "protocol": {
+    "human_reviewed": true,
+    "research_question": "Does enrichment change activity?",
+    "hypothesis": "Activity differs",
+    "population": "Synthetic pigs",
+    "design": "Randomised",
+    "sample_size": 20,
+    "outcomes": [
+      "activity"
+    ]
+  },
+  "analysis_plan": {
+    "primary_analysis": "Difference in means",
+    "exclusions": "None",
+    "missing_data": "Report and describe",
+    "stopping_rule": "Fixed n=20",
+    "multiple_comparisons": "One primary test"
+  },
+  "data_classification": "synthetic"
+}

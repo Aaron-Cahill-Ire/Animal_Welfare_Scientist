@@ -1,0 +1,68 @@
+{
+  "name": "Welfare Protocol Design Agent",
+  "task": "Draft a protocol from a user welfare framework",
+  "required": [
+    "hypothesis",
+    "framework"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "hypothesis",
+      "framework"
+    ],
+    "properties": {
+      "hypothesis": {
+        "type": "object"
+      },
+      "framework": {
+        "type": "object"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "protocol_draft": {
+        "type": "object"
+      },
+      "unresolved_decisions": {
+        "type": "array"
+      },
+      "review_needs": {
+        "type": "array"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions"
+  ],
+  "modalities": [
+    "structured-json"
+  ],
+  "baseline": "Simple literal extraction or unadjusted summary; performs no scientific inference",
+  "id": "B2",
+  "configuration_snapshot": {
+    "agent_id": "B2",
+    "agent_version": "7384d90d218c8e78d2060c2c2c1f55064be46c3b7f804c728b4ac1a8c207f7d4",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "bd9dbc5dd5f7a1765f67e4d7142ffc45566bdbe7b40c0c37fd07af146a77b14c"
+  },
+  "run_method": "python -m commons run B2",
+  "permissions": [],
+  "human_review_required": true
+}

@@ -1,0 +1,29 @@
+{
+  "n": 4,
+  "passed": 4,
+  "baseline_passed": 3,
+  "baseline": "Map only the first supplied source.",
+  "configuration_snapshot": {
+    "agent_id": "A5",
+    "agent_version": "29cfe1ac4f7d239edfd95cce228ccd6454d1a8e620f18bdc2b3031283c242c39",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+  },
+  "failures": [],
+  "abstentions": 2,
+  "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+  "maturity": "Prototype"
+}

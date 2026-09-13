@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Commons run result 1.0",
+  "type": "object",
+  "required": ["schema_version", "run_id", "agent_id", "agent_version", "configuration_snapshot", "input_sha256", "status", "data", "sources", "warnings", "limitations", "human_review_required", "runtime_seconds", "cost_usd"],
+  "properties": {
+    "schema_version": {"enum": ["1.0"]},
+    "run_id": {"type": "string"},
+    "agent_id": {"type": "string"},
+    "agent_version": {"type": "string"},
+    "configuration_snapshot": {"type": "object", "required": ["id", "backend", "dependencies", "parameters", "permissions"]},
+    "status": {"enum": ["completed", "partial", "abstained", "awaiting_human", "awaiting_external", "unsupported_input"]},
+    "data": {"type": "object"},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["id"]}},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "human_review_required": {"enum": [true]},
+    "runtime_seconds": {"type": "number", "minimum": 0},
+    "cost_usd": {"type": "number", "minimum": 0}
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "name": "Reproducibility and Reporting Agent",
+  "purpose": "Build a content-hashed artifact manifest, provenance issues and missing-artifact checklist.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Build a content-hashed artifact manifest, provenance issues and missing-artifact checklist."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000147,
+  "human_review_required": true,
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "artifacts": [
+      {
+        "id": "methods",
+        "type": "methods",
+        "content": "Synthetic observer labels activity at fixed intervals."
+      }
+    ],
+    "run_records": [],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "6f6031ef-d00b-44e2-9ccc-9f273441143b",
+    "agent_id": "C5",
+    "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+    "configuration_snapshot": {
+      "agent_id": "C5",
+      "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+    },
+    "input_sha256": "612373c422a5a85a638cb4c38a2d9e9e16768812037e8c77fe72fcfc378fa5f4",
+    "sources": [],
+    "runtime_seconds": 0.000147,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "manifest": [
+        {
+          "id": "methods",
+          "type": "methods",
+          "path": null,
+          "source_ids": [],
+          "derived_from": [],
+          "sha256": "a2d81e6fdf2318360ab0cd2d8d31a512c4c9ed790f666980a648068848968857",
+          "content_supplied": true,
+          "availability": "supplied inline"
+        }
+      ],
+      "missing_artifact_checklist": [
+        "protocol",
+        "code",
+        "configuration",
+        "data",
+        "results",
+        "deviations",
+        "limitations",
+        "run_records"
+      ],
+      "provenance_issues": [],
+      "run_records": [],
+      "methods_draft": [
+        {
+          "artifact_id": "methods",
+          "type": "methods",
+          "supplied_text": "Synthetic observer labels activity at fixed intervals."
+        }
+      ],
+      "reproduced_execution": false
+    },
+    "warnings": [
+      "Manifest audits supplied content; referenced paths and code are not opened or executed."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
+}

@@ -1,0 +1,131 @@
+{
+  "name": "Evidence Synthesis Agent",
+  "task": "Screen supplied documents and preserve human decisions in a qualified evidence table.",
+  "required": [
+    "question",
+    "documents"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [
+      "question",
+      "documents"
+    ],
+    "properties": {
+      "question": {
+        "type": "string"
+      },
+      "documents": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "passage": {
+              "type": "string"
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "human_decision": {
+              "type": "string",
+              "enum": [
+                "include",
+                "exclude",
+                "undecided"
+              ]
+            },
+            "finding": {
+              "type": "string"
+            },
+            "exclusion_reason": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "inclusion_terms": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "question",
+      "screening",
+      "evidence_table",
+      "exclusions",
+      "synthesis",
+      "coverage"
+    ],
+    "properties": {
+      "question": {
+        "type": "string"
+      },
+      "screening": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "evidence_table": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "exclusions": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "synthesis": {
+        "type": "object"
+      },
+      "coverage": {
+        "type": "object"
+      }
+    }
+  },
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "modalities": [
+    "text",
+    "structured_data"
+  ],
+  "baseline": "Extract all non-excluded supplied passages without lexical screening.",
+  "id": "C1",
+  "configuration_snapshot": {
+    "agent_id": "C1",
+    "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+  },
+  "run_method": "python -m commons run C1",
+  "permissions": [],
+  "human_review_required": true
+}

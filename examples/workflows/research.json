@@ -1,0 +1,1387 @@
+{
+  "label": "Actual software execution on synthetic inputs with simulated human/external artifacts. No real approval or experiment.",
+  "steps": [
+    {
+      "input": {
+        "question": "Does enrichment change pig activity?",
+        "inclusion_terms": [
+          "pig",
+          "enrichment"
+        ],
+        "sources": [
+          {
+            "id": "s1",
+            "passage": "Synthetic pig enrichment study reports more activity."
+          }
+        ],
+        "documents": [
+          {
+            "id": "d1",
+            "passage": "Synthetic pig enrichment study reports more activity.",
+            "human_decision": "include",
+            "finding": "More activity reported; welfare implications uncertain.",
+            "source_ids": [
+              "s1"
+            ]
+          }
+        ],
+        "data_classification": "synthetic"
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "research",
+        "input": {
+          "question": "Does enrichment change pig activity?",
+          "inclusion_terms": [
+            "pig",
+            "enrichment"
+          ],
+          "sources": [
+            {
+              "id": "s1",
+              "passage": "Synthetic pig enrichment study reports more activity."
+            }
+          ],
+          "documents": [
+            {
+              "id": "d1",
+              "passage": "Synthetic pig enrichment study reports more activity.",
+              "human_decision": "include",
+              "finding": "More activity reported; welfare implications uncertain.",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "data_classification": "synthetic"
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "3fb33728-3e3b-4fb8-9b6e-5845757eba35",
+            "agent_id": "C1",
+            "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+            "configuration_snapshot": {
+              "agent_id": "C1",
+              "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+            },
+            "input_sha256": "a5de80012fb25ae58ed4a99f9cab50dc9642edbd5bf891c8b8fce3fdea88b2b9",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.000211,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "completed",
+            "data": {
+              "question": "Does enrichment change pig activity?",
+              "screening": [
+                {
+                  "document_id": "d1",
+                  "decision": "include",
+                  "basis": "human decision preserved",
+                  "matched_terms": [
+                    "enrichment",
+                    "pig"
+                  ]
+                }
+              ],
+              "evidence_table": [
+                {
+                  "document_id": "d1",
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "passage": "Synthetic pig enrichment study reports more activity.",
+                  "human_included": true,
+                  "reported_finding": "More activity reported; welfare implications uncertain.",
+                  "species": null,
+                  "setting": null,
+                  "risk_of_bias": "unknown; assess study design and reporting"
+                }
+              ],
+              "exclusions": [],
+              "synthesis": {
+                "included_document_count": 1,
+                "reported_findings": [
+                  {
+                    "document_id": "d1",
+                    "finding": "More activity reported; welfare implications uncertain."
+                  }
+                ],
+                "interpretation": "Descriptive extraction of supplied claims; no causal or pooled effect inference"
+              },
+              "coverage": {
+                "documents_supplied": 1,
+                "external_search_performed": false
+              }
+            },
+            "warnings": [
+              "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "693e064d-172e-436a-b357-16d7ab772d98",
+            "agent_id": "C6",
+            "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+            "configuration_snapshot": {
+              "agent_id": "C6",
+              "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+            },
+            "input_sha256": "bd41358f8bdd83691811a3d97e0330b874c4e31086df8339c7dab2d8e4ed7b1d",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.000185,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "completed",
+            "data": {
+              "scope": {
+                "questions": [
+                  "Does enrichment change pig activity?"
+                ]
+              },
+              "research_questions": [
+                {
+                  "question": "Does enrichment change pig activity?",
+                  "classification": "evidence_available_uncertainty_unassessed",
+                  "supporting_findings": [
+                    {
+                      "question": "Does enrichment change pig activity?",
+                      "finding": "More activity reported; welfare implications uncertain.",
+                      "source_ids": [
+                        "s1"
+                      ]
+                    }
+                  ],
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "next_step": "Assess study quality, precision and applicability before prioritising additional basic research."
+                }
+              ],
+              "out_of_scope_findings": [],
+              "search_coverage": {
+                "complete_within_scope": false,
+                "description": "Supplied documents only; no external search"
+              },
+              "global_absence_claim": false
+            },
+            "warnings": [
+              "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "df8deecc-eb7b-49e2-b057-77e5ef1afb20",
+            "agent_id": "A6",
+            "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+            "configuration_snapshot": {
+              "agent_id": "A6",
+              "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+            },
+            "input_sha256": "8d8eb22867d958c26f227ab74a7a673a08420ffa61f05bc3f7cbbb4b50214719",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.000165,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "findings": [
+                {
+                  "claim_id": "d1",
+                  "claim": "More activity reported; welfare implications uncertain.",
+                  "verdict": "human_review_required",
+                  "assessments": [
+                    {
+                      "source_id": "s1",
+                      "support": "not_established",
+                      "contradiction": "not_assessed",
+                      "scope": "unknown",
+                      "strength": "unknown",
+                      "strength_basis": "unassessed",
+                      "evidence_quotes": [],
+                      "review_flags": [
+                        "Semantic entailment requires human review; lexical overlap is not support.",
+                        "Evidence strength has not been established."
+                      ]
+                    }
+                  ],
+                  "human_review_required": true,
+                  "causal_support_established": false
+                }
+              ]
+            },
+            "warnings": [
+              "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "6afdc194-776f-4778-b5f0-b75b9d7f989e",
+            "agent_id": "C5",
+            "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+            "configuration_snapshot": {
+              "agent_id": "C5",
+              "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+            },
+            "input_sha256": "3eb6eaddcb5126f492a11ed7f237706921c5fd9d6c9e52fe23d368c1299a0104",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.001713,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "manifest": [
+                {
+                  "id": "3fb33728-3e3b-4fb8-9b6e-5845757eba35",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "derived_from": [],
+                  "sha256": "9f6ae73135faab9c64ce11a9a344ca196183ada5498c09029d8956ba29802a08",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "693e064d-172e-436a-b357-16d7ab772d98",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "derived_from": [],
+                  "sha256": "0dd2529679eb4d7a83e88879d92d3b55616b0bec0361ad489fe4cfd6a0f9714e",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "df8deecc-eb7b-49e2-b057-77e5ef1afb20",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "derived_from": [],
+                  "sha256": "1ad5434162fc283ceb3b200f5d0cd1c72d67b52c7badfc2c88eca65d05449419",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                }
+              ],
+              "missing_artifact_checklist": [
+                "protocol",
+                "methods",
+                "code",
+                "configuration",
+                "data",
+                "deviations",
+                "limitations"
+              ],
+              "provenance_issues": [],
+              "run_records": [
+                {
+                  "schema_version": "1.0",
+                  "run_id": "3fb33728-3e3b-4fb8-9b6e-5845757eba35",
+                  "agent_id": "C1",
+                  "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+                  "configuration_snapshot": {
+                    "agent_id": "C1",
+                    "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+                  },
+                  "input_sha256": "a5de80012fb25ae58ed4a99f9cab50dc9642edbd5bf891c8b8fce3fdea88b2b9",
+                  "sources": [
+                    {
+                      "id": "s1",
+                      "passage": "Synthetic pig enrichment study reports more activity."
+                    }
+                  ],
+                  "runtime_seconds": 0.000211,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "completed",
+                  "data": {
+                    "question": "Does enrichment change pig activity?",
+                    "screening": [
+                      {
+                        "document_id": "d1",
+                        "decision": "include",
+                        "basis": "human decision preserved",
+                        "matched_terms": [
+                          "enrichment",
+                          "pig"
+                        ]
+                      }
+                    ],
+                    "evidence_table": [
+                      {
+                        "document_id": "d1",
+                        "source_ids": [
+                          "s1"
+                        ],
+                        "passage": "Synthetic pig enrichment study reports more activity.",
+                        "human_included": true,
+                        "reported_finding": "More activity reported; welfare implications uncertain.",
+                        "species": null,
+                        "setting": null,
+                        "risk_of_bias": "unknown; assess study design and reporting"
+                      }
+                    ],
+                    "exclusions": [],
+                    "synthesis": {
+                      "included_document_count": 1,
+                      "reported_findings": [
+                        {
+                          "document_id": "d1",
+                          "finding": "More activity reported; welfare implications uncertain."
+                        }
+                      ],
+                      "interpretation": "Descriptive extraction of supplied claims; no causal or pooled effect inference"
+                    },
+                    "coverage": {
+                      "documents_supplied": 1,
+                      "external_search_performed": false
+                    }
+                  },
+                  "warnings": [
+                    "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "693e064d-172e-436a-b357-16d7ab772d98",
+                  "agent_id": "C6",
+                  "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+                  "configuration_snapshot": {
+                    "agent_id": "C6",
+                    "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+                  },
+                  "input_sha256": "bd41358f8bdd83691811a3d97e0330b874c4e31086df8339c7dab2d8e4ed7b1d",
+                  "sources": [
+                    {
+                      "id": "s1",
+                      "passage": "Synthetic pig enrichment study reports more activity."
+                    }
+                  ],
+                  "runtime_seconds": 0.000185,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "completed",
+                  "data": {
+                    "scope": {
+                      "questions": [
+                        "Does enrichment change pig activity?"
+                      ]
+                    },
+                    "research_questions": [
+                      {
+                        "question": "Does enrichment change pig activity?",
+                        "classification": "evidence_available_uncertainty_unassessed",
+                        "supporting_findings": [
+                          {
+                            "question": "Does enrichment change pig activity?",
+                            "finding": "More activity reported; welfare implications uncertain.",
+                            "source_ids": [
+                              "s1"
+                            ]
+                          }
+                        ],
+                        "source_ids": [
+                          "s1"
+                        ],
+                        "next_step": "Assess study quality, precision and applicability before prioritising additional basic research."
+                      }
+                    ],
+                    "out_of_scope_findings": [],
+                    "search_coverage": {
+                      "complete_within_scope": false,
+                      "description": "Supplied documents only; no external search"
+                    },
+                    "global_absence_claim": false
+                  },
+                  "warnings": [
+                    "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "df8deecc-eb7b-49e2-b057-77e5ef1afb20",
+                  "agent_id": "A6",
+                  "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+                  "configuration_snapshot": {
+                    "agent_id": "A6",
+                    "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+                  },
+                  "input_sha256": "8d8eb22867d958c26f227ab74a7a673a08420ffa61f05bc3f7cbbb4b50214719",
+                  "sources": [
+                    {
+                      "id": "s1",
+                      "passage": "Synthetic pig enrichment study reports more activity."
+                    }
+                  ],
+                  "runtime_seconds": 0.000165,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "partial",
+                  "data": {
+                    "findings": [
+                      {
+                        "claim_id": "d1",
+                        "claim": "More activity reported; welfare implications uncertain.",
+                        "verdict": "human_review_required",
+                        "assessments": [
+                          {
+                            "source_id": "s1",
+                            "support": "not_established",
+                            "contradiction": "not_assessed",
+                            "scope": "unknown",
+                            "strength": "unknown",
+                            "strength_basis": "unassessed",
+                            "evidence_quotes": [],
+                            "review_flags": [
+                              "Semantic entailment requires human review; lexical overlap is not support.",
+                              "Evidence strength has not been established."
+                            ]
+                          }
+                        ],
+                        "human_review_required": true,
+                        "causal_support_established": false
+                      }
+                    ]
+                  },
+                  "warnings": [
+                    "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+                    "Synthetic examples are not field validation."
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                }
+              ],
+              "methods_draft": [],
+              "reproduced_execution": false
+            },
+            "warnings": [
+              "Manifest audits supplied content; referenced paths and code are not opened or executed."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality.",
+          "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation.",
+          "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence.",
+          "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment.",
+          "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+          "Synthetic examples are not field validation.",
+          "Manifest audits supplied content; referenced paths and code are not opened or executed."
+        ],
+        "created_at": "2026-09-13T13:44:10.183009+00:00",
+        "gate": "final_review",
+        "status": "awaiting_human",
+        "required_action": "Review evidence, unresolved questions and missing reporting artefacts before using this output.",
+        "checkpoint_id": "b4fb14e6b7b392de4fd6fb153ad4d3a29e0806b75b40494d450bc48fd5029300"
+      }
+    },
+    {
+      "artifact": {
+        "checkpoint_id": "b4fb14e6b7b392de4fd6fb153ad4d3a29e0806b75b40494d450bc48fd5029300",
+        "data_classification": "synthetic",
+        "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+        "reviewer": "Synthetic demonstration reviewer",
+        "approved": true
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "research",
+        "input": {
+          "question": "Does enrichment change pig activity?",
+          "inclusion_terms": [
+            "pig",
+            "enrichment"
+          ],
+          "sources": [
+            {
+              "id": "s1",
+              "passage": "Synthetic pig enrichment study reports more activity."
+            }
+          ],
+          "documents": [
+            {
+              "id": "d1",
+              "passage": "Synthetic pig enrichment study reports more activity.",
+              "human_decision": "include",
+              "finding": "More activity reported; welfare implications uncertain.",
+              "source_ids": [
+                "s1"
+              ]
+            }
+          ],
+          "data_classification": "synthetic"
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "3fb33728-3e3b-4fb8-9b6e-5845757eba35",
+            "agent_id": "C1",
+            "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+            "configuration_snapshot": {
+              "agent_id": "C1",
+              "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+            },
+            "input_sha256": "a5de80012fb25ae58ed4a99f9cab50dc9642edbd5bf891c8b8fce3fdea88b2b9",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.000211,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "completed",
+            "data": {
+              "question": "Does enrichment change pig activity?",
+              "screening": [
+                {
+                  "document_id": "d1",
+                  "decision": "include",
+                  "basis": "human decision preserved",
+                  "matched_terms": [
+                    "enrichment",
+                    "pig"
+                  ]
+                }
+              ],
+              "evidence_table": [
+                {
+                  "document_id": "d1",
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "passage": "Synthetic pig enrichment study reports more activity.",
+                  "human_included": true,
+                  "reported_finding": "More activity reported; welfare implications uncertain.",
+                  "species": null,
+                  "setting": null,
+                  "risk_of_bias": "unknown; assess study design and reporting"
+                }
+              ],
+              "exclusions": [],
+              "synthesis": {
+                "included_document_count": 1,
+                "reported_findings": [
+                  {
+                    "document_id": "d1",
+                    "finding": "More activity reported; welfare implications uncertain."
+                  }
+                ],
+                "interpretation": "Descriptive extraction of supplied claims; no causal or pooled effect inference"
+              },
+              "coverage": {
+                "documents_supplied": 1,
+                "external_search_performed": false
+              }
+            },
+            "warnings": [
+              "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "693e064d-172e-436a-b357-16d7ab772d98",
+            "agent_id": "C6",
+            "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+            "configuration_snapshot": {
+              "agent_id": "C6",
+              "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+            },
+            "input_sha256": "bd41358f8bdd83691811a3d97e0330b874c4e31086df8339c7dab2d8e4ed7b1d",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.000185,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "completed",
+            "data": {
+              "scope": {
+                "questions": [
+                  "Does enrichment change pig activity?"
+                ]
+              },
+              "research_questions": [
+                {
+                  "question": "Does enrichment change pig activity?",
+                  "classification": "evidence_available_uncertainty_unassessed",
+                  "supporting_findings": [
+                    {
+                      "question": "Does enrichment change pig activity?",
+                      "finding": "More activity reported; welfare implications uncertain.",
+                      "source_ids": [
+                        "s1"
+                      ]
+                    }
+                  ],
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "next_step": "Assess study quality, precision and applicability before prioritising additional basic research."
+                }
+              ],
+              "out_of_scope_findings": [],
+              "search_coverage": {
+                "complete_within_scope": false,
+                "description": "Supplied documents only; no external search"
+              },
+              "global_absence_claim": false
+            },
+            "warnings": [
+              "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "df8deecc-eb7b-49e2-b057-77e5ef1afb20",
+            "agent_id": "A6",
+            "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+            "configuration_snapshot": {
+              "agent_id": "A6",
+              "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+            },
+            "input_sha256": "8d8eb22867d958c26f227ab74a7a673a08420ffa61f05bc3f7cbbb4b50214719",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.000165,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "findings": [
+                {
+                  "claim_id": "d1",
+                  "claim": "More activity reported; welfare implications uncertain.",
+                  "verdict": "human_review_required",
+                  "assessments": [
+                    {
+                      "source_id": "s1",
+                      "support": "not_established",
+                      "contradiction": "not_assessed",
+                      "scope": "unknown",
+                      "strength": "unknown",
+                      "strength_basis": "unassessed",
+                      "evidence_quotes": [],
+                      "review_flags": [
+                        "Semantic entailment requires human review; lexical overlap is not support.",
+                        "Evidence strength has not been established."
+                      ]
+                    }
+                  ],
+                  "human_review_required": true,
+                  "causal_support_established": false
+                }
+              ]
+            },
+            "warnings": [
+              "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "6afdc194-776f-4778-b5f0-b75b9d7f989e",
+            "agent_id": "C5",
+            "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+            "configuration_snapshot": {
+              "agent_id": "C5",
+              "agent_version": "7839f39aca8c30e9e313f49a534fb78f8853052683446bd59d844574c9ea8b84",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "0c689d7330f3e1c6aea11fbdb040be39f23640aa0c16593f0492094a16d52e6f"
+            },
+            "input_sha256": "3eb6eaddcb5126f492a11ed7f237706921c5fd9d6c9e52fe23d368c1299a0104",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic pig enrichment study reports more activity."
+              }
+            ],
+            "runtime_seconds": 0.001713,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "manifest": [
+                {
+                  "id": "3fb33728-3e3b-4fb8-9b6e-5845757eba35",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "derived_from": [],
+                  "sha256": "9f6ae73135faab9c64ce11a9a344ca196183ada5498c09029d8956ba29802a08",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "693e064d-172e-436a-b357-16d7ab772d98",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "derived_from": [],
+                  "sha256": "0dd2529679eb4d7a83e88879d92d3b55616b0bec0361ad489fe4cfd6a0f9714e",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                },
+                {
+                  "id": "df8deecc-eb7b-49e2-b057-77e5ef1afb20",
+                  "type": "results",
+                  "path": null,
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "derived_from": [],
+                  "sha256": "1ad5434162fc283ceb3b200f5d0cd1c72d67b52c7badfc2c88eca65d05449419",
+                  "content_supplied": true,
+                  "availability": "supplied inline"
+                }
+              ],
+              "missing_artifact_checklist": [
+                "protocol",
+                "methods",
+                "code",
+                "configuration",
+                "data",
+                "deviations",
+                "limitations"
+              ],
+              "provenance_issues": [],
+              "run_records": [
+                {
+                  "schema_version": "1.0",
+                  "run_id": "3fb33728-3e3b-4fb8-9b6e-5845757eba35",
+                  "agent_id": "C1",
+                  "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+                  "configuration_snapshot": {
+                    "agent_id": "C1",
+                    "agent_version": "7460e611d7edf654fe78e14cb9e5fc86c1d23c51aae48f32d71bd2dfc7a8777c",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "4cfece585da4b7558adf934190bcef8cef08364ced8f5dcc94b52340a252b5c5"
+                  },
+                  "input_sha256": "a5de80012fb25ae58ed4a99f9cab50dc9642edbd5bf891c8b8fce3fdea88b2b9",
+                  "sources": [
+                    {
+                      "id": "s1",
+                      "passage": "Synthetic pig enrichment study reports more activity."
+                    }
+                  ],
+                  "runtime_seconds": 0.000211,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "completed",
+                  "data": {
+                    "question": "Does enrichment change pig activity?",
+                    "screening": [
+                      {
+                        "document_id": "d1",
+                        "decision": "include",
+                        "basis": "human decision preserved",
+                        "matched_terms": [
+                          "enrichment",
+                          "pig"
+                        ]
+                      }
+                    ],
+                    "evidence_table": [
+                      {
+                        "document_id": "d1",
+                        "source_ids": [
+                          "s1"
+                        ],
+                        "passage": "Synthetic pig enrichment study reports more activity.",
+                        "human_included": true,
+                        "reported_finding": "More activity reported; welfare implications uncertain.",
+                        "species": null,
+                        "setting": null,
+                        "risk_of_bias": "unknown; assess study design and reporting"
+                      }
+                    ],
+                    "exclusions": [],
+                    "synthesis": {
+                      "included_document_count": 1,
+                      "reported_findings": [
+                        {
+                          "document_id": "d1",
+                          "finding": "More activity reported; welfare implications uncertain."
+                        }
+                      ],
+                      "interpretation": "Descriptive extraction of supplied claims; no causal or pooled effect inference"
+                    },
+                    "coverage": {
+                      "documents_supplied": 1,
+                      "external_search_performed": false
+                    }
+                  },
+                  "warnings": [
+                    "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "693e064d-172e-436a-b357-16d7ab772d98",
+                  "agent_id": "C6",
+                  "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+                  "configuration_snapshot": {
+                    "agent_id": "C6",
+                    "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+                  },
+                  "input_sha256": "bd41358f8bdd83691811a3d97e0330b874c4e31086df8339c7dab2d8e4ed7b1d",
+                  "sources": [
+                    {
+                      "id": "s1",
+                      "passage": "Synthetic pig enrichment study reports more activity."
+                    }
+                  ],
+                  "runtime_seconds": 0.000185,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "completed",
+                  "data": {
+                    "scope": {
+                      "questions": [
+                        "Does enrichment change pig activity?"
+                      ]
+                    },
+                    "research_questions": [
+                      {
+                        "question": "Does enrichment change pig activity?",
+                        "classification": "evidence_available_uncertainty_unassessed",
+                        "supporting_findings": [
+                          {
+                            "question": "Does enrichment change pig activity?",
+                            "finding": "More activity reported; welfare implications uncertain.",
+                            "source_ids": [
+                              "s1"
+                            ]
+                          }
+                        ],
+                        "source_ids": [
+                          "s1"
+                        ],
+                        "next_step": "Assess study quality, precision and applicability before prioritising additional basic research."
+                      }
+                    ],
+                    "out_of_scope_findings": [],
+                    "search_coverage": {
+                      "complete_within_scope": false,
+                      "description": "Supplied documents only; no external search"
+                    },
+                    "global_absence_claim": false
+                  },
+                  "warnings": [
+                    "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                },
+                {
+                  "schema_version": "1.0",
+                  "run_id": "df8deecc-eb7b-49e2-b057-77e5ef1afb20",
+                  "agent_id": "A6",
+                  "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+                  "configuration_snapshot": {
+                    "agent_id": "A6",
+                    "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+                    "backend": "deterministic-python",
+                    "model": null,
+                    "prompt": null,
+                    "tools": [],
+                    "dependencies": {
+                      "python": "3.9.6"
+                    },
+                    "permissions": [],
+                    "parameters": {
+                      "input_bytes": 1000000,
+                      "sources": 200,
+                      "cost_usd": 0,
+                      "runtime_seconds": 10
+                    },
+                    "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+                  },
+                  "input_sha256": "8d8eb22867d958c26f227ab74a7a673a08420ffa61f05bc3f7cbbb4b50214719",
+                  "sources": [
+                    {
+                      "id": "s1",
+                      "passage": "Synthetic pig enrichment study reports more activity."
+                    }
+                  ],
+                  "runtime_seconds": 0.000165,
+                  "cost_usd": 0.0,
+                  "backend": "deterministic-python",
+                  "human_review_required": true,
+                  "status": "partial",
+                  "data": {
+                    "findings": [
+                      {
+                        "claim_id": "d1",
+                        "claim": "More activity reported; welfare implications uncertain.",
+                        "verdict": "human_review_required",
+                        "assessments": [
+                          {
+                            "source_id": "s1",
+                            "support": "not_established",
+                            "contradiction": "not_assessed",
+                            "scope": "unknown",
+                            "strength": "unknown",
+                            "strength_basis": "unassessed",
+                            "evidence_quotes": [],
+                            "review_flags": [
+                              "Semantic entailment requires human review; lexical overlap is not support.",
+                              "Evidence strength has not been established."
+                            ]
+                          }
+                        ],
+                        "human_review_required": true,
+                        "causal_support_established": false
+                      }
+                    ]
+                  },
+                  "warnings": [
+                    "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+                  ],
+                  "required_action": null,
+                  "limitations": [
+                    "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+                    "Synthetic examples are not field validation."
+                  ],
+                  "context": "Not specified",
+                  "data_classification": "synthetic",
+                  "limits": {
+                    "input_bytes": 1000000,
+                    "sources": 200,
+                    "cost_usd": 0,
+                    "runtime_seconds": 10
+                  }
+                }
+              ],
+              "methods_draft": [],
+              "reproduced_execution": false
+            },
+            "warnings": [
+              "Manifest audits supplied content; referenced paths and code are not opened or executed."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [
+          {
+            "checkpoint_id": "b4fb14e6b7b392de4fd6fb153ad4d3a29e0806b75b40494d450bc48fd5029300",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true
+          }
+        ],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Coverage is limited to supplied documents. Lexical matches do not establish relevance or evidence quality.",
+          "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation.",
+          "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence.",
+          "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment.",
+          "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+          "Synthetic examples are not field validation.",
+          "Manifest audits supplied content; referenced paths and code are not opened or executed."
+        ],
+        "created_at": "2026-09-13T13:44:10.183009+00:00",
+        "gate": "complete",
+        "status": "completed",
+        "required_action": "Human-reviewed record only; no deployment, experiment or procurement has occurred",
+        "checkpoint_id": "ed0f6e4410bf03f35d09d86135508fe38b278cfbc45d084b7f326f7da8db0a21"
+      }
+    }
+  ]
+}

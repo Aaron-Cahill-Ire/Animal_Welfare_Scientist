@@ -1,0 +1,40 @@
+name: Agent, evidence, or capability contribution
+description: Propose a tool, a missing capability, an evaluation, or a failure report for manual review.
+title: '[Contribution] '
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Contribution type
+      options: [Agent, Capability gap, Evaluation, Failure or correction]
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Research task and intended users
+      description: Include the current workaround, inputs, outputs and species/context.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Sources, version and access
+      description: Canonical URL, immutable release/commit, licence, run method, dependencies and permissions. Do not paste credentials or private data.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, failures and limitations
+      description: Link examples, benchmark rubric, baseline, results and known risks. Clearly label unknowns.
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria and human review
+      description: Explain how this capability would be evaluated and which decisions require qualified review.
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Publication
+      options:
+        - label: I have authority to publish this material and it contains no private or restricted data.
+          required: true

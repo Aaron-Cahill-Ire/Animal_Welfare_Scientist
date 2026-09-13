@@ -1,0 +1,124 @@
+{
+  "status": "complete",
+  "verdict": "Ready to merge",
+  "verdict_reason": "Both reproduced defects were fixed and checked with targeted regression tests. No current actionable findings remain in the reviewed prototype scope.",
+  "scope": {
+    "base": "399509e29256f70314429d85b19449c419a4bdd9",
+    "branch": "codex/agent-commons-prototype",
+    "head_sha": "399509e29256f70314429d85b19449c419a4bdd9",
+    "pr_url": null,
+    "files_changed": 25,
+    "mode": "standalone",
+    "includes_untracked": true
+  },
+  "intent": "Build a bounded runnable prototype portfolio of 20 deterministic animal-welfare research agents, with provenance, explicit human workflow gates, starter evaluations and static catalogue/browser examples. No autonomous research or claims of validated scientific maturity.",
+  "intent_confidence": "explicit",
+  "reviewers": [
+    "correctness",
+    "adversarial",
+    "security",
+    "testing",
+    "maintainability",
+    "reliability",
+    "api-contract",
+    "agent-native"
+  ],
+  "findings": [],
+  "actionable_findings": [],
+  "triage_groups": [],
+  "pre_existing_findings": [],
+  "requirements_completeness": {
+    "plan": "docs/plans/2026-09-13-animal-welfare-science-agent-commons-prd.md",
+    "source": "explicit",
+    "requirements": [],
+    "implementation_units": [],
+    "note": "The PRD supplies product intent; no extracted R-ID or implementation-unit obligations were invented."
+  },
+  "learnings": [],
+  "agent_native_gaps": [],
+  "deployment_notes": [],
+  "residual_risks": [],
+  "testing_gaps": [],
+  "coverage": {
+    "cross_model": "Cross-model pass not run: runner supports git diff <base>, which cannot carry explicitly included untracked runtime files without Git mutation; local adversarial lens covers exact requested source instead.",
+    "validator": {
+      "outcome": "verdicts",
+      "batch_count": 1,
+      "selected": 2,
+      "confirmed": 0,
+      "rejected": 2,
+      "resolved_during_review": 2,
+      "unresolved": 0,
+      "malformed": 0,
+      "failed": 0,
+      "shortcut_skipped": 0,
+      "bound_exceeded": false,
+      "reason": "Both original defects were fixed by the main agent during review; current-source rejection means resolved, not false positive.",
+      "protected_subject_reclassifications": []
+    },
+    "first_evidence_backfilled": 7,
+    "quote_demotions": 0,
+    "suppressed_by_confidence": {},
+    "mode_aware_demotions": 0,
+    "malformed_findings": 0,
+    "malformed_returns": 0,
+    "failed_reviewers": [],
+    "compound_packs": {
+      "roots": [],
+      "errors": [],
+      "warnings": []
+    },
+    "resolved_findings": [
+      {
+        "#": 1,
+        "title": "Empty search results prevent the workflow's human review",
+        "severity": "P2",
+        "file": "commons/workflows.py",
+        "line": 51,
+        "status": "resolved_during_review",
+        "protected_subject": "public-contract",
+        "resolution_evidence": "The saved full.diff proves the original call lacked empty-audit handling, but in the current working tree based on 399509e, Python 3.9.6, tests.test_workflows.WorkflowTests.test_discovery_no_candidates_still_returns_gap_report exercises a discovery example with sources=[] and asserts final_review/awaiting_human with preserved gaps; it passes because commons/workflows.py:30 permits an empty A6 audit and line 51 enables that guard, directly disproving the finding against current source."
+      },
+      {
+        "#": 2,
+        "title": "Evaluate constraints together for each candidate",
+        "severity": "P2",
+        "file": "commons/agents/track_a.py",
+        "line": 235,
+        "status": "resolved_during_review",
+        "protected_subject": null,
+        "resolution_evidence": "The saved full.diff proves the original aggregate-only behavior, but in the current working tree based on 399509e, Python 3.9.6, tests.test_coverage_regressions.CoverageRegressions.test_complementary_incompatible_candidates_are_not_full_coverage exercises the cited mutually incompatible candidates and passes; commons/agents/track_a.py:236-248 now computes per-candidate fit and returns requires_integration_review with both candidates marked meets_all_constraints=false."
+      }
+    ],
+    "notes": [
+      "Scope helper found zero tracked executable changed lines; lite not eligible. Explicit caller scope includes new untracked source and contract context; full.diff stages authored contents without git writes.",
+      "PRD is product intent without Implementation Units or unified R-ID Requirements; no invented implementation-unit completion obligations.",
+      "Review happens while main agent adds verification and fixes; retained claims must be checked against current source.",
+      "No applicable standards files, declared packs, migration artifacts, or performance-sensitive workloads found.",
+      "Fresh child dispatch reached host lifetime thread limit after six reviewer launches. No release primitive exists. API-contract and agent-native coverage performed in dispatch context; not independent and never eligible for confidence promotion. Completed child reused for merge/report and a separate reviewer child for validation due permanent host slot pressure.",
+      "Main intentionally added failing A3/no-candidate workflow regressions during review. These are evidence of the two already identified defects, not additional findings.",
+      "Main applied both reproduced review findings while validation ran. Validator confirmed original defect evidence in saved full.diff and rejected current claims as resolved using discriminating regression tests on current Python 3.9.6 source. Preserve historical findings as resolved in coverage or resolved_findings, not current actionable findings.",
+      "Host lifetime thread cap prevented a fresh validator; completed reliability reviewer performed validation of findings it did not author. No cross-model confidence promotion was used."
+    ],
+    "rejected_at_synthesis": [
+      {
+        "title": "Release artifact builder has no automated test",
+        "reason": "Absence of an automated build test alone does not establish a release defect or an explicit violated test requirement. The proposed checklist demands completeness without observed breakage."
+      },
+      {
+        "title": "Conflicting provenance sources lack regression coverage",
+        "reason": "Current source rejects conflicting records at workflows.py:143-144; this claim only requests protection against a hypothetical future removal."
+      },
+      {
+        "title": "Duplicate result-envelope builders invite contract drift",
+        "reason": "Small existing private constructors are valid and no current drift or incorrect call is established; the proposed shared API would disrupt all call sites for speculative benefit."
+      },
+      {
+        "title": "Runtime limit does not preempt threaded calls",
+        "reason": "No threaded production caller or nonterminating bundled handler is evidenced in the bounded CLI/browser prototype; the reproduced patched sleeping handler assumes an unsupported integration topology."
+      }
+    ]
+  },
+  "artifact_path": "/tmp/compound-engineering-501/ce-code-review/20260913-commons-review",
+  "run_id": "20260913-commons-review"
+}

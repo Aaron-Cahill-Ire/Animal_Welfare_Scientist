@@ -1,0 +1,29 @@
+{
+  "n": 6,
+  "passed": 6,
+  "baseline_passed": 5,
+  "baseline": "Compare only the first candidate.",
+  "configuration_snapshot": {
+    "agent_id": "A3",
+    "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+  },
+  "failures": [],
+  "abstentions": 1,
+  "uncertainty": "Purposive developer-authored development cases; no population estimate or scientific confidence interval.",
+  "maturity": "Prototype"
+}

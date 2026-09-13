@@ -1,0 +1,14 @@
+{
+  "protocol": {
+    "experimental_unit": "synthetic enclosure",
+    "comparator": "standard enclosure",
+    "primary_outcome": "sound level"
+  },
+  "resources": {
+    "available_units": 100,
+    "minimum_effect": 2,
+    "outcome_sd": 3,
+    "randomization_feasible": true
+  },
+  "data_classification": "synthetic"
+}

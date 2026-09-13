@@ -1,0 +1,127 @@
+{
+  "name": "Research Question and Knowledge-Gap Agent",
+  "purpose": "Classify scoped unresolved questions from supplied synthesis and documented search coverage.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Classify scoped unresolved questions from supplied synthesis and documented search coverage."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.00012,
+  "human_review_required": true,
+  "limitations": [
+    "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "scope": {
+      "questions": [
+        "How does enrichment affect pig activity?"
+      ]
+    },
+    "synthesis": {
+      "findings": [],
+      "search_coverage": {
+        "description": "Two supplied synthetic abstracts",
+        "complete_within_scope": false
+      }
+    },
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "0ad831d0-9965-45d4-8144-7ece4db5dc5e",
+    "agent_id": "C6",
+    "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+    "configuration_snapshot": {
+      "agent_id": "C6",
+      "agent_version": "7142dbb8f74a4d3c70915d698eb56e5876e23e9eba841d95be7f316064d5939f",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "06f69ddb5b2f732124e73244b0fa6be6d72f7b6b37550b24945adcb4c8c6725b"
+    },
+    "input_sha256": "82d4d42665e560a5bdb8f557a13890299b38b58344793fbb4abbd19750ea0cfa",
+    "sources": [],
+    "runtime_seconds": 0.00012,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "scope": {
+        "questions": [
+          "How does enrichment affect pig activity?"
+        ]
+      },
+      "research_questions": [
+        {
+          "question": "How does enrichment affect pig activity?",
+          "classification": "search_gap",
+          "supporting_findings": [],
+          "source_ids": [],
+          "next_step": "Extend or document the search before treating this as a knowledge gap."
+        }
+      ],
+      "out_of_scope_findings": [],
+      "search_coverage": {
+        "description": "Two supplied synthetic abstracts",
+        "complete_within_scope": false
+      },
+      "global_absence_claim": false
+    },
+    "warnings": [
+      "Search completeness is a supplied assertion. Gaps are bounded to the declared scope, never global absence of evidence."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Deterministic bounded assistance over supplied public/synthetic inputs; no external retrieval or expert validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
+}

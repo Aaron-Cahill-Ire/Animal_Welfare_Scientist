@@ -1,0 +1,1978 @@
+{
+  "label": "Actual software execution on synthetic inputs with simulated human/external artifacts. No real approval or experiment.",
+  "steps": [
+    {
+      "input": {
+        "brief": "Lameness in dairy cows: prevent hoof damage, detect abnormal gait, and route animals for examination.",
+        "context": {
+          "affected_animals": "dairy cows",
+          "production_system": "dairy"
+        },
+        "constraints": {
+          "budget": "unknown"
+        },
+        "sources": [
+          {
+            "id": "s1",
+            "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+            "url": "https://example.org/sensor",
+            "context": {
+              "affected_animals": "dairy cows"
+            },
+            "solution": {
+              "name": "Synthetic gait sensor",
+              "classification": "prototype"
+            },
+            "capability_matches": [
+              {
+                "capability_id": "gait",
+                "evidence_quote": "detects abnormal gait",
+                "requirements_met": [
+                  "gait detection"
+                ]
+              }
+            ],
+            "tool": {
+              "name": "Synthetic gait sensor",
+              "canonical_url": "https://example.org/sensor",
+              "capabilities": [
+                {
+                  "name": "gait detection",
+                  "evidence_quote": "detects abnormal gait"
+                }
+              ],
+              "version": "1.0",
+              "version_evidence_quote": "Version 1.0",
+              "access": "open source",
+              "access_evidence_quote": "open source"
+            }
+          }
+        ],
+        "components": [
+          {
+            "id": "measurement-gait",
+            "type": "measurement",
+            "description": "Delayed gait detection",
+            "source_ids": [
+              "s1"
+            ],
+            "epistemic_status": "hypothesis",
+            "downstream_action": "Route animal for qualified examination",
+            "dependencies": [
+              "examination-access"
+            ],
+            "required_capabilities": [
+              {
+                "id": "gait",
+                "description": "Detect abnormal gait",
+                "requirements": [
+                  "gait detection"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "causal-flooring",
+            "type": "causal",
+            "description": "Flooring may contribute to hoof damage",
+            "epistemic_status": "hypothesis",
+            "required_capabilities": [
+              {
+                "id": "hoof-prevention",
+                "description": "Prevent hoof damage",
+                "requirements": [
+                  "prevent hoof damage"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "implementation-exam",
+            "type": "implementation",
+            "description": "Detected animals may not receive timely examination",
+            "epistemic_status": "hypothesis",
+            "required_capabilities": [
+              {
+                "id": "examination-access",
+                "description": "Route affected animals for examination",
+                "requirements": [
+                  "examination routing"
+                ]
+              }
+            ]
+          }
+        ],
+        "data_classification": "synthetic"
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "discovery",
+        "input": {
+          "brief": "Lameness in dairy cows: prevent hoof damage, detect abnormal gait, and route animals for examination.",
+          "context": {
+            "affected_animals": "dairy cows",
+            "production_system": "dairy"
+          },
+          "constraints": {
+            "budget": "unknown"
+          },
+          "sources": [
+            {
+              "id": "s1",
+              "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+              "url": "https://example.org/sensor",
+              "context": {
+                "affected_animals": "dairy cows"
+              },
+              "solution": {
+                "name": "Synthetic gait sensor",
+                "classification": "prototype"
+              },
+              "capability_matches": [
+                {
+                  "capability_id": "gait",
+                  "evidence_quote": "detects abnormal gait",
+                  "requirements_met": [
+                    "gait detection"
+                  ]
+                }
+              ],
+              "tool": {
+                "name": "Synthetic gait sensor",
+                "canonical_url": "https://example.org/sensor",
+                "capabilities": [
+                  {
+                    "name": "gait detection",
+                    "evidence_quote": "detects abnormal gait"
+                  }
+                ],
+                "version": "1.0",
+                "version_evidence_quote": "Version 1.0",
+                "access": "open source",
+                "access_evidence_quote": "open source"
+              }
+            }
+          ],
+          "components": [
+            {
+              "id": "measurement-gait",
+              "type": "measurement",
+              "description": "Delayed gait detection",
+              "source_ids": [
+                "s1"
+              ],
+              "epistemic_status": "hypothesis",
+              "downstream_action": "Route animal for qualified examination",
+              "dependencies": [
+                "examination-access"
+              ],
+              "required_capabilities": [
+                {
+                  "id": "gait",
+                  "description": "Detect abnormal gait",
+                  "requirements": [
+                    "gait detection"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "causal-flooring",
+              "type": "causal",
+              "description": "Flooring may contribute to hoof damage",
+              "epistemic_status": "hypothesis",
+              "required_capabilities": [
+                {
+                  "id": "hoof-prevention",
+                  "description": "Prevent hoof damage",
+                  "requirements": [
+                    "prevent hoof damage"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "implementation-exam",
+              "type": "implementation",
+              "description": "Detected animals may not receive timely examination",
+              "epistemic_status": "hypothesis",
+              "required_capabilities": [
+                {
+                  "id": "examination-access",
+                  "description": "Route affected animals for examination",
+                  "requirements": [
+                    "examination routing"
+                  ]
+                }
+              ]
+            }
+          ],
+          "data_classification": "synthetic"
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "bf6c6377-035a-47a9-8927-f0552ba2c081",
+            "agent_id": "A1",
+            "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+            "configuration_snapshot": {
+              "agent_id": "A1",
+              "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+            },
+            "input_sha256": "65242f166f5d1a6224f904253f41b9091c8087e818a92352180c2659943996ae",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.001041,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "welfare_outcome": "Lameness in dairy cows: prevent hoof damage, detect abnormal gait, and route animals for examination.",
+              "context": {
+                "affected_animals": "dairy cows",
+                "production_system": "dairy"
+              },
+              "components": [
+                {
+                  "id": "measurement-gait",
+                  "type": "measurement",
+                  "description": "Delayed gait detection",
+                  "epistemic_status": "hypothesis",
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "evidence_basis": "Caller annotation linked to supplied passages; unverified",
+                  "uncertainty": "Causal interpretation and local relevance require researcher review.",
+                  "alternative_explanations": [],
+                  "indicators": [],
+                  "indicator_limits": "Construct validity is unknown.",
+                  "intervention_point": "Observe the indicator and establish its validity",
+                  "downstream_action": "Route animal for qualified examination",
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "existing_mitigations": [],
+                  "mitigation_insufficiency_evidence": [],
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "constraints": {
+                    "budget": "unknown"
+                  }
+                },
+                {
+                  "id": "causal-flooring",
+                  "type": "causal",
+                  "description": "Flooring may contribute to hoof damage",
+                  "epistemic_status": "hypothesis",
+                  "source_ids": [],
+                  "evidence_basis": "Brief-derived hypothesis; no supporting source supplied",
+                  "uncertainty": "Causal interpretation and local relevance require researcher review.",
+                  "alternative_explanations": [],
+                  "indicators": [],
+                  "indicator_limits": "Construct validity is unknown.",
+                  "intervention_point": "Investigate prevention or change of the proposed mechanism",
+                  "downstream_action": null,
+                  "dependencies": [],
+                  "existing_mitigations": [],
+                  "mitigation_insufficiency_evidence": [],
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "constraints": {
+                    "budget": "unknown"
+                  }
+                },
+                {
+                  "id": "implementation-exam",
+                  "type": "implementation",
+                  "description": "Detected animals may not receive timely examination",
+                  "epistemic_status": "hypothesis",
+                  "source_ids": [],
+                  "evidence_basis": "Brief-derived hypothesis; no supporting source supplied",
+                  "uncertainty": "Causal interpretation and local relevance require researcher review.",
+                  "alternative_explanations": [],
+                  "indicators": [],
+                  "indicator_limits": "Construct validity is unknown.",
+                  "intervention_point": "Enable a response to the identified welfare problem",
+                  "downstream_action": null,
+                  "dependencies": [],
+                  "existing_mitigations": [],
+                  "mitigation_insufficiency_evidence": [],
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "constraints": {
+                    "budget": "unknown"
+                  }
+                }
+              ],
+              "relationships": [],
+              "capabilities": [
+                {
+                  "id": "gait",
+                  "component_id": "measurement-gait",
+                  "component_type": "measurement",
+                  "description": "Detect abnormal gait",
+                  "requirements": [
+                    "gait detection"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "downstream_action": "Route animal for qualified examination"
+                },
+                {
+                  "id": "hoof-prevention",
+                  "component_id": "causal-flooring",
+                  "component_type": "causal",
+                  "description": "Prevent hoof damage",
+                  "requirements": [
+                    "prevent hoof damage"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null
+                },
+                {
+                  "id": "examination-access",
+                  "component_id": "implementation-exam",
+                  "component_type": "implementation",
+                  "description": "Route affected animals for examination",
+                  "requirements": [
+                    "examination routing"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null
+                }
+              ],
+              "search_targets": [
+                {
+                  "id": "search-7b3d74039aee",
+                  "component_id": "measurement-gait",
+                  "component_type": "measurement",
+                  "description": "Detect abnormal gait",
+                  "requirements": [
+                    "gait detection"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "downstream_action": "Route animal for qualified examination",
+                  "capability_id": "gait",
+                  "query": "Detect abnormal gait",
+                  "unresolved_questions": [
+                    "Causal interpretation and local relevance require researcher review."
+                  ],
+                  "scope": "Supplied approved collection only; researcher may expand sources"
+                },
+                {
+                  "id": "search-9432e02f8ac7",
+                  "component_id": "causal-flooring",
+                  "component_type": "causal",
+                  "description": "Prevent hoof damage",
+                  "requirements": [
+                    "prevent hoof damage"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null,
+                  "capability_id": "hoof-prevention",
+                  "query": "Prevent hoof damage",
+                  "unresolved_questions": [
+                    "Causal interpretation and local relevance require researcher review."
+                  ],
+                  "scope": "Supplied approved collection only; researcher may expand sources"
+                },
+                {
+                  "id": "search-f82ce2f66103",
+                  "component_id": "implementation-exam",
+                  "component_type": "implementation",
+                  "description": "Route affected animals for examination",
+                  "requirements": [
+                    "examination routing"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null,
+                  "capability_id": "examination-access",
+                  "query": "Route affected animals for examination",
+                  "unresolved_questions": [
+                    "Causal interpretation and local relevance require researcher review."
+                  ],
+                  "scope": "Supplied approved collection only; researcher may expand sources"
+                }
+              ],
+              "unresolved_questions": [],
+              "human_review_required": true
+            },
+            "warnings": [
+              "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+            ],
+            "required_action": "Review components, causal hypotheses, capabilities and unknown context before scouting.",
+            "limitations": [
+              "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": {
+              "affected_animals": "dairy cows",
+              "production_system": "dairy"
+            },
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "cc8dc249-279a-45a1-889e-2eea6ec579b6",
+            "agent_id": "A2",
+            "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+            "configuration_snapshot": {
+              "agent_id": "A2",
+              "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+            },
+            "input_sha256": "9fc8cad5f43fc5d9d9831333479b332033e101542b4b6c951a9f6b7fe8183688",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.000693,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "candidates": [
+                {
+                  "id": "solution-ba49f5aef47e",
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype",
+                  "component_id": "measurement-gait",
+                  "capability_id": "gait",
+                  "component_type": "measurement",
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "evidence_quote": "detects abnormal gait",
+                  "match_basis": "Caller-annotated capability match; passage presence checked only",
+                  "context": {
+                    "affected_animals": "dairy cows"
+                  },
+                  "context_mismatches": [],
+                  "constraint_fit": {},
+                  "requirements_met": [
+                    "gait detection"
+                  ],
+                  "requirements_unmet": [],
+                  "dependencies": [],
+                  "limitations": [],
+                  "verification_status": "requires_human_review"
+                }
+              ],
+              "coverage": [
+                {
+                  "search_target_id": "search-7b3d74039aee",
+                  "component_id": "measurement-gait",
+                  "capability_id": "gait",
+                  "status": "candidates_found",
+                  "candidate_ids": [
+                    "solution-ba49f5aef47e"
+                  ],
+                  "inaccessible_source_ids": [],
+                  "insufficient_source_ids": [],
+                  "searched_source_ids": [
+                    "s1"
+                  ],
+                  "scope": "Supplied approved source collection only",
+                  "complete": false,
+                  "nonexistence_established": false
+                },
+                {
+                  "search_target_id": "search-9432e02f8ac7",
+                  "component_id": "causal-flooring",
+                  "capability_id": "hoof-prevention",
+                  "status": "no_result",
+                  "candidate_ids": [],
+                  "inaccessible_source_ids": [],
+                  "insufficient_source_ids": [],
+                  "searched_source_ids": [
+                    "s1"
+                  ],
+                  "scope": "Supplied approved source collection only",
+                  "complete": false,
+                  "nonexistence_established": false
+                },
+                {
+                  "search_target_id": "search-f82ce2f66103",
+                  "component_id": "implementation-exam",
+                  "capability_id": "examination-access",
+                  "status": "no_result",
+                  "candidate_ids": [],
+                  "inaccessible_source_ids": [],
+                  "insufficient_source_ids": [],
+                  "searched_source_ids": [
+                    "s1"
+                  ],
+                  "scope": "Supplied approved source collection only",
+                  "complete": false,
+                  "nonexistence_established": false
+                }
+              ]
+            },
+            "warnings": [
+              "No external search performed. Source annotations and availability classifications require verification."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "940f990d-486a-4af5-8c18-62f8eaaae8aa",
+            "agent_id": "A3",
+            "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+            "configuration_snapshot": {
+              "agent_id": "A3",
+              "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+            },
+            "input_sha256": "bcaf778aebf775f9ce4170131e4aa5cbbcd20f1d1633cd4ef712c82e55210486",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.001426,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "gaps": [
+                {
+                  "capability_id": "gait",
+                  "component_id": "measurement-gait",
+                  "component_type": "measurement",
+                  "status": "insufficient_evidence",
+                  "candidate_ids": [
+                    "solution-ba49f5aef47e"
+                  ],
+                  "candidate_fits": [
+                    {
+                      "candidate_id": "solution-ba49f5aef47e",
+                      "meets_all_requirements": true,
+                      "meets_all_constraints": false
+                    }
+                  ],
+                  "rejected_candidate_ids": [],
+                  "unmet_requirements": [],
+                  "not_evidenced_requirements": [],
+                  "constraint_status": {
+                    "budget": "unknown"
+                  },
+                  "search_unresolved": true,
+                  "search_coverage": "candidates_found",
+                  "nonexistence_established": false,
+                  "current_limitations": [],
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "development_brief": {
+                    "who_needs_capability": "Researcher must identify operator or decision owner",
+                    "decision_supported": "Route animal for qualified examination",
+                    "available_inputs": [],
+                    "useful_output": "Detect abnormal gait",
+                    "why_current_tools_fail": [],
+                    "unresolved_evidence": [],
+                    "success_criteria": [
+                      "gait detection"
+                    ],
+                    "constraints": {
+                      "budget": "unknown"
+                    }
+                  },
+                  "source_ids": [
+                    "s1"
+                  ]
+                },
+                {
+                  "capability_id": "hoof-prevention",
+                  "component_id": "causal-flooring",
+                  "component_type": "causal",
+                  "status": "insufficient_evidence",
+                  "candidate_ids": [],
+                  "candidate_fits": [],
+                  "rejected_candidate_ids": [],
+                  "unmet_requirements": [],
+                  "not_evidenced_requirements": [
+                    "prevent hoof damage"
+                  ],
+                  "constraint_status": {
+                    "budget": "unknown"
+                  },
+                  "search_unresolved": true,
+                  "search_coverage": "no_result",
+                  "nonexistence_established": false,
+                  "current_limitations": [],
+                  "dependencies": [],
+                  "development_brief": {
+                    "who_needs_capability": "Researcher must identify operator or decision owner",
+                    "decision_supported": "Prevent hoof damage",
+                    "available_inputs": [],
+                    "useful_output": "Prevent hoof damage",
+                    "why_current_tools_fail": [],
+                    "unresolved_evidence": [
+                      "Requirement not evidenced: prevent hoof damage"
+                    ],
+                    "success_criteria": [
+                      "prevent hoof damage"
+                    ],
+                    "constraints": {
+                      "budget": "unknown"
+                    }
+                  },
+                  "source_ids": []
+                },
+                {
+                  "capability_id": "examination-access",
+                  "component_id": "implementation-exam",
+                  "component_type": "implementation",
+                  "status": "insufficient_evidence",
+                  "candidate_ids": [],
+                  "candidate_fits": [],
+                  "rejected_candidate_ids": [],
+                  "unmet_requirements": [],
+                  "not_evidenced_requirements": [
+                    "examination routing"
+                  ],
+                  "constraint_status": {
+                    "budget": "unknown"
+                  },
+                  "search_unresolved": true,
+                  "search_coverage": "no_result",
+                  "nonexistence_established": false,
+                  "current_limitations": [],
+                  "dependencies": [],
+                  "development_brief": {
+                    "who_needs_capability": "Researcher must identify operator or decision owner",
+                    "decision_supported": "Route affected animals for examination",
+                    "available_inputs": [],
+                    "useful_output": "Route affected animals for examination",
+                    "why_current_tools_fail": [],
+                    "unresolved_evidence": [
+                      "Requirement not evidenced: examination routing"
+                    ],
+                    "success_criteria": [
+                      "examination routing"
+                    ],
+                    "constraints": {
+                      "budget": "unknown"
+                    }
+                  },
+                  "source_ids": []
+                }
+              ]
+            },
+            "warnings": [
+              "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "17ac599b-6855-487f-a26f-f207adb1ef58",
+            "agent_id": "A6",
+            "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+            "configuration_snapshot": {
+              "agent_id": "A6",
+              "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+            },
+            "input_sha256": "3477ac0e80cf75b02cd536c8c36c534354053f0e96bcc4d0efdafb7591541757",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.000293,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "findings": [
+                {
+                  "claim_id": "candidate-0",
+                  "claim": "detects abnormal gait",
+                  "verdict": "quotation_verified",
+                  "assessments": [
+                    {
+                      "source_id": "s1",
+                      "support": "direct_quotation_present",
+                      "contradiction": "not_assessed",
+                      "scope": "unknown",
+                      "strength": "unknown",
+                      "strength_basis": "unassessed",
+                      "evidence_quotes": [],
+                      "review_flags": [
+                        "Evidence strength has not been established."
+                      ]
+                    }
+                  ],
+                  "human_review_required": true,
+                  "causal_support_established": false
+                }
+              ]
+            },
+            "warnings": [
+              "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Rule-based decomposition is a reviewable draft; source linkage does not establish causality.",
+          "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+          "Synthetic examples are not field validation.",
+          "No external search performed. Source annotations and availability classifications require verification.",
+          "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+          "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence.",
+          "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+          "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment.",
+          "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment."
+        ],
+        "created_at": "2026-09-13T13:44:10.140923+00:00",
+        "gate": "final_review",
+        "status": "awaiting_human",
+        "required_action": "Supply an explicit reviewer decision for this checkpoint before using the discovery report.",
+        "checkpoint_id": "05dc9dcf70c0277a7d407f83f57faabad7a7040fe9f3d370041fff32532140f4"
+      }
+    },
+    {
+      "artifact": {
+        "checkpoint_id": "05dc9dcf70c0277a7d407f83f57faabad7a7040fe9f3d370041fff32532140f4",
+        "data_classification": "synthetic",
+        "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+        "reviewer": "Synthetic demonstration reviewer",
+        "approved": true
+      },
+      "checkpoint": {
+        "schema_version": "1.0",
+        "workflow": "discovery",
+        "input": {
+          "brief": "Lameness in dairy cows: prevent hoof damage, detect abnormal gait, and route animals for examination.",
+          "context": {
+            "affected_animals": "dairy cows",
+            "production_system": "dairy"
+          },
+          "constraints": {
+            "budget": "unknown"
+          },
+          "sources": [
+            {
+              "id": "s1",
+              "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+              "url": "https://example.org/sensor",
+              "context": {
+                "affected_animals": "dairy cows"
+              },
+              "solution": {
+                "name": "Synthetic gait sensor",
+                "classification": "prototype"
+              },
+              "capability_matches": [
+                {
+                  "capability_id": "gait",
+                  "evidence_quote": "detects abnormal gait",
+                  "requirements_met": [
+                    "gait detection"
+                  ]
+                }
+              ],
+              "tool": {
+                "name": "Synthetic gait sensor",
+                "canonical_url": "https://example.org/sensor",
+                "capabilities": [
+                  {
+                    "name": "gait detection",
+                    "evidence_quote": "detects abnormal gait"
+                  }
+                ],
+                "version": "1.0",
+                "version_evidence_quote": "Version 1.0",
+                "access": "open source",
+                "access_evidence_quote": "open source"
+              }
+            }
+          ],
+          "components": [
+            {
+              "id": "measurement-gait",
+              "type": "measurement",
+              "description": "Delayed gait detection",
+              "source_ids": [
+                "s1"
+              ],
+              "epistemic_status": "hypothesis",
+              "downstream_action": "Route animal for qualified examination",
+              "dependencies": [
+                "examination-access"
+              ],
+              "required_capabilities": [
+                {
+                  "id": "gait",
+                  "description": "Detect abnormal gait",
+                  "requirements": [
+                    "gait detection"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "causal-flooring",
+              "type": "causal",
+              "description": "Flooring may contribute to hoof damage",
+              "epistemic_status": "hypothesis",
+              "required_capabilities": [
+                {
+                  "id": "hoof-prevention",
+                  "description": "Prevent hoof damage",
+                  "requirements": [
+                    "prevent hoof damage"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "implementation-exam",
+              "type": "implementation",
+              "description": "Detected animals may not receive timely examination",
+              "epistemic_status": "hypothesis",
+              "required_capabilities": [
+                {
+                  "id": "examination-access",
+                  "description": "Route affected animals for examination",
+                  "requirements": [
+                    "examination routing"
+                  ]
+                }
+              ]
+            }
+          ],
+          "data_classification": "synthetic"
+        },
+        "runs": [
+          {
+            "schema_version": "1.0",
+            "run_id": "bf6c6377-035a-47a9-8927-f0552ba2c081",
+            "agent_id": "A1",
+            "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+            "configuration_snapshot": {
+              "agent_id": "A1",
+              "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+            },
+            "input_sha256": "65242f166f5d1a6224f904253f41b9091c8087e818a92352180c2659943996ae",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.001041,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "welfare_outcome": "Lameness in dairy cows: prevent hoof damage, detect abnormal gait, and route animals for examination.",
+              "context": {
+                "affected_animals": "dairy cows",
+                "production_system": "dairy"
+              },
+              "components": [
+                {
+                  "id": "measurement-gait",
+                  "type": "measurement",
+                  "description": "Delayed gait detection",
+                  "epistemic_status": "hypothesis",
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "evidence_basis": "Caller annotation linked to supplied passages; unverified",
+                  "uncertainty": "Causal interpretation and local relevance require researcher review.",
+                  "alternative_explanations": [],
+                  "indicators": [],
+                  "indicator_limits": "Construct validity is unknown.",
+                  "intervention_point": "Observe the indicator and establish its validity",
+                  "downstream_action": "Route animal for qualified examination",
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "existing_mitigations": [],
+                  "mitigation_insufficiency_evidence": [],
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "constraints": {
+                    "budget": "unknown"
+                  }
+                },
+                {
+                  "id": "causal-flooring",
+                  "type": "causal",
+                  "description": "Flooring may contribute to hoof damage",
+                  "epistemic_status": "hypothesis",
+                  "source_ids": [],
+                  "evidence_basis": "Brief-derived hypothesis; no supporting source supplied",
+                  "uncertainty": "Causal interpretation and local relevance require researcher review.",
+                  "alternative_explanations": [],
+                  "indicators": [],
+                  "indicator_limits": "Construct validity is unknown.",
+                  "intervention_point": "Investigate prevention or change of the proposed mechanism",
+                  "downstream_action": null,
+                  "dependencies": [],
+                  "existing_mitigations": [],
+                  "mitigation_insufficiency_evidence": [],
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "constraints": {
+                    "budget": "unknown"
+                  }
+                },
+                {
+                  "id": "implementation-exam",
+                  "type": "implementation",
+                  "description": "Detected animals may not receive timely examination",
+                  "epistemic_status": "hypothesis",
+                  "source_ids": [],
+                  "evidence_basis": "Brief-derived hypothesis; no supporting source supplied",
+                  "uncertainty": "Causal interpretation and local relevance require researcher review.",
+                  "alternative_explanations": [],
+                  "indicators": [],
+                  "indicator_limits": "Construct validity is unknown.",
+                  "intervention_point": "Enable a response to the identified welfare problem",
+                  "downstream_action": null,
+                  "dependencies": [],
+                  "existing_mitigations": [],
+                  "mitigation_insufficiency_evidence": [],
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "constraints": {
+                    "budget": "unknown"
+                  }
+                }
+              ],
+              "relationships": [],
+              "capabilities": [
+                {
+                  "id": "gait",
+                  "component_id": "measurement-gait",
+                  "component_type": "measurement",
+                  "description": "Detect abnormal gait",
+                  "requirements": [
+                    "gait detection"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "downstream_action": "Route animal for qualified examination"
+                },
+                {
+                  "id": "hoof-prevention",
+                  "component_id": "causal-flooring",
+                  "component_type": "causal",
+                  "description": "Prevent hoof damage",
+                  "requirements": [
+                    "prevent hoof damage"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null
+                },
+                {
+                  "id": "examination-access",
+                  "component_id": "implementation-exam",
+                  "component_type": "implementation",
+                  "description": "Route affected animals for examination",
+                  "requirements": [
+                    "examination routing"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null
+                }
+              ],
+              "search_targets": [
+                {
+                  "id": "search-7b3d74039aee",
+                  "component_id": "measurement-gait",
+                  "component_type": "measurement",
+                  "description": "Detect abnormal gait",
+                  "requirements": [
+                    "gait detection"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "downstream_action": "Route animal for qualified examination",
+                  "capability_id": "gait",
+                  "query": "Detect abnormal gait",
+                  "unresolved_questions": [
+                    "Causal interpretation and local relevance require researcher review."
+                  ],
+                  "scope": "Supplied approved collection only; researcher may expand sources"
+                },
+                {
+                  "id": "search-9432e02f8ac7",
+                  "component_id": "causal-flooring",
+                  "component_type": "causal",
+                  "description": "Prevent hoof damage",
+                  "requirements": [
+                    "prevent hoof damage"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null,
+                  "capability_id": "hoof-prevention",
+                  "query": "Prevent hoof damage",
+                  "unresolved_questions": [
+                    "Causal interpretation and local relevance require researcher review."
+                  ],
+                  "scope": "Supplied approved collection only; researcher may expand sources"
+                },
+                {
+                  "id": "search-f82ce2f66103",
+                  "component_id": "implementation-exam",
+                  "component_type": "implementation",
+                  "description": "Route affected animals for examination",
+                  "requirements": [
+                    "examination routing"
+                  ],
+                  "constraints": {
+                    "budget": "unknown"
+                  },
+                  "context": {
+                    "affected_animals": "dairy cows",
+                    "production_system": "dairy"
+                  },
+                  "source_ids": [],
+                  "dependencies": [],
+                  "downstream_action": null,
+                  "capability_id": "examination-access",
+                  "query": "Route affected animals for examination",
+                  "unresolved_questions": [
+                    "Causal interpretation and local relevance require researcher review."
+                  ],
+                  "scope": "Supplied approved collection only; researcher may expand sources"
+                }
+              ],
+              "unresolved_questions": [],
+              "human_review_required": true
+            },
+            "warnings": [
+              "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+            ],
+            "required_action": "Review components, causal hypotheses, capabilities and unknown context before scouting.",
+            "limitations": [
+              "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": {
+              "affected_animals": "dairy cows",
+              "production_system": "dairy"
+            },
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "cc8dc249-279a-45a1-889e-2eea6ec579b6",
+            "agent_id": "A2",
+            "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+            "configuration_snapshot": {
+              "agent_id": "A2",
+              "agent_version": "61aeb602d8e24fa2bf2ebd4560ab1f210a566ef74b616e48dfa3b36f3270f334",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "14cbbcd6e6def7fb718333d50be138fab4bc282e369d86d799255726d1bd057b"
+            },
+            "input_sha256": "9fc8cad5f43fc5d9d9831333479b332033e101542b4b6c951a9f6b7fe8183688",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.000693,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "candidates": [
+                {
+                  "id": "solution-ba49f5aef47e",
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype",
+                  "component_id": "measurement-gait",
+                  "capability_id": "gait",
+                  "component_type": "measurement",
+                  "source_ids": [
+                    "s1"
+                  ],
+                  "evidence_quote": "detects abnormal gait",
+                  "match_basis": "Caller-annotated capability match; passage presence checked only",
+                  "context": {
+                    "affected_animals": "dairy cows"
+                  },
+                  "context_mismatches": [],
+                  "constraint_fit": {},
+                  "requirements_met": [
+                    "gait detection"
+                  ],
+                  "requirements_unmet": [],
+                  "dependencies": [],
+                  "limitations": [],
+                  "verification_status": "requires_human_review"
+                }
+              ],
+              "coverage": [
+                {
+                  "search_target_id": "search-7b3d74039aee",
+                  "component_id": "measurement-gait",
+                  "capability_id": "gait",
+                  "status": "candidates_found",
+                  "candidate_ids": [
+                    "solution-ba49f5aef47e"
+                  ],
+                  "inaccessible_source_ids": [],
+                  "insufficient_source_ids": [],
+                  "searched_source_ids": [
+                    "s1"
+                  ],
+                  "scope": "Supplied approved source collection only",
+                  "complete": false,
+                  "nonexistence_established": false
+                },
+                {
+                  "search_target_id": "search-9432e02f8ac7",
+                  "component_id": "causal-flooring",
+                  "capability_id": "hoof-prevention",
+                  "status": "no_result",
+                  "candidate_ids": [],
+                  "inaccessible_source_ids": [],
+                  "insufficient_source_ids": [],
+                  "searched_source_ids": [
+                    "s1"
+                  ],
+                  "scope": "Supplied approved source collection only",
+                  "complete": false,
+                  "nonexistence_established": false
+                },
+                {
+                  "search_target_id": "search-f82ce2f66103",
+                  "component_id": "implementation-exam",
+                  "capability_id": "examination-access",
+                  "status": "no_result",
+                  "candidate_ids": [],
+                  "inaccessible_source_ids": [],
+                  "insufficient_source_ids": [],
+                  "searched_source_ids": [
+                    "s1"
+                  ],
+                  "scope": "Supplied approved source collection only",
+                  "complete": false,
+                  "nonexistence_established": false
+                }
+              ]
+            },
+            "warnings": [
+              "No external search performed. Source annotations and availability classifications require verification."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "940f990d-486a-4af5-8c18-62f8eaaae8aa",
+            "agent_id": "A3",
+            "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+            "configuration_snapshot": {
+              "agent_id": "A3",
+              "agent_version": "b91ebd61e597427c5076ad1c44025705624d77d8597019f18e8373fcde8d9a8e",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "aa24f66b8924d580209960309c98a7cc41c40d9076f7db098165006242dcea6d"
+            },
+            "input_sha256": "bcaf778aebf775f9ce4170131e4aa5cbbcd20f1d1633cd4ef712c82e55210486",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.001426,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "gaps": [
+                {
+                  "capability_id": "gait",
+                  "component_id": "measurement-gait",
+                  "component_type": "measurement",
+                  "status": "insufficient_evidence",
+                  "candidate_ids": [
+                    "solution-ba49f5aef47e"
+                  ],
+                  "candidate_fits": [
+                    {
+                      "candidate_id": "solution-ba49f5aef47e",
+                      "meets_all_requirements": true,
+                      "meets_all_constraints": false
+                    }
+                  ],
+                  "rejected_candidate_ids": [],
+                  "unmet_requirements": [],
+                  "not_evidenced_requirements": [],
+                  "constraint_status": {
+                    "budget": "unknown"
+                  },
+                  "search_unresolved": true,
+                  "search_coverage": "candidates_found",
+                  "nonexistence_established": false,
+                  "current_limitations": [],
+                  "dependencies": [
+                    "examination-access"
+                  ],
+                  "development_brief": {
+                    "who_needs_capability": "Researcher must identify operator or decision owner",
+                    "decision_supported": "Route animal for qualified examination",
+                    "available_inputs": [],
+                    "useful_output": "Detect abnormal gait",
+                    "why_current_tools_fail": [],
+                    "unresolved_evidence": [],
+                    "success_criteria": [
+                      "gait detection"
+                    ],
+                    "constraints": {
+                      "budget": "unknown"
+                    }
+                  },
+                  "source_ids": [
+                    "s1"
+                  ]
+                },
+                {
+                  "capability_id": "hoof-prevention",
+                  "component_id": "causal-flooring",
+                  "component_type": "causal",
+                  "status": "insufficient_evidence",
+                  "candidate_ids": [],
+                  "candidate_fits": [],
+                  "rejected_candidate_ids": [],
+                  "unmet_requirements": [],
+                  "not_evidenced_requirements": [
+                    "prevent hoof damage"
+                  ],
+                  "constraint_status": {
+                    "budget": "unknown"
+                  },
+                  "search_unresolved": true,
+                  "search_coverage": "no_result",
+                  "nonexistence_established": false,
+                  "current_limitations": [],
+                  "dependencies": [],
+                  "development_brief": {
+                    "who_needs_capability": "Researcher must identify operator or decision owner",
+                    "decision_supported": "Prevent hoof damage",
+                    "available_inputs": [],
+                    "useful_output": "Prevent hoof damage",
+                    "why_current_tools_fail": [],
+                    "unresolved_evidence": [
+                      "Requirement not evidenced: prevent hoof damage"
+                    ],
+                    "success_criteria": [
+                      "prevent hoof damage"
+                    ],
+                    "constraints": {
+                      "budget": "unknown"
+                    }
+                  },
+                  "source_ids": []
+                },
+                {
+                  "capability_id": "examination-access",
+                  "component_id": "implementation-exam",
+                  "component_type": "implementation",
+                  "status": "insufficient_evidence",
+                  "candidate_ids": [],
+                  "candidate_fits": [],
+                  "rejected_candidate_ids": [],
+                  "unmet_requirements": [],
+                  "not_evidenced_requirements": [
+                    "examination routing"
+                  ],
+                  "constraint_status": {
+                    "budget": "unknown"
+                  },
+                  "search_unresolved": true,
+                  "search_coverage": "no_result",
+                  "nonexistence_established": false,
+                  "current_limitations": [],
+                  "dependencies": [],
+                  "development_brief": {
+                    "who_needs_capability": "Researcher must identify operator or decision owner",
+                    "decision_supported": "Route affected animals for examination",
+                    "available_inputs": [],
+                    "useful_output": "Route affected animals for examination",
+                    "why_current_tools_fail": [],
+                    "unresolved_evidence": [
+                      "Requirement not evidenced: examination routing"
+                    ],
+                    "success_criteria": [
+                      "examination routing"
+                    ],
+                    "constraints": {
+                      "budget": "unknown"
+                    }
+                  },
+                  "source_ids": []
+                }
+              ]
+            },
+            "warnings": [
+              "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          },
+          {
+            "schema_version": "1.0",
+            "run_id": "17ac599b-6855-487f-a26f-f207adb1ef58",
+            "agent_id": "A6",
+            "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+            "configuration_snapshot": {
+              "agent_id": "A6",
+              "agent_version": "2b33618811663db4605cb8da792624ded2137f2f882893affbc141a19424492b",
+              "backend": "deterministic-python",
+              "model": null,
+              "prompt": null,
+              "tools": [],
+              "dependencies": {
+                "python": "3.9.6"
+              },
+              "permissions": [],
+              "parameters": {
+                "input_bytes": 1000000,
+                "sources": 200,
+                "cost_usd": 0,
+                "runtime_seconds": 10
+              },
+              "id": "ce1c6ce273b3ed0e1c302f4ba5f29bd41097cda796222763f7f5bcca66541ff8"
+            },
+            "input_sha256": "3477ac0e80cf75b02cd536c8c36c534354053f0e96bcc4d0efdafb7591541757",
+            "sources": [
+              {
+                "id": "s1",
+                "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+                "url": "https://example.org/sensor",
+                "context": {
+                  "affected_animals": "dairy cows"
+                },
+                "solution": {
+                  "name": "Synthetic gait sensor",
+                  "classification": "prototype"
+                },
+                "capability_matches": [
+                  {
+                    "capability_id": "gait",
+                    "evidence_quote": "detects abnormal gait",
+                    "requirements_met": [
+                      "gait detection"
+                    ]
+                  }
+                ],
+                "tool": {
+                  "name": "Synthetic gait sensor",
+                  "canonical_url": "https://example.org/sensor",
+                  "capabilities": [
+                    {
+                      "name": "gait detection",
+                      "evidence_quote": "detects abnormal gait"
+                    }
+                  ],
+                  "version": "1.0",
+                  "version_evidence_quote": "Version 1.0",
+                  "access": "open source",
+                  "access_evidence_quote": "open source"
+                }
+              }
+            ],
+            "runtime_seconds": 0.000293,
+            "cost_usd": 0.0,
+            "backend": "deterministic-python",
+            "human_review_required": true,
+            "status": "partial",
+            "data": {
+              "findings": [
+                {
+                  "claim_id": "candidate-0",
+                  "claim": "detects abnormal gait",
+                  "verdict": "quotation_verified",
+                  "assessments": [
+                    {
+                      "source_id": "s1",
+                      "support": "direct_quotation_present",
+                      "contradiction": "not_assessed",
+                      "scope": "unknown",
+                      "strength": "unknown",
+                      "strength_basis": "unassessed",
+                      "evidence_quotes": [],
+                      "review_flags": [
+                        "Evidence strength has not been established."
+                      ]
+                    }
+                  ],
+                  "human_review_required": true,
+                  "causal_support_established": false
+                }
+              ]
+            },
+            "warnings": [
+              "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment."
+            ],
+            "required_action": null,
+            "limitations": [
+              "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment.",
+              "Synthetic examples are not field validation."
+            ],
+            "context": "Not specified",
+            "data_classification": "synthetic",
+            "limits": {
+              "input_bytes": 1000000,
+              "sources": 200,
+              "cost_usd": 0,
+              "runtime_seconds": 10
+            }
+          }
+        ],
+        "decisions": [
+          {
+            "checkpoint_id": "05dc9dcf70c0277a7d407f83f57faabad7a7040fe9f3d370041fff32532140f4",
+            "data_classification": "synthetic",
+            "example_label": "SIMULATED decision/results; no actual approval, study or physical test",
+            "reviewer": "Synthetic demonstration reviewer",
+            "approved": true
+          }
+        ],
+        "warnings": [
+          "No studies, procurement or external submissions are performed.",
+          "Rule-based decomposition is a reviewable draft; source linkage does not establish causality.",
+          "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+          "Synthetic examples are not field validation.",
+          "No external search performed. Source annotations and availability classifications require verification.",
+          "Search is limited to a supplied approved source collection with explicit capability matches and exact evidence quotes.",
+          "Coverage is provisional and based on caller annotations. An incomplete search cannot establish nonexistence.",
+          "Coverage relies on caller-annotated requirements and accessible source IDs; scientific validity requires human review.",
+          "This deterministic auditor validates quotation provenance and flags annotated conflicts; it does not establish scientific entailment.",
+          "Exact quotation checks and caller-annotated evidence relations only; no automatic scientific entailment assessment."
+        ],
+        "created_at": "2026-09-13T13:44:10.140923+00:00",
+        "gate": "complete",
+        "status": "completed",
+        "required_action": "Human-reviewed record only; no deployment, experiment or procurement has occurred",
+        "checkpoint_id": "f7fd4500584f0339349e0569475ef93355c5d77cb883c77696824c774a95ada1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "name": "Welfare Problem Mapper",
+  "purpose": "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Rule-based clause typing and explicit researcher annotations; incomplete maps require review."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000546,
+  "human_review_required": true,
+  "limitations": [
+    "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+    "Synthetic examples are not field validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "brief": "Delayed gait detection may worsen welfare in dairy cows.",
+    "context": {
+      "affected_animals": "dairy cows",
+      "production_system": "dairy"
+    },
+    "constraints": {
+      "budget": "unknown"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "components": [
+      {
+        "id": "measurement-gait",
+        "type": "measurement",
+        "description": "Delayed gait detection",
+        "source_ids": [
+          "s1"
+        ],
+        "epistemic_status": "hypothesis",
+        "downstream_action": "Route animal for qualified examination",
+        "dependencies": [
+          "examination-access"
+        ],
+        "required_capabilities": [
+          {
+            "id": "gait",
+            "description": "Detect abnormal gait",
+            "requirements": [
+              "gait detection"
+            ]
+          }
+        ]
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "3fa45603-ed70-4cea-a22b-5090a57288fa",
+    "agent_id": "A1",
+    "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+    "configuration_snapshot": {
+      "agent_id": "A1",
+      "agent_version": "401212f06177eb6f5bd6494539b51a64d8c7ad1c3ae3ab7ac18f2d941c6f92f1",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "9dfaacb0d9935478d4c06d5bd7002d28b9a5604d0e73ab9931a5829f6f1d9045"
+    },
+    "input_sha256": "c0f9386b2feaf4d1a995a4cb31c53c013f3762e627f5817dc36516ac735ffb4d",
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "runtime_seconds": 0.000546,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "welfare_outcome": "Delayed gait detection may worsen welfare in dairy cows.",
+      "context": {
+        "affected_animals": "dairy cows",
+        "production_system": "dairy"
+      },
+      "components": [
+        {
+          "id": "measurement-gait",
+          "type": "measurement",
+          "description": "Delayed gait detection",
+          "epistemic_status": "hypothesis",
+          "source_ids": [
+            "s1"
+          ],
+          "evidence_basis": "Caller annotation linked to supplied passages; unverified",
+          "uncertainty": "Causal interpretation and local relevance require researcher review.",
+          "alternative_explanations": [],
+          "indicators": [],
+          "indicator_limits": "Construct validity is unknown.",
+          "intervention_point": "Observe the indicator and establish its validity",
+          "downstream_action": "Route animal for qualified examination",
+          "dependencies": [
+            "examination-access"
+          ],
+          "existing_mitigations": [],
+          "mitigation_insufficiency_evidence": [],
+          "context": {
+            "affected_animals": "dairy cows",
+            "production_system": "dairy"
+          },
+          "constraints": {
+            "budget": "unknown"
+          }
+        }
+      ],
+      "relationships": [],
+      "capabilities": [
+        {
+          "id": "gait",
+          "component_id": "measurement-gait",
+          "component_type": "measurement",
+          "description": "Detect abnormal gait",
+          "requirements": [
+            "gait detection"
+          ],
+          "constraints": {
+            "budget": "unknown"
+          },
+          "context": {
+            "affected_animals": "dairy cows",
+            "production_system": "dairy"
+          },
+          "source_ids": [
+            "s1"
+          ],
+          "dependencies": [
+            "examination-access"
+          ],
+          "downstream_action": "Route animal for qualified examination"
+        }
+      ],
+      "search_targets": [
+        {
+          "id": "search-7b3d74039aee",
+          "component_id": "measurement-gait",
+          "component_type": "measurement",
+          "description": "Detect abnormal gait",
+          "requirements": [
+            "gait detection"
+          ],
+          "constraints": {
+            "budget": "unknown"
+          },
+          "context": {
+            "affected_animals": "dairy cows",
+            "production_system": "dairy"
+          },
+          "source_ids": [
+            "s1"
+          ],
+          "dependencies": [
+            "examination-access"
+          ],
+          "downstream_action": "Route animal for qualified examination",
+          "capability_id": "gait",
+          "query": "Detect abnormal gait",
+          "unresolved_questions": [
+            "Causal interpretation and local relevance require researcher review."
+          ],
+          "scope": "Supplied approved collection only; researcher may expand sources"
+        }
+      ],
+      "unresolved_questions": [],
+      "human_review_required": true
+    },
+    "warnings": [
+      "Rule-based decomposition is a reviewable draft; source linkage does not establish causality."
+    ],
+    "required_action": "Review components, causal hypotheses, capabilities and unknown context before scouting.",
+    "limitations": [
+      "Rule-based clause typing and explicit researcher annotations; incomplete maps require review.",
+      "Synthetic examples are not field validation."
+    ],
+    "context": {
+      "affected_animals": "dairy cows",
+      "production_system": "dairy"
+    },
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
+}

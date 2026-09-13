@@ -1,0 +1,18 @@
+{
+  "rows": [
+    {
+      "reading": 1
+    },
+    {
+      "reading": 3
+    },
+    {
+      "reading": null
+    }
+  ],
+  "columns": [
+    "reading"
+  ],
+  "question": "What is the distribution of synthetic readings?",
+  "data_classification": "synthetic"
+}

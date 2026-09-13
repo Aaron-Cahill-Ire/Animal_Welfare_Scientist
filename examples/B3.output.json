@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "run_id": "f11dadb2-d9c9-4331-99b8-c8a9ffa9a0ec",
+  "agent_id": "B3",
+  "agent_version": "3fe7c4922aca2dd702d58a06036e97a467ec7647dd64788ff95af7ffe657fd26",
+  "configuration_snapshot": {
+    "agent_id": "B3",
+    "agent_version": "3fe7c4922aca2dd702d58a06036e97a467ec7647dd64788ff95af7ffe657fd26",
+    "backend": "deterministic-python",
+    "model": null,
+    "prompt": null,
+    "tools": [],
+    "dependencies": {
+      "python": "3.9.6"
+    },
+    "permissions": [],
+    "parameters": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    },
+    "id": "a55f14e95afc5201cb7bc489b755200a2771e1e533a52dd887ea0878054d028b"
+  },
+  "input_sha256": "e74de9b76b4a77be63f94e6096cf6bed027c072c3bd739752a4de122bae0262b",
+  "sources": [],
+  "runtime_seconds": 0.000163,
+  "cost_usd": 0.0,
+  "backend": "deterministic-python",
+  "human_review_required": true,
+  "status": "partial",
+  "data": {
+    "design": "parallel randomized comparison",
+    "experimental_unit": "synthetic enclosure",
+    "comparator": "standard enclosure",
+    "sampling": {
+      "available_units": 100,
+      "approximate_units_per_arm": 36,
+      "resource_feasible": true,
+      "formula": "ceil(2*(z_(1-alpha/2)+z_power)^2*sd^2/effect^2)",
+      "assumptions": [
+        "Independent units",
+        "Two equally sized groups",
+        "Continuous approximately normal outcome",
+        "No attrition, clustering or multiplicity adjustment",
+        "Large-sample approximation; statistician review required"
+      ]
+    },
+    "power_inputs": {
+      "minimum_effect": 2,
+      "outcome_sd": 3,
+      "alpha": 0.05,
+      "power": 0.8
+    },
+    "analysis_plan": {
+      "confirmatory": {
+        "outcome": "sound level",
+        "contrast": "between-group mean difference",
+        "prespecification_required": true
+      },
+      "exploratory": [],
+      "missing_data": "Report missingness by group; prespecify handling and sensitivity analysis"
+    },
+    "stopping_assumptions": [
+      "No efficacy peeking without prespecified sequential boundaries",
+      "Human-approved humane stopping rules override study completion"
+    ],
+    "unresolved_decisions": []
+  },
+  "warnings": [
+    "Planning approximation only; do not start a study from this output."
+  ],
+  "required_action": null,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "Power approximation is limited to two independent continuous-outcome groups; no clustering adjustment"
+  ],
+  "context": "Not specified",
+  "data_classification": "synthetic",
+  "limits": {
+    "input_bytes": 1000000,
+    "sources": 200,
+    "cost_usd": 0,
+    "runtime_seconds": 10
+  }
+}

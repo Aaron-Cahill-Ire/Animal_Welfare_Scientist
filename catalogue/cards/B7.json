@@ -1,0 +1,153 @@
+{
+  "name": "Component and Supply-Chain Agent",
+  "purpose": "Compare approved dated supplier records",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Compare approved dated supplier records"
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000186,
+  "human_review_required": true,
+  "limitations": [
+    "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+    "Human review required before consequential research decisions",
+    "Exact specification matching only; no live availability or pricing lookup"
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "requirements": {
+      "voltage": 3.3
+    },
+    "supplier_records": [
+      {
+        "part_id": "synthetic-part",
+        "supplier": "Synthetic supplier",
+        "approved": true,
+        "specifications": {
+          "voltage": 3.3
+        },
+        "checked_at": "2026-09-01",
+        "cost": 12,
+        "currency": "USD",
+        "availability": "synthetic in-stock claim",
+        "source_id": "synthetic-catalogue"
+      }
+    ],
+    "as_of": "2026-09-13",
+    "sources": [
+      {
+        "id": "synthetic-catalogue",
+        "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+        "context": "synthetic supplier"
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "a5d2b8cf-657a-4d66-be89-dbf4cfcf69be",
+    "agent_id": "B7",
+    "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+    "configuration_snapshot": {
+      "agent_id": "B7",
+      "agent_version": "60c674b2289741017287594ee370c248a02cc432e548a9d759b7ad5c425363b3",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "059027a2d91768619de631ed17d4f9e553703e2c24251ae028a73d969be8119a"
+    },
+    "input_sha256": "6db1c38099401c70c38d7d55935ab36803e9997a155fec002462e5e4e36f8794",
+    "sources": [
+      {
+        "id": "synthetic-catalogue",
+        "passage": "Synthetic supplier record dated 2026-09-01: synthetic-part, 3.3 V, indicative USD 12 and synthetic in-stock status. This is test data, not a real offer.",
+        "context": "synthetic supplier"
+      }
+    ],
+    "runtime_seconds": 0.000186,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "candidates": [
+        {
+          "part_id": "synthetic-part",
+          "supplier": "Synthetic supplier",
+          "source_id": "synthetic-catalogue",
+          "url": null,
+          "compatibility": "matches_supplied_constraints",
+          "gaps": [],
+          "conflicts": [],
+          "checked_at": "2026-09-01",
+          "age_days": 12,
+          "freshness": "within_requested_age",
+          "cost": 12,
+          "currency": "USD",
+          "availability": "synthetic in-stock claim",
+          "lead_time_days": null,
+          "independent_confirmation_required": true
+        }
+      ],
+      "rejected": [],
+      "as_of": "2026-09-13",
+      "constraint_method": "Exact equality against user-supplied specification fields; no inferred substitutes"
+    },
+    "warnings": [
+      "No live procurement lookup. Cost and availability are user-supplied, dated claims; confirm before purchase."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Deterministic bounded assistance using supplied structured inputs; no independent scientific validation",
+      "Human review required before consequential research decisions",
+      "Exact specification matching only; no live availability or pricing lookup"
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
+}

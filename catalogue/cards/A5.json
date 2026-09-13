@@ -1,0 +1,219 @@
+{
+  "name": "Agent and Tool Mapper",
+  "purpose": "Requires structured tool identity and quoted capability evidence; no live external discovery or availability check.",
+  "intended_users": [
+    "Welfare researchers",
+    "Methods reviewers",
+    "Developers"
+  ],
+  "intended_uses": [
+    "Requires structured tool identity and quoted capability evidence; no live external discovery or availability check."
+  ],
+  "prohibited_uses": [
+    "Autonomous animal study approval or execution",
+    "Veterinary diagnosis",
+    "Autonomous procurement",
+    "Claims of independent scientific validation"
+  ],
+  "species": "Synthetic examples only; no general species validation",
+  "production_systems": "Context supplied by researcher; unvalidated",
+  "jurisdictions": "Not assessed",
+  "data_governance": "Public/synthetic only. Local computation, no external model processing; see handling policy.",
+  "dependencies": [
+    "Python >=3.9 (stdlib); browser trial uses pinned Pyodide 0.27.7"
+  ],
+  "models": [],
+  "tools": [],
+  "cost_usd": 0,
+  "runtime_seconds_example": 0.000321,
+  "human_review_required": true,
+  "limitations": [
+    "Requires structured tool identity and quoted capability evidence; no live external discovery or availability check.",
+    "Synthetic examples are not field validation."
+  ],
+  "failure_and_abstention": "Invalid/missing input requests correction. Unsupported evidence/context is partial or abstained.",
+  "repository": "https://github.com/Aaron-Cahill-Ire/Animal_Welfare_Scientist",
+  "release": "0.1.0 development; configuration content hash in manifest",
+  "maintainer": "Repository owner; scientific maintainer assignment pending",
+  "license": "MIT (implementation)",
+  "real_study_validation": "Not performed",
+  "input_example": {
+    "task": "Find reusable gait detection tools",
+    "required_capabilities": [
+      "gait detection"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "data_classification": "synthetic"
+  },
+  "output_example": {
+    "schema_version": "1.0",
+    "run_id": "9719252b-303a-4b47-a971-fe8c38f20d6b",
+    "agent_id": "A5",
+    "agent_version": "29cfe1ac4f7d239edfd95cce228ccd6454d1a8e620f18bdc2b3031283c242c39",
+    "configuration_snapshot": {
+      "agent_id": "A5",
+      "agent_version": "29cfe1ac4f7d239edfd95cce228ccd6454d1a8e620f18bdc2b3031283c242c39",
+      "backend": "deterministic-python",
+      "model": null,
+      "prompt": null,
+      "tools": [],
+      "dependencies": {
+        "python": "3.9.6"
+      },
+      "permissions": [],
+      "parameters": {
+        "input_bytes": 1000000,
+        "sources": 200,
+        "cost_usd": 0,
+        "runtime_seconds": 10
+      },
+      "id": "43bd0d3ee926a9667c9d0bde00a4d84fefe4428bdc829724709bac1ced2d7a15"
+    },
+    "input_sha256": "5518ba5f0395aa8e91daf21f37d5792f8909a8c5f0c3637e0a6fcada7bc25ccf",
+    "sources": [
+      {
+        "id": "s1",
+        "passage": "Synthetic gait sensor detects abnormal gait. Version 1.0 is open source.",
+        "url": "https://example.org/sensor",
+        "context": {
+          "affected_animals": "dairy cows"
+        },
+        "solution": {
+          "name": "Synthetic gait sensor",
+          "classification": "prototype"
+        },
+        "capability_matches": [
+          {
+            "capability_id": "gait",
+            "evidence_quote": "detects abnormal gait",
+            "requirements_met": [
+              "gait detection"
+            ]
+          }
+        ],
+        "tool": {
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "evidence_quote": "detects abnormal gait"
+            }
+          ],
+          "version": "1.0",
+          "version_evidence_quote": "Version 1.0",
+          "access": "open source",
+          "access_evidence_quote": "open source"
+        }
+      }
+    ],
+    "runtime_seconds": 0.000321,
+    "cost_usd": 0.0,
+    "backend": "deterministic-python",
+    "human_review_required": true,
+    "status": "partial",
+    "data": {
+      "tools": [
+        {
+          "id": "tool-d8daddd6ffe0",
+          "name": "Synthetic gait sensor",
+          "canonical_url": "https://example.org/sensor",
+          "source_ids": [
+            "s1"
+          ],
+          "capabilities": [
+            {
+              "name": "gait detection",
+              "source_id": "s1",
+              "evidence_quote": "detects abnormal gait",
+              "verification_status": "caller_annotation"
+            }
+          ],
+          "versions": [
+            {
+              "value": "1.0",
+              "source_id": "s1",
+              "evidence_quote": "Version 1.0"
+            }
+          ],
+          "access_conditions": [
+            {
+              "value": "open source",
+              "source_id": "s1",
+              "evidence_quote": "open source"
+            }
+          ],
+          "reuse_options": [
+            {
+              "option": "evaluate_reuse",
+              "matched_capabilities": [
+                "gait detection"
+              ],
+              "missing_capabilities": [],
+              "task": "Find reusable gait detection tools",
+              "requires_validation": true
+            }
+          ],
+          "conflicts": []
+        }
+      ],
+      "coverage_gaps": []
+    },
+    "warnings": [
+      "Task suitability depends on explicit capability annotations; no external discovery or live access checks performed."
+    ],
+    "required_action": null,
+    "limitations": [
+      "Requires structured tool identity and quoted capability evidence; no live external discovery or availability check.",
+      "Synthetic examples are not field validation."
+    ],
+    "context": "Not specified",
+    "data_classification": "synthetic",
+    "limits": {
+      "input_bytes": 1000000,
+      "sources": 200,
+      "cost_usd": 0,
+      "runtime_seconds": 10
+    }
+  },
+  "evidence_maturity": "Prototype",
+  "maintenance": "Active",
+  "security": "Unreviewed",
+  "last_evaluation": "2026-09-13T13:52:46.813412+00:00"
+}

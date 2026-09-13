@@ -1,0 +1,29 @@
+{
+  "hypothesis": {
+    "population": "synthetic enclosure",
+    "outcome": "sound level",
+    "comparator": "standard enclosure",
+    "duration": "one hour"
+  },
+  "framework": {
+    "name": "User-supplied environmental measurement framework",
+    "indicators": [
+      {
+        "name": "sound level",
+        "unit": "dB",
+        "construct": "environmental noise",
+        "procedure": "Record calibrated readings at predefined positions",
+        "source_id": "synthetic-protocol",
+        "validation_population": "synthetic enclosure"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "synthetic-protocol",
+      "passage": "Synthetic protocol: record calibrated sound readings at predefined positions in a synthetic enclosure. No animal welfare validation is claimed.",
+      "context": "synthetic enclosure"
+    }
+  ],
+  "data_classification": "synthetic"
+}
