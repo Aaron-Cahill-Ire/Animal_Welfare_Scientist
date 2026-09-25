@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welfare Technology Scanner — Toy Tree</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: light-dark(#f6f7fb, #101218);
+      --surface: light-dark(#ffffff, #191c24);
+      --surface-soft: light-dark(#eef1f7, #222632);
+      --text: light-dark(#1b2230, #f1f4fa);
+      --muted: light-dark(#5f6878, #aeb6c5);
+      --line: light-dark(#cbd2df, #414858);
+      --dark: light-dark(#222936, #f0f3f8);
+      --dark-text: light-dark(#ffffff, #151820);
+      --chemistry: light-dark(#6e52b8, #b9a2f2);
+      --chemistry-soft: light-dark(#eee8fc, #2b2440);
+      --contact: light-dark(#2476a8, #75c2ee);
+      --contact-soft: light-dark(#e2f2fa, #193242);
+      --exposure: light-dark(#b45d24, #f0a66f);
+      --exposure-soft: light-dark(#fbeadf, #40291d);
+      --success: light-dark(#18734a, #68d69f);
+      --success-soft: light-dark(#e0f4e9, #183329);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--page);
+      color: var(--text);
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 44px 0 56px;
+    }
+
+    header {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .subtitle {
+      margin: 14px auto 0;
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .node {
+      width: min(100%, 650px);
+      padding: 17px 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      text-align: center;
+      box-shadow: 0 10px 30px light-dark(rgb(31 42 60 / 8%), rgb(0 0 0 / 18%));
+    }
+
+    .node strong,
+    .card strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.08rem;
+      line-height: 1.3;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .ailment {
+      border-color: transparent;
+      background: var(--dark);
+      color: var(--dark-text);
+    }
+
+    .ailment .label {
+      color: color-mix(in srgb, var(--dark-text) 68%, transparent);
+    }
+
+    .pathway {
+      background: var(--surface-soft);
+    }
+
+    .connector {
+      position: relative;
+      width: 2px;
+      height: 30px;
+      background: var(--line);
+    }
+
+    .connector::after {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      content: "";
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .gate {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.83rem;
+      font-weight: 650;
+    }
+
+    .gate b {
+      color: var(--text);
+    }
+
+    .branches {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      width: 100%;
+      margin-top: 38px;
+    }
+
+    .branches::before {
+      position: absolute;
+      top: -20px;
+      left: calc(16.666% - 1px);
+      width: 66.666%;
+      height: 1px;
+      background: var(--line);
+      content: "";
+    }
+
+    .branch {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .branch::before {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      width: 1px;
+      height: 20px;
+      background: var(--line);
+      content: "";
+    }
+
+    .card {
+      min-height: 128px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-top: 5px solid currentColor;
+      border-radius: 15px;
+      background: var(--surface);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .card p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .branch-arrow {
+      align-self: center;
+      padding: 8px 0 6px;
+      color: var(--muted);
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .target,
+    .technology {
+      min-height: 104px;
+    }
+
+    .target {
+      background: var(--surface-soft);
+    }
+
+    .technology {
+      border-style: dashed;
+      border-top-style: solid;
+    }
+
+    .chemistry {
+      color: var(--chemistry);
+    }
+
+    .chemistry.target,
+    .chemistry.technology {
+      background: var(--chemistry-soft);
+    }
+
+    .contact {
+      color: var(--contact);
+    }
+
+    .contact.target,
+    .contact.technology {
+      background: var(--contact-soft);
+    }
+
+    .exposure {
+      color: var(--exposure);
+    }
+
+    .exposure.target,
+    .exposure.technology {
+      background: var(--exposure-soft);
+    }
+
+    .card strong,
+    .card p,
+    .card .label {
+      color: var(--text);
+    }
+
+    .card p,
+    .card .label {
+      color: var(--muted);
+    }
+
+    .outcome {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: min(100%, 760px);
+      margin-top: 32px;
+      padding: 15px 18px;
+      border: 1px solid color-mix(in srgb, var(--success) 35%, var(--line));
+      border-radius: 14px;
+      background: var(--success-soft);
+      color: var(--text);
+      text-align: center;
+      line-height: 1.45;
+    }
+
+    .outcome-mark {
+      flex: 0 0 auto;
+      color: var(--success);
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .note {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .agent-flow {
+      margin-top: 56px;
+      padding-top: 44px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 26px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      letter-spacing: -0.025em;
+    }
+
+    .section-heading p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .orchestrator {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 880px;
+      margin: 0 auto 24px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: var(--dark);
+      color: var(--dark-text);
+    }
+
+    .orchestrator .step-number {
+      border-color: color-mix(in srgb, var(--dark-text) 34%, transparent);
+      color: var(--dark-text);
+    }
+
+    .orchestrator p {
+      margin: 3px 0 0;
+      color: color-mix(in srgb, var(--dark-text) 70%, transparent);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .phases {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .phase {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface);
+    }
+
+    .phase-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .phase-title h3 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .phase-title span {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .steps {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 11px;
+      padding: 13px;
+      border-radius: 12px;
+      background: var(--surface-soft);
+    }
+
+    .step-number {
+      display: grid;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 750;
+      place-items: center;
+    }
+
+    .step h4 {
+      margin: 0;
+      font-size: 0.93rem;
+    }
+
+    .step p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.42;
+    }
+
+    .human {
+      border-left: 4px solid var(--success);
+      background: var(--success-soft);
+    }
+
+    .parallel {
+      border-left: 4px solid var(--contact);
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 22px, 620px);
+        padding-top: 28px;
+      }
+
+      .branches {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 24px;
+      }
+
+      .branches::before {
+        display: none;
+      }
+
+      .branch::before {
+        top: -22px;
+        height: 22px;
+      }
+
+      .branch + .branch {
+        margin-top: 22px;
+      }
+
+      .card {
+        min-height: 0;
+      }
+
+      .phases {
+        grid-template-columns: 1fr;
+      }
+
+      .orchestrator {
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        padding: 10mm;
+      }
+
+      .node,
+      .card {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Welfare Technology Scanner · Toy example</p>
+      <h1>One pathway, three intervention surfaces</h1>
+      <p class="subtitle">
+        Map the conditions required for a welfare-harm pathway, then search each
+        distinct condition for technologies that could break the chain.
+      </p>
+    </header>
+
+    <section class="tree" aria-label="Toy causal tree for broiler footpad dermatitis">
+      <div class="node ailment">
+        <span class="label">Ailment</span>
+        <strong>Painful footpad dermatitis</strong>
+      </div>
+
+      <div class="connector" aria-hidden="true"></div>
+
+      <div class="node pathway">
+        <span class="label">Toy pathway</span>
+        <strong>Ammonia-mediated irritation from litter contact</strong>
+      </div>
+
+      <div class="connector" aria-hidden="true"></div>
+
+      <div class="gate">
+        <b>ALL</b>
+        <span>Three conditions are required within this pathway</span>
+      </div>
+
+      <div class="branches">
+        <article class="branch">
+          <div class="card chemistry">
+            <span class="label">Necessary condition</span>
+            <strong>Damaging ammonia is produced</strong>
+            <p>Change the chemical process in the litter.</p>
+          </div>
+          <div class="branch-arrow" aria-hidden="true">↓</div>
+          <div class="card target chemistry">
+            <span class="label">Search target</span>
+            <strong>Reduce ammonia production</strong>
+          </div>
+          <div class="branch-arrow" aria-hidden="true">↓</div>
+          <div class="card technology chemistry">
+            <span class="label">Example technology</span>
+            <strong>Urease inhibitor</strong>
+          </div>
+        </article>
+
+        <article class="branch">
+          <div class="card contact">
+            <span class="label">Necessary condition</span>
+            <strong>Footpad contacts the litter</strong>
+            <p>Change the physical interface.</p>
+          </div>
+          <div class="branch-arrow" aria-hidden="true">↓</div>
+          <div class="card target contact">
+            <span class="label">Search target</span>
+            <strong>Reduce physical contact</strong>
+          </div>
+          <div class="branch-arrow" aria-hidden="true">↓</div>
+          <div class="card technology contact">
+            <span class="label">Example technology</span>
+            <strong>Low-cost raised surface or barrier</strong>
+          </div>
+        </article>
+
+        <article class="branch">
+          <div class="card exposure">
+            <span class="label">Necessary condition</span>
+            <strong>Exposure lasts long enough</strong>
+            <p>Change the duration or recovery interval.</p>
+          </div>
+          <div class="branch-arrow" aria-hidden="true">↓</div>
+          <div class="card target exposure">
+            <span class="label">Search target</span>
+            <strong>Reduce exposure time</strong>
+          </div>
+          <div class="branch-arrow" aria-hidden="true">↓</div>
+          <div class="card technology exposure">
+            <span class="label">Example technology</span>
+            <strong>Dry resting area or surface rotation</strong>
+          </div>
+        </article>
+      </div>
+
+      <div class="outcome">
+        <span class="outcome-mark" aria-hidden="true">✓</span>
+        <span>Remove any genuinely necessary condition and this particular pathway is blocked.</span>
+      </div>
+    </section>
+
+    <p class="note">
+      Teaching example only. A real scanner run would require evidence and human
+      approval before accepting the pathway, its necessary conditions, or any
+      technology candidate. Other pathways to the same ailment may remain open.
+    </p>
+
+    <section class="agent-flow" aria-labelledby="agent-flow-title">
+      <div class="section-heading">
+        <p class="eyebrow">How the system produces this tree</p>
+        <h2 id="agent-flow-title">Agents turn one welfare problem into node-linked technologies</h2>
+        <p>The causal tree is completed and approved before the full technology searches begin.</p>
+      </div>
+
+      <div class="orchestrator">
+        <span class="step-number">O</span>
+        <div>
+          <strong>Workflow Orchestrator</strong>
+          <p>Opens the run, passes structured artifacts between roles, validates their format, records every version, and pauses at both human decisions. It makes no scientific judgements.</p>
+        </div>
+      </div>
+
+      <div class="phases">
+        <section class="phase" aria-labelledby="phase-one-title">
+          <div class="phase-title">
+            <h3 id="phase-one-title">Phase 1 · Build the tree</h3>
+            <span>Before searching</span>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-number">1</span>
+              <div>
+                <h4>Problem Intake Agent</h4>
+                <p>Freezes the selected problem record and sets broiler footpad dermatitis as the one-ailment run scope.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">2</span>
+              <div>
+                <h4>Welfare Evidence Agent</h4>
+                <p>Returns evidence cards about the proposed pathway, ammonia production, litter contact, exposure, and uncertainty.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">3</span>
+              <div>
+                <h4>Fault-Tree Builder</h4>
+                <p>Builds the pathway and necessary-condition structure, asks for missing evidence, and stops when deeper detail would not reveal a new intervention target.</p>
+              </div>
+            </li>
+            <li class="step human">
+              <span class="step-number">H1</span>
+              <div>
+                <h4>Human review 1</h4>
+                <p>Approves, edits, or rejects the complete tree and the exact condition nodes that may be searched.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="phase" aria-labelledby="phase-two-title">
+          <div class="phase-title">
+            <h3 id="phase-two-title">Phase 2 · Find technologies</h3>
+            <span>Approved nodes only</span>
+          </div>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-number">4</span>
+              <div>
+                <h4>Mechanism Translator</h4>
+                <p>Turns ammonia production, physical contact, and exposure time into separate species-neutral search briefs.</p>
+              </div>
+            </li>
+            <li class="step parallel">
+              <span class="step-number">5–7</span>
+              <div>
+                <h4>Three Scouts search in parallel</h4>
+                <p>The Patent, Research, and Product + Trade Scouts find candidates such as urease inhibitors, contact barriers, and surface-management systems.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">8</span>
+              <div>
+                <h4>Mechanism Match Judge</h4>
+                <p>Keeps only candidates that act on the exact searched condition under compatible conditions and scale.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">9</span>
+              <div>
+                <h4>Prior-Use Validator</h4>
+                <p>Checks whether each candidate has already been used, tested, failed, or is only apparently untested in broiler systems.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">10</span>
+              <div>
+                <h4>Triage Agent</h4>
+                <p>Ranks surviving candidates by evidence, expected welfare effect, readiness, cost, scale, adoption barriers, and new-harm risk.</p>
+              </div>
+            </li>
+            <li class="step human">
+              <span class="step-number">H2</span>
+              <div>
+                <h4>Human review 2</h4>
+                <p>Chooses whether to investigate, test, hold, or reject each candidate. No agent recommends autonomous deployment.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
