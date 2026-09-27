@@ -7,6 +7,9 @@ This folder contains the repository's central design work. Its purpose is to
 make possible LLM pipelines easy to inspect side by side before custom agents
 are built.
 
+[Other AI research-system precedents](other-precedents.md) are recorded as
+background examples, not as additional pipeline candidates.
+
 ## Current candidates
 
 | Candidate | How it searches for interventions | Intended output | Current maturity |
@@ -56,4 +59,3 @@ individual approaches have been evaluated, not an accidental mixture.
 3. Record strengths, failures, cost and human-review burden.
 4. Select one pipeline or document a deliberate combination.
 5. Define the stage contracts and only then specify the custom agents.
-

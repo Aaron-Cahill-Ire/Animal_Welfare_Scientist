@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ideation: A Learning Evaluation System for WelfareTech Explorer</title>
+  <style>
+    :root { --ink:#17211b; --muted:#5c6b62; --paper:#f6f7f2; --card:#ffffff; --line:#d9dfd8; --green:#205c3b; --green-soft:#e7f2ea; --blue:#24547a; --blue-soft:#e7f0f7; --amber:#765313; --amber-soft:#f8efd8; --rose:#7a3434; --rose-soft:#f7e8e6; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.62 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(940px,calc(100% - 32px)); margin:36px auto 72px; }
+    header { background:#173d2a; color:#fff; padding:36px; border-radius:18px; }
+    h1 { font-size:clamp(28px,4vw,42px); line-height:1.1; margin:4px 0 14px; letter-spacing:-.025em; }
+    h2 { margin:44px 0 16px; font-size:24px; letter-spacing:-.015em; }
+    h3 { font-size:20px; margin:0; line-height:1.25; }
+    p { max-width:72ch; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.13em; font-size:11px; font-weight:750; opacity:.78; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+    .chip { display:inline-flex; border-radius:999px; padding:5px 10px; background:rgba(255,255,255,.13); font-size:12px; }
+    .thesis { margin:22px 0 0; font-size:18px; max-width:68ch; color:#e4f1e8; }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:18px 0 0; }
+    .stat { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:15px; }
+    .stat b { display:block; font-size:23px; line-height:1.1; }
+    .stat span { color:var(--muted); font-size:12px; }
+    .callout { background:var(--blue-soft); color:#193f5d; padding:17px 20px; border-radius:13px; margin:20px 0; }
+    .axes { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; padding:0; list-style:none; }
+    .axes li { display:flex; align-items:center; min-height:86px; padding:12px; border-radius:12px; background:var(--card); border:1px solid var(--line); font-weight:650; font-size:13px; }
+    .loop { display:grid; grid-template-columns:repeat(5,1fr); align-items:center; gap:8px; margin:22px 0; }
+    .step { background:var(--green-soft); color:#17492e; border-radius:12px; padding:12px; text-align:center; font-weight:700; min-height:68px; display:flex; align-items:center; justify-content:center; }
+    .arrow { text-align:center; color:var(--green); font-size:22px; }
+    nav { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 20px; }
+    nav ol { margin:8px 0 0; columns:2; padding-left:22px; }
+    nav a { color:var(--blue); text-decoration:none; }
+    article { margin:16px 0; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:23px; }
+    .rank { display:inline-flex; margin-bottom:10px; border-radius:999px; padding:4px 9px; background:var(--green-soft); color:var(--green); font-size:12px; font-weight:800; }
+    dl { display:grid; grid-template-columns:120px 1fr; gap:8px 14px; margin:18px 0 0; }
+    dt { color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-size:11px; font-weight:750; }
+    dd { margin:0; }
+    .confidence { display:inline-flex; padding:3px 8px; border-radius:999px; background:var(--green-soft); color:var(--green); font-weight:700; }
+    .complexity { display:inline-flex; padding:3px 8px; border-radius:999px; background:var(--amber-soft); color:var(--amber); font-weight:700; }
+    table { width:100%; border-collapse:collapse; background:var(--card); border-radius:12px; overflow:hidden; }
+    th,td { padding:11px 12px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+    th { background:#edf0eb; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+    footer { color:var(--muted); border-top:1px solid var(--line); margin-top:44px; padding-top:16px; font-size:12px; }
+    code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.92em; }
+    @media (max-width:720px) { .stats,.axes { grid-template-columns:1fr 1fr; } .loop { grid-template-columns:1fr; } .arrow { transform:rotate(90deg); } nav ol { columns:1; } dl { grid-template-columns:1fr; } header { padding:25px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Evaluation-system ideation</div>
+    <h1>A Learning Evaluation System for WelfareTech Explorer</h1>
+    <p class="thesis">The system does not need a perfect label for “good idea” before it can improve. It needs a ladder of increasingly consequential evidence, with objective checks near the bottom and delayed welfare outcomes at the top.</p>
+    <div class="meta">
+      <span class="chip">Date: <time datetime="2026-09-11">2026-09-11</time></span>
+      <span class="chip">Topic: learning-evaluation-system</span>
+      <span class="chip">Focus: longitudinal improvement without immediate ground truth</span>
+      <span class="chip">Mode: repo-grounded</span>
+    </div>
+  </header>
+
+  <div class="stats" aria-label="Ideation summary">
+    <div class="stat"><b>47</b><span>raw candidates</span></div>
+    <div class="stat"><b>14</b><span>deduplicated concepts</span></div>
+    <div class="stat"><b>7</b><span>ranked survivors</span></div>
+    <div class="stat"><b>5</b><span>evaluation axes covered</span></div>
+  </div>
+
+  <section id="grounding-context">
+    <h2>Grounding Context</h2>
+    <p>The initial PRD already anticipates historical backtesting, known-intervention recovery, novelty benchmarks, citation accuracy, independent expert evaluation, configurable pipeline experiments, false-positive and false-negative tracking, and full research provenance. Its quality model is deliberately multidimensional: welfare impact, technical feasibility, adoption, neglectedness, scalability, additionality, evidence strength, and information value.</p>
+    <p>The principal gap is operationalisation. The document does not yet define benchmark cases, scoring anchors, reviewer calibration, the treatment of disagreement, stage-specific outcome labels, rejected-idea audits, or rules for promoting one pipeline configuration over another.</p>
+    <div class="callout"><strong>Core conclusion:</strong> final idea quality should be treated as a delayed, partly subjective latent outcome. Improvement should come from multiple linked measurements rather than a single composite reward.</div>
+    <div class="loop" aria-label="Learning loop">
+      <div class="step">Make explicit predictions</div><div class="arrow">→</div>
+      <div class="step">Run the next research stage</div><div class="arrow">→</div>
+      <div class="step">Resolve outcomes and recalibrate</div>
+    </div>
+  </section>
+
+  <section id="topic-axes">
+    <h2>Topic Axes</h2>
+    <ul class="axes">
+      <li>Component correctness</li>
+      <li>Expert judgement and reviewer reliability</li>
+      <li>Confidence calibration and forecasting</li>
+      <li>Delayed outcomes and historical backtesting</li>
+      <li>Anti-gaming and evaluation governance</li>
+    </ul>
+  </section>
+
+  <section id="ranked-ideas">
+    <h2>Ranked Ideas</h2>
+    <nav aria-label="Ranked ideas">
+      <div class="eyebrow">Jump to an idea</div>
+      <ol>
+        <li><a href="#idea-1">The Outcome and Forecast Ladder</a></li>
+        <li><a href="#idea-2">Rejection Insurance Pool</a></li>
+        <li><a href="#idea-3">Adversarial Challenge Bank</a></li>
+        <li><a href="#idea-4">Reviewer Calibration Guild</a></li>
+        <li><a href="#idea-5">Time-Capsule Discovery League</a></li>
+        <li><a href="#idea-6">Shadow Pipeline League</a></li>
+        <li><a href="#idea-7">Error Cascade Map</a></li>
+      </ol>
+    </nav>
+
+    <article id="idea-1">
+      <span class="rank">1 · Highest leverage</span>
+      <h3>The Outcome and Forecast Ladder</h3>
+      <p>Every idea produces explicit forecasts for the next observable rung: prior-art survival, expert endorsement, technical validation, buyer interest, prototype performance, pilot behaviour change, and eventual welfare change. Each forecast has a deadline and resolution rule; the system scores calibration as evidence arrives and periodically tests which early signals actually predicted later rungs.</p>
+      <dl>
+        <dt>Axis</dt><dd>Confidence calibration and forecasting</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> The PRD already stores confidence, evidence, counterevidence, stage decisions, timestamps, validation plans, and human decisions. <strong>external:</strong> Proper scoring rules and calibration curves allow probabilistic predictions to be evaluated before ultimate impact is known.</dd>
+        <dt>Rationale</dt><dd>This is the central learning engine. It converts every research stage into feedback without mistaking an early milestone for final welfare success.</dd>
+        <dt>Downsides</dt><dd>Resolution criteria require discipline; many predictions will censor or resolve slowly. Poorly chosen milestones could become proxies the system games, so correlations with later rungs must be audited.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">92%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">Medium</span></dd>
+      </dl>
+    </article>
+
+    <article id="idea-2">
+      <span class="rank">2 · Blind-spot control</span>
+      <h3>Rejection Insurance Pool</h3>
+      <p>Randomly send a stratified 5–10% sample of rejected ideas through the next research stage, covering different species, technology families, pipeline gates, and rejection reasons. Compare the deeper result with the original kill decision to estimate false negatives and identify filters that systematically suppress unusual but valuable opportunities.</p>
+      <dl>
+        <dt>Axis</dt><dd>Anti-gaming and evaluation governance</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> The PRD names false-negative rate, configurable stopping rules, recorded decisions, and a steep 1,000-to-1–3 funnel. <strong>reasoned:</strong> Survivor-only evaluation creates selection bias because incorrectly rejected ideas otherwise disappear.</dd>
+        <dt>Rationale</dt><dd>The costliest failure may be invisible: the pipeline confidently discarding its one exceptional idea. This creates labels for the failure rather than assuming it away.</dd>
+        <dt>Downsides</dt><dd>Consumes scarce research budget on candidates believed to be weak. Sampling must be large enough to be informative and protected from cherry-picking.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">90%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">Low</span></dd>
+      </dl>
+    </article>
+
+    <article id="idea-3">
+      <span class="rank">3 · Hard-case benchmark</span>
+      <h3>Adversarial Challenge Bank</h3>
+      <p>Maintain versioned cases containing obscure patents, terminology traps, failed prototypes, persuasive unsupported claims, productivity-only benefits, and technologies that measure distress without causing action. Include cases whose correct answer is “insufficient evidence.” Score prior-art Recall@k, citation support, classification, causal-chain diagnosis, calibrated abstention, and robustness to irrelevant rewording.</p>
+      <dl>
+        <dt>Axis</dt><dd>Component correctness</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> The PRD requires terminology expansion, a novelty taxonomy, citation auditing, an explicit welfare causal pathway, welfare/productivity separation, and uncertainty when searches are inconclusive. <strong>external:</strong> Information-retrieval benchmarks provide established recall and ranking measures.</dd>
+        <dt>Rationale</dt><dd>It turns several unprovable claims—especially “nothing similar exists”—into measurable capabilities under controlled cases.</dd>
+        <dt>Downsides</dt><dd>Building authoritative cases is labour-intensive. A visible static set will eventually be overfit, so a protected and rotating subset is needed.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">89%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">Medium</span></dd>
+      </dl>
+    </article>
+
+    <article id="idea-4">
+      <span class="rank">4 · Human measurement</span>
+      <h3>Reviewer Calibration Guild</h3>
+      <p>Separate welfare-science, technical-feasibility, and adoption judgements. Reviewers first score shared anchor cases, then make blinded pairwise choices such as “which deserves the next £1,000 of research?” Track agreement and domain-specific reviewer reliability; route high disagreement into targeted research rather than averaging it away.</p>
+      <dl>
+        <dt>Axis</dt><dd>Expert judgement and reviewer reliability</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> The PRD calls for independent expert ratings, human overrides, multidimensional scoring, and blinded comparison. <strong>external:</strong> Pairwise ranking and inter-rater reliability provide more stable signals than unanchored absolute scores.</dd>
+        <dt>Rationale</dt><dd>Expert judgement becomes a reusable measurement instrument, while disagreement becomes information about which assumption needs evidence.</dd>
+        <dt>Downsides</dt><dd>Experts are scarce and may share field-wide biases. Pairwise comparisons infer relative preference, not moral truth or causal impact.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">86%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">Medium</span></dd>
+      </dl>
+    </article>
+
+    <article id="idea-5">
+      <span class="rank">5 · End-to-end foresight</span>
+      <h3>Time-Capsule Discovery League</h3>
+      <p>Create historical evaluation worlds containing only evidence available before a cutoff date. Ask pipeline variants to rank opportunities that later became useful alongside contemporaneous dead ends, remove later terminology, check for date leakage, and retain unseen eras as holdouts.</p>
+      <dl>
+        <dt>Axis</dt><dd>Delayed outcomes and historical backtesting</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> Historical cutoff backtesting and known-intervention recovery are already specified in the PRD. <strong>reasoned:</strong> Matched dead ends distinguish foresight from retrospective storytelling.</dd>
+        <dt>Rationale</dt><dd>This is the closest repeatable test of whether the system could have found tomorrow’s useful intervention yesterday.</dd>
+        <dt>Downsides</dt><dd>Outcome labels are contestable and reconstructing a clean historic information environment is difficult. Historical success may not transfer to new opportunity classes.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">80%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">High</span></dd>
+      </dl>
+    </article>
+
+    <article id="idea-6">
+      <span class="rank">6 · Improvement governance</span>
+      <h3>Shadow Pipeline League</h3>
+      <p>Run the current pipeline and challenger configurations on identical frozen batches. Compare the full system with ablated versions, a minimal one-agent workflow, and matched-budget human brainstorming; anonymise outputs and promote challengers only when repeated results improve the Pareto frontier without breaching evidence and welfare guardrails.</p>
+      <dl>
+        <dt>Axis</dt><dd>Anti-gaming and evaluation governance</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> The PRD makes models, prompts, agents, strategies, and stopping rules configurable and proposes blinded control/treatment evaluation plus cost metrics. <strong>reasoned:</strong> Ablations make every added agent earn its cost.</dd>
+        <dt>Rationale</dt><dd>This provides the actual mechanism for continuous improvement: a challenger replaces the champion only when it demonstrably performs better.</dd>
+        <dt>Downsides</dt><dd>Requires repeated trials and enough expert judgements to overcome noise. A Pareto frontier still needs governance choices about guardrails and acceptable trade-offs.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">84%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">High</span></dd>
+      </dl>
+    </article>
+
+    <article id="idea-7">
+      <span class="rank">7 · Debuggability</span>
+      <h3>Error Cascade Map</h3>
+      <p>Evaluate every handoff separately—retrieval, extraction, bottleneck classification, analogy generation, novelty search, causal-path analysis, scoring, and synthesis. Replay downstream stages with a corrected upstream input to estimate how much each component changes the final decision.</p>
+      <dl>
+        <dt>Axis</dt><dd>Component correctness</dd>
+        <dt>Basis</dt><dd><strong>direct:</strong> The PRD defines structured agent outputs, a staged funnel, full provenance, and configurable components. <strong>reasoned:</strong> Counterfactual replay distinguishes the agent that introduced an error from the agents that merely inherited it.</dd>
+        <dt>Rationale</dt><dd>Without local evaluation, teams tend to tune the final judge even when the decisive failure was missing evidence several stages earlier.</dd>
+        <dt>Downsides</dt><dd>Gold intermediate records are expensive to author. Correcting one handoff may create an artificial input that downstream agents would not normally receive.</dd>
+        <dt>Confidence</dt><dd><span class="confidence">82%</span></dd>
+        <dt>Complexity</dt><dd><span class="complexity">High</span></dd>
+      </dl>
+    </article>
+  </section>
+
+  <section id="rejection-summary">
+    <h2>Rejection Summary</h2>
+    <table>
+      <thead><tr><th>#</th><th>Idea</th><th>Reason rejected or merged</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Next-Dollar Evaluation</td><td>Merged into the Outcome and Forecast Ladder; useful, but its decision-relevant resolution rule was underspecified as a standalone concept.</td></tr>
+        <tr><td>2</td><td>Research as Belief Change</td><td>Merged into the Outcome and Forecast Ladder; belief movement should be judged against later evidence, not rewarded by itself.</td></tr>
+        <tr><td>3</td><td>Standalone Pareto Frontier</td><td>Merged into the Shadow Pipeline League; a complete ban on composite ranking would conflict with the PRD’s need to prioritise.</td></tr>
+        <tr><td>4</td><td>Novelty Assassin Trial</td><td>Merged into the Adversarial Challenge Bank; falsifiable kill claims and resurrection cases are benchmark families, not a separate system.</td></tr>
+        <tr><td>5</td><td>Standalone Metamorphic Tests</td><td>Merged into the Adversarial Challenge Bank; robustness to irrelevant wording is one challenge class.</td></tr>
+        <tr><td>6</td><td>Standalone Causal-Chain Break Tests</td><td>Merged into the Adversarial Challenge Bank; planted measurement-without-action and productivity-only cases are core benchmark fixtures.</td></tr>
+        <tr><td>7</td><td>Delete the Master Score</td><td>Reframed rather than retained: resist a single optimisation target, but preserve transparent ranking and human trade-off decisions.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="composition-signal">Composed 2026-09-11T13:59Z by ce-ideate from the user’s evaluation-design question and <code>INITIAL_PRD.md</code>.</footer>
+</main>
+</body>
+</html>
