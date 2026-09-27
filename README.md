@@ -1,21 +1,91 @@
-# Animal Welfare Science Agent Commons
+# Animal Welfare Scientist — LLM Pipeline Design Workspace
 
-Animal Welfare Science Agent Commons is an open collection of small research
-tools for people working on animal-welfare questions. It is designed to make
-early research work easier to inspect, repeat and review.
+> **Current status:** This repository is being used to compare possible LLM
+> research pipelines. No final pipeline or agent architecture has been selected.
+
+The main goal is to decide **which end-to-end LLM pipeline should be built for
+discovering and evaluating possible animal-welfare interventions**. Custom agents
+should be designed only after that pipeline and its handoffs are clear.
+
+## Start here: candidate pipelines
+
+The core design work is collected in [`docs/approaches`](docs/approaches/README.md).
+There are currently three candidate approaches:
+
+| Candidate | Central idea | Best current entry point |
+|---|---|---|
+| **Welfare Technology Scanner** | Decompose a welfare harm into supported causal pathways and searchable technical requirements, then search across patents, research and products. | [Approach overview](docs/approaches/welfare-technology-scanner.md) and [process map](prototypes/welfare-scanner/PROCESS_MAP.md) |
+| **Animal Welfare Research Loop — Baseline v1** | Move from welfare problem to mechanism, measurable process, intervention, experiment and updated hypothesis. | [Read the baseline](docs/approaches/animal-welfare-research-loop-baseline-v1.md) |
+| **Jev Welfare-Case Analogy Pipeline** | Represent problem cases on shared welfare dimensions, retrieve similar known cases and transfer their linked solutions as unverified hypotheses. | [Read the analogy pipeline](docs/approaches/jev-welfare-case-analogy-pipeline.md) |
+
+These are exploratory proposals. They may turn out to be alternatives,
+complementary stages, or unsuitable. The repository does not yet claim that one
+is the preferred architecture.
+
+## The decision this repository should support
+
+The immediate work is to compare the candidate pipelines and answer:
+
+1. What exact research problem does each pipeline solve?
+2. What information enters and leaves each stage?
+3. Which stages genuinely need an LLM, ordinary code, search, or human review?
+4. How does the pipeline preserve evidence, uncertainty and provenance?
+5. Can it search biological, engineering, material, sensing and operational
+   interventions without producing unmanageable noise?
+6. How would useful output be distinguished from a plausible but unsafe or
+   unsupported suggestion?
+7. What small test would show whether the pipeline is worth building?
+
+After a pipeline is selected, the intended sequence is:
+
+```text
+compare candidate pipelines
+        -> select or deliberately combine a pipeline
+        -> define stage and handoff contracts
+        -> design the required custom agents
+        -> build a small end-to-end version
+        -> evaluate it on known welfare problems
+```
+
+## What is supporting material
+
+Everything outside the approach documents is currently secondary to the
+pipeline decision. It has been preserved because it may supply useful building
+blocks, examples or historical context.
+
+- `prototypes/welfare-scanner` contains the Welfare Scanner's detailed design
+  artefacts, workbook and interface snapshots. It is not evidence that the
+  pipeline has been implemented or selected.
+- `commons`, `catalogue`, `examples`, `schemas`, `tests` and `benchmarks` contain
+  20 small deterministic research-tool prototypes and their supporting data.
+  They are possible building blocks, not the chosen LLM architecture.
+- `web` and `dist` contain the catalogue website and generated browser assets.
+- `docs/plans` records earlier product planning.
+- `docs/implementation` documents the current deterministic prototype suite.
+- `INITIAL_PRD.md` preserves the broader original WelfareTech proposal.
+
+No material has to be discarded to make the project clear. A supporting
+artefact should be promoted into the main pipeline only when the pipeline design
+shows why it is needed.
+
+## Supporting implementation: Agent Commons
+
+Animal Welfare Science Agent Commons is an existing collection of small
+research tools for people working on animal-welfare questions. It was designed
+to make early research work easier to inspect, repeat and review.
 
 [Explore the public catalogue](https://animal-welfare-agent-commons.aaronmcahill.chatgpt.site/)
 
-The project currently contains 20 prototypes. Each one handles a narrow task,
+The collection currently contains 20 prototypes. Each handles a narrow task,
 such as mapping a research question, checking a dataset, drafting a protocol or
-auditing whether a quotation matches the evidence supplied with it. Four sample
-workflows show how several tools can be combined while keeping important
-decisions with a human reviewer.
+auditing whether a quotation matches supplied evidence. Four sample workflows
+show how several tools can be combined while keeping important decisions with a
+human reviewer.
 
-This is an early development portfolio. The tools use deterministic Python
-rules and calculations on data you provide. They do not call an AI model,
-search the live web, conduct experiments or diagnose animal welfare. Their
-outputs are starting points for qualified human review, not scientific findings.
+These prototypes use deterministic Python rules and calculations on supplied
+data. They do not call an AI model, search the live web, conduct experiments or
+diagnose animal welfare. Their outputs are starting points for qualified human
+review, not scientific findings or a finished LLM pipeline.
 
 ## Who this is for
 

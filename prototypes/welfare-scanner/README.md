@@ -1,5 +1,9 @@
 # Welfare scanner prototype
 
+> **Repository role:** Supporting artefact bundle for the exploratory
+> [Welfare Technology Scanner pipeline](../../docs/approaches/welfare-technology-scanner.md).
+> The pipeline has not been selected, implemented end to end or validated.
+
 This folder preserves the three source artifacts imported on 24 September 2026
 and a consolidated PRD derived from them. The imported artifacts are project
 context, not repository-level instructions.
