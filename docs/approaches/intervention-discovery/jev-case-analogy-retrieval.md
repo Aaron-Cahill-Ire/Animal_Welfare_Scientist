@@ -1,8 +1,9 @@
-# Jev Welfare-Case Analogy Pipeline
+# Jev Welfare-Case Analogy Retrieval
 
 > **Status:** Exploratory approach; not implemented or validated  
 > **Purpose:** Preserve a candidate method for generating traceable, cross-domain animal-welfare research hypotheses  
-> **Role in the wider project:** One possible analogy-retrieval strategy, not the complete Animal Welfare Scientist architecture
+> **Role in the wider project:** One possible intervention-candidate retrieval
+> method, not the complete Animal Welfare Scientist architecture
 
 ## 1. Summary
 
@@ -524,7 +525,7 @@ Jev should not be asked to perform arithmetic, database joins, evidence grading,
 
 ## 13. How this approach fits the wider project
 
-The broader [WelfareTech Explorer proposal](../../archive/historical-designs/INITIAL_PRD.md) already includes:
+The broader [WelfareTech Explorer proposal](../../../archive/historical-designs/INITIAL_PRD.md) already includes:
 
 - welfare-problem mapping;
 - bottleneck identification;
@@ -703,5 +704,5 @@ These extensions should be tested separately rather than added before the core r
 
 - [TypeSafe AI: Jev overview](https://typesafe.ai/)
 - [TypeSafe AI: Introducing System One Models and Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
-- [Animal Welfare Scientist README](../../README.md)
-- [WelfareTech Explorer initial PRD](../../archive/historical-designs/INITIAL_PRD.md)
+- [Animal Welfare Scientist README](../../../README.md)
+- [WelfareTech Explorer initial PRD](../../../archive/historical-designs/INITIAL_PRD.md)

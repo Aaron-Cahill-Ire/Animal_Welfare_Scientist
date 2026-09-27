@@ -7,17 +7,17 @@ technologies that could remove one of those conditions.
 
 Please begin by reading these files in order:
 
-1. `prototypes/welfare-scanner/PROCESS_MAP.md` — the clearest current end-to-end
-   process and worked example.
-2. `prototypes/welfare-scanner/PROCESS_SPEC.md` — the more detailed design rules
-   and agent responsibilities.
+1. `docs/approaches/intervention-discovery/welfare-technology-scanner/process-map.md`
+   — the clearest current end-to-end process and worked example.
+2. `docs/approaches/intervention-discovery/welfare-technology-scanner/process-specification.md`
+   — the more detailed design rules and agent responsibilities.
 3. `prototypes/welfare-scanner/README.md` — provenance and authority notes.
 4. `prototypes/welfare-scanner/welfare-problem-mechanism-database.xlsx` — the
    33-problem MVP input register.
 
 The imported dashboard and imported historical chat prompt are earlier
-snapshots. Use them only as context. Where they conflict with `PROCESS_MAP.md`
-or `PROCESS_SPEC.md`, the two newer documents take precedence. In particular,
+snapshots. Use them only as context. Where they conflict with `process-map.md`
+or `process-specification.md`, the two newer documents take precedence. In particular,
 do not assume that ammonia is a necessary cause of broiler footpad dermatitis.
 
 ## Decisions already made

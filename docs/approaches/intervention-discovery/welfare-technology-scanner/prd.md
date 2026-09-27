@@ -4,16 +4,17 @@
 
 **Scope:** MVP process and information model; no software implementation
 
-**Canonical inputs:** `PROCESS_MAP.md`, then `PROCESS_SPEC.md`, then the problem
-register workbook. This PRD resolves inconsistencies among them. Imported dashboard
+**Canonical inputs:** `process-map.md`, then `process-specification.md`, then the
+[problem register workbook](../../../../prototypes/welfare-scanner/welfare-problem-mechanism-database.xlsx).
+This PRD resolves inconsistencies among them. Imported dashboard
 and chat artifacts are historical context only.
 
-**Relationship to the Agent Commons:** This scanner is the proposed **deep causal
-scanning** profile within Track A. It complements rather than replaces the current
-**broad capability mapping** profile, which also maps measurement and
-implementation bottlenecks. Broad mapping may hand one selected causal component
-to this workflow for deeper decomposition. Both profiles remain valid while the
-product direction is being explored.
+**Relationship to the wider project:** This scanner is the proposed **deep
+causal decomposition** method within intervention discovery. In the archived
+Agent Commons design it was described as a Track A profile alongside **broad
+capability mapping**, which also maps measurement and implementation
+bottlenecks. A broad mapping stage may hand one selected causal component to
+this workflow for deeper decomposition.
 
 ## 1. Product decision
 

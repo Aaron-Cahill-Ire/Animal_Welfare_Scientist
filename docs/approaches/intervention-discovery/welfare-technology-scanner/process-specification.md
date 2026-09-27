@@ -69,8 +69,9 @@ invention. Each entry must include:
 - source citations; and
 - mechanism confidence.
 
-The initial register is the 33-row workbook in this folder. It is the
-**authoritative inventory for the MVP**: a run must start from one of its stable
+The initial register is the
+[33-row workbook](../../../../prototypes/welfare-scanner/welfare-problem-mechanism-database.xlsx).
+It is the **authoritative inventory for the MVP**: a run must start from one of its stable
 problem IDs. It contains 33 unique IDs with no missing species, stage, problem,
 mechanism, source, or confidence fields. Twenty-six mechanism descriptions are
 marked high confidence and seven medium confidence.

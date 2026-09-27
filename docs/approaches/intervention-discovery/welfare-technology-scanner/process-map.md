@@ -370,8 +370,9 @@ No agent autonomously recommends on-farm deployment.
 
 ## Initial problem source and limits
 
-The 33-row workbook in this folder is the authoritative problem inventory for
-the MVP. The underlying scientific sources—not the spreadsheet or an LLM—remain
+The [33-row workbook](../../../../prototypes/welfare-scanner/welfare-problem-mechanism-database.xlsx)
+is the authoritative problem inventory for the MVP. The underlying scientific
+sources—not the spreadsheet or an LLM—remain
 the authority for causal claims. Adding new ailments is a separate future
 curation workflow.
 

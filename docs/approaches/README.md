@@ -1,61 +1,71 @@
-# Candidate LLM Pipelines
+# Animal Welfare Scientist Approaches
 
 > **Status:** Exploration and comparison. No pipeline has been selected for
 > implementation.
 
-This folder contains the repository's central design work. Its purpose is to
-make possible LLM pipelines easy to inspect side by side before custom agents
-are built.
+The design space is organised by **objective first**, then by method. This
+prevents a complete research loop, a search pipeline and a retrieval module
+from being presented as though they were equivalent alternatives.
 
-[Other AI research-system precedents](other-precedents.md) are recorded as
-background examples, not as additional pipeline candidates.
+## Two approach families
 
-## Current candidates
+| Family | Use it when | Primary output |
+|---|---|---|
+| [Scientific discovery](scientific-discovery/README.md) | The important causal mechanism is uncertain, or the relationship between a process and welfare needs experimental testing. | Better-supported or rejected hypotheses and a useful next experiment. |
+| [Intervention discovery](intervention-discovery/README.md) | The problem is understood well enough to state what should change. | Evidence-traceable intervention candidates for review or testing. |
 
-| Candidate | How it searches for interventions | Intended output | Current maturity |
-|---|---|---|---|
-| [Welfare Technology Scanner](welfare-technology-scanner.md) | Builds evidence-qualified causal pathways, translates approved nodes into species-neutral requirements, and searches patents, research and products. | Ranked technologies tied to explicit causal and evidence paths. | Detailed process and PRD; not implemented or validated. |
-| [Animal Welfare Research Loop — Baseline v1](animal-welfare-research-loop-baseline-v1.md) | Moves from a welfare problem through mechanisms and measurable processes to intervention search, testing and iteration. | Testable intervention and mechanism hypotheses, followed by experimental learning. | Exploratory baseline; not implemented or validated. |
-| [Jev Welfare-Case Analogy Pipeline](jev-welfare-case-analogy-pipeline.md) | Classifies source and target problems on shared welfare dimensions, finds similar cases and retrieves their linked solutions. | Cross-domain solutions labelled as derived, unverified research candidates. | Exploratory retrieval proposal; not implemented or validated. |
+The families share the evidence, review and evaluation rules in
+[shared foundations](shared-foundations.md).
 
-## How to compare them
+## Routing rule
 
-Apply the same questions to every candidate:
+```text
+welfare problem
+    -> define the harm and context
+    -> review the available causal evidence
+    -> can we state what must change?
+
+       no or uncertain -> scientific discovery
+       yes             -> intervention discovery
+```
+
+The route is not permanent. Scientific work may establish a process that can
+then enter intervention discovery. A failed intervention may expose a weak
+mechanism assumption and send the work back to scientific discovery.
+
+## Intervention-discovery methods
+
+| Method | Main strength | Important boundary |
+|---|---|---|
+| [Direct functional search](intervention-discovery/direct-functional-search.md) | Fast search when a required function is already clear. | May return obvious or shallow candidates. |
+| [Welfare Technology Scanner](intervention-discovery/welfare-technology-scanner/README.md) | Deep, evidence-gated causal decomposition before technology search. | Necessary-condition rules may exclude important contributory factors. |
+| [Jev case-analogy retrieval](intervention-discovery/jev-case-analogy-retrieval.md) | Generates cross-domain leads from similar problem profiles. | Similar welfare outcomes do not establish compatible mechanisms. |
+
+The Jev method is an optional candidate generator. It needs a source library
+and downstream scientific, engineering, safety and ethical review. It is not a
+replacement for the complete discovery workflow.
+
+## How to compare approaches
+
+Apply the same questions:
 
 1. **Purpose:** What decision or discovery task does it improve?
-2. **Pipeline:** What are its exact stages, inputs, outputs and feedback loops?
-3. **Division of labour:** What should an LLM do, and what should be handled by
-   search, ordinary code or a person?
-4. **Evidence:** How are claims, quotations, context, uncertainty and provenance
+2. **Pipeline:** What are its stages, inputs, outputs and feedback loops?
+3. **Division of labour:** What belongs to an LLM, search, deterministic code or
+   a person?
+4. **Evidence:** How are source claims, context, uncertainty and provenance
    retained?
-5. **Search breadth:** Can it surface medical, biological, engineering,
-   materials, sensing and operational solutions?
-6. **Transfer safety:** How does it prevent an analogy or match from being
-   mistaken for proof?
-7. **Feasibility:** What data, models, tools and human expertise are required?
-8. **Evaluation:** What small backtest or prospective test could falsify its
-   value?
+5. **Safety:** How is an interesting candidate prevented from being mistaken
+   for a validated intervention?
+6. **Feasibility:** What data, tools and human expertise are required?
+7. **Evaluation:** What backtest or prospective test could disconfirm its value?
 
-## How to read the candidates
+## Preserved source material
 
-- For the Welfare Technology Scanner, start with its
-  [process map](../../prototypes/welfare-scanner/PROCESS_MAP.md), then consult the
-  [process specification](../../prototypes/welfare-scanner/PROCESS_SPEC.md) and
-  [PRD](../../prototypes/welfare-scanner/PRD.md).
-- For the Research Loop, begin with the core flow and then compare its
-  scientific-discovery and technology-transfer tracks.
-- For the Jev pipeline, begin with the summary, the boundary around what is
-  vectorised, and the worked examples.
+The original combined
+[Animal Welfare Research Loop — Baseline v1](../../archive/historical-designs/animal-welfare-research-loop-baseline-v1.md)
+is preserved unchanged. The current scientific-discovery, direct-search and
+shared-foundation documents make its distinct roles easier to inspect.
 
-The candidates are not assumed to be mutually exclusive. For example, analogy
-retrieval could eventually supply leads to a deeper causal or experimental
-pipeline. Any combination should be an explicit design decision made after the
-individual approaches have been evaluated, not an accidental mixture.
-
-## Decision sequence
-
-1. Bring every serious candidate to a comparable level of detail.
-2. Test each candidate on the same small set of welfare problems.
-3. Record strengths, failures, cost and human-review burden.
-4. Select one pipeline or document a deliberate combination.
-5. Define the stage contracts and only then specify the custom agents.
+[AI research-system precedents](../research/ai-scientist-precedents.md) are
+background research, not additional approach candidates.

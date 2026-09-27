@@ -1,8 +1,8 @@
 # Welfare Technology Scanner
 
 > **Status:** Exploratory pipeline design; not implemented or validated  
-> **Role in the wider project:** One candidate LLM pipeline for discovering
-> cross-domain technologies that may address animal-welfare problems
+> **Role in the wider project:** A deeper intervention-discovery pipeline based
+> on evidence-qualified causal decomposition
 
 ## Purpose
 
@@ -23,33 +23,30 @@ welfare harm
     -> human decision
 ```
 
-The approach is more developed on paper than the other candidates, but that
+The approach is more developed on paper than the other methods, but that
 does not mean it has been selected or proven. The current materials define and
 illustrate a possible pipeline.
 
 ## Canonical design material
 
-The detailed files remain together in `prototypes/welfare-scanner` so their
-existing relationships and history are preserved:
+The canonical design documents remain together in this folder:
 
-1. [Process map](../../prototypes/welfare-scanner/PROCESS_MAP.md) — the clearest
-   end-to-end explanation and worked example.
-2. [Process specification](../../prototypes/welfare-scanner/PROCESS_SPEC.md) —
+1. [Process map](process-map.md) — the clearest end-to-end explanation and
+   worked example.
+2. [Process specification](process-specification.md) —
    detailed rules, proposed roles and handoffs.
-3. [Product requirements document](../../prototypes/welfare-scanner/PRD.md) —
+3. [Product requirements document](prd.md) —
    product boundary, artefact contracts, workflow states and acceptance
    criteria.
-4. [Supporting artefact index](../../prototypes/welfare-scanner/README.md) —
+4. [Supporting artefact index](../../../../prototypes/welfare-scanner/README.md) —
    workbook, interface snapshots, teaching visual and provenance notes.
 
 ## Important boundary
 
-The folder name `prototypes` describes the collection of design and interface
-artefacts. It should not be read as evidence that the proposed LLM pipeline is
-runnable. The dashboard and teaching visual demonstrate ideas; the Markdown
-files describe the intended process.
+The Markdown files in this folder describe the intended process. The workbook,
+dashboard and teaching visual under `prototypes/welfare-scanner` support that
+design but do not make the proposed LLM pipeline runnable.
 
 Before implementation, this candidate still needs to be compared with the
 other approaches, reduced to a testable first slice, and evaluated on shared
 example problems.
-
